@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>13:00 A->B </title>
+    <title>조쉬와의 채팅방</title>
 </head>
 <body>
     <div class="status-bar">
@@ -23,48 +23,45 @@
         </div>
     </div>
     
-    <div class="map__info">
-        <img src="/exampleimage/mapexample.png">
-        <span>중간 경유 가능</span>
-    </div>
-    <div class="deparrtemre">
-        <div class="deparrtemre__dear">
-            <span>출발</span>
-            <span> -> </span>
-            <span>도착</span>
+    <div class="chat-header">
+        <div class="chat-header__arrow">
+            <i class="fas fa-arrow-left"></i>
         </div>
-        <div class="deparrtemre__time">
-            <span> 13:00 </span>
+        <div></div>
+        <div class="chat-header__name">
+            <span>조쉬</span>
         </div>
-        <div class="deparrtemre__remain">
-            <span>3석</span>
+        <div class="chat-header__notifi">
+            <i class="fas fa-bell"></i>
         </div>
-    </div>
-    <div class="user__manner">
-        <div class="user__manner__map"><img src="/exampleimage/userduck.jpg"></div>
-        <div class="user__manner_name"><span>duck</span></div>
-        <div class="user__manner_temper">
-            <span>매너온도 </span>
-            <span> 60℃</span>
-            <i class="fas fa-thermometer-three-quarters"></i>
+        <div class="chat-header__tem">
+            <span>매너온도</span>
+            <i class="fas fa-thermometer-empty"></i>
+        </div>
+        <div class="chat-header__option">
+            <i class="fas fa-ellipsis-v"></i>
         </div>
     </div>
-    <div class="detail__inscript">
-        <p>
-            매너온도 40이하 안받아요!
-            00동은 괜찮은데 xx동은 안갑니다.
-        </p>
+    <div class="dearsub">
+        <span> A -> B</span>
+        <span>유스퀘어에서 전대까지 가실분!</span>
     </div>
-    <div class="money__apply">
-        <div class="money__apply__cost">
-            <span>예상 </span>
-            <span>13000원</span>
+    <div class="chat__context">
+        <div class="chat__context-date">
+            <span>2021년 7월 31일</span>
         </div>
-        <div class="money__apply__reap">
-            <span>잔여 1석</span>
-            <span> 신청하기!</span>
+        <div class="chat__context-text">
+            <img src="/exampleimage/userduck.jpg">
+            <span>타시나요?</span>
+            <span>오후 8:27</span>
         </div>
     </div>
+
+    <form class="chat__bar">
+        <i class="fas fa-plus"></i>
+        <input type="text" placeholder="메세지를 입력하세요">
+        <input type="submit">
+    </form>
     <script src="https://kit.fontawesome.com/762239f8d9.js" crossorigin="anonymous"></script>
 </body>
 </html>
