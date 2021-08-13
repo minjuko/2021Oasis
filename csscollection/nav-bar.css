@@ -1,0 +1,18 @@
+.nav {
+  background-color: #7488e0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid rgb(0, 0, 0, 0.8);
+  box-sizing: border-box;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__btn {
+  width: 25%;
+  margin: 5px 0px;
+}
