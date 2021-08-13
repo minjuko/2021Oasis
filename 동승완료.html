@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+		.nav1 {
+			height: 50px;
+      
+			border-bottom: 1px solid black;
+			display: flex;
+			align-items: center;
+		}
+
+                 /* nav tag */
+                 nav ul{padding-top:10px;}                     /*  상단 여백 10px  */
+         nav ul li {
+            display:inline;                         /*  세로나열을 가로나열로 변경 */
+            border-left:1px solid #999;             /* 각 메뉴의 왼쪽에 "|" 표시(분류 표시) */
+                                 /* 폰트 설정 - 12px의 돋움체 굵은 글씨로 표시 */
+            padding:0 10px;                         /* 각 메뉴 간격 */
+        }
+         nav ul li:first-child{border-left:none;}
+
+	</style>
+  </head>
+
+  <body>
+
+    <div class="nav1">
+		<div class="nav1-right-items">
+			<div class="nav1-item">동승 내역</div>
+
+		</div>
+	</div>
+    <nav>
+    <ul>
+    <li><a href="">동승구인중</a></li>
+    <li><a href="">동승구인완료</a></li>
+    <li><a href="">동승완료</a></li>
+    </ul>
+    </nav>
+    <script src="script.js"></script>
+
+  </body>
+</html>
