@@ -1,0 +1,74 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+.profile__span {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-size: xx-large;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.profile__info img {
+  padding: 10px 3px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.profile__info {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.profile__info-text {
+  margin-left: 25px;
+}
+.profile__info-text__name {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: x-large;
+}
+.profile__info-text__adnum {
+  font-size: large;
+}
+.profile__revise {
+  padding: 13px 0px;
+  text-align: center;
+  font-size: larger;
+  background-color: darkgrey;
+}
+.profile__carpoollist {
+  padding: 11.5px 0px;
+  text-align: center;
+  font-size: larger;
+  margin-top: 3px;
+  background-color: gray;
+}
+.profile__temperture {
+  display: flex;
+  justify-content: space-around;
+  margin: 35px 30px;
+}
+.profile__temperture img {
+  margin: 0px 50px;
+  width: 60px;
+  height: 180px;
+}
+.profile__temperture-context {
+  text-align: center;
+  font-size: large;
+}
+.profile__temperture-context__my {
+  margin-top: 10px;
+}
+.profile__temperture-context__tem {
+  font-size: xx-large;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.profile__logout {
+  margin-top: 10px;
+  text-align: center;
+  font-size: large;
+  padding: 12px;
+  background-color: bisque;
+}

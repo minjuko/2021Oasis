@@ -1,0 +1,88 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+.chat-header {
+  margin: 5px 0px;
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.chat-header__arrow {
+  font-size: x-large;
+}
+.chat-header__arrow span {
+  margin-left: 10px;
+}
+.chat-header__notifi {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 15px;
+  align-items: center;
+}
+.chat-header__tem {
+  margin: 0px 16px;
+}
+.chat-header__tem span:nth-child(2) {
+  text-decoration: underline;
+}
+.dearsub {
+  padding: 13px 5px;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+}
+.chat__context-date {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0px;
+}
+.chat__context-date span {
+  background-color: cornflowerblue;
+  padding: 3px 8px;
+  border-radius: 10%;
+  color: aliceblue;
+}
+.chat__context-text {
+  display: flex;
+  justify-content: flex-start;
+}
+.chat__context-text img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+.chat__context-text__text span:first-child {
+  font-size: large;
+}
+.chat__context-text__text span:last-child {
+  font-size: small;
+}
+.chat__context-text__text {
+  justify-content: space-evenly;
+}
+.chat__context-text__text span:nth-child(3) {
+  background-color: wheat;
+  padding: 1px 4px;
+  border-radius: 5%;
+}
+.chat__bar {
+  bottom: 0px;
+  position: fixed;
+  background-color: whitesmoke;
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+}
+.chat__bar-mes {
+  width: 85%;
+  height: 30px;
+  border: 0;
+  margin: 0px 10px;
+}
+.chat__bar-submit {
+  border: 0;
+  border-radius: 50%;
+  font-size: larger;
+}

@@ -3,6 +3,7 @@
 
 <head>
 	<link rel="stylesheet" href="csscollection/status.css">
+	<link rel="stylesheet" href="csscollection/myProfileCss.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,13 +26,15 @@
 				<i class="fas fa-bolt"></i>
 			</div>
 		</div>
-		<span>나의 프로필</span>
+		<div class="profile__span">
+			<span>나의 프로필</span>
+		</div>
 	</header>
 
 	<div class="main">
 		
 		<div class="profile__info">
-			<img src="/exampleimage/usericon.jpg" width="50">
+			<img src="exampleimage/jung.png">
 			<div class="profile__info-text">
 				<div class="profile__info-text__name"><span>정해인</span></div>
 				<div class="profile__info-text__adnum">
@@ -52,12 +55,13 @@
 		</a>
 		
 		<div class="profile__temperture">
-			<img src="/exampleimage/thermometer.jpg" width="50"> 
+			<img src="exampleimage/thermometer.jpg"> 
 			<div class="profile__temperture-context">
 				<div class="profile__temperture-context__my"><span>현재 나의 온도</span></div>
+				<div class="profile__temperture-context__tem"><span>78.6도</span></div>
+				<div class="profile__temperture-context__per"><span>상위 3%</span></div>
 			</div>
-			<div class="profile__temperture-context__tem"><span>78.6도</span></div>
-			<div class="profile__temperture-context__per"><span>상위 3%</span></div>
+			
 		</div>
 	</div>
 	<a href="login.html">

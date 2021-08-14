@@ -34,3 +34,48 @@ a {
   padding: 0px 0px;
   color: brown;
 }
+#resadd-form {
+  font-size: larger;
+}
+.resadd-form__departure input {
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 8px 15px;
+  margin-right: 5px;
+}
+.resadd-form__arrival input {
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 8px 15px;
+  margin-right: 5px;
+}
+.resadd-form__time input {
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 8px 15px;
+}
+.resadd-form__maxx input {
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 8px 10px;
+}
+.resadd-form__minn input {
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 8px 10px;
+}
+.resadd-form__memo input {
+  border: 1px solid brown;
+  margin: 8px 10px;
+  width: 80%;
+  height: 150px;
+}
+.resadd-form__midinter {
+  margin: 10px 0px;
+}
+.resadd-form__sexseper label {
+  font-size: large;
+}
+.resadd-form__midinter label {
+  font-size: large;
+}

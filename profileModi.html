@@ -2,27 +2,48 @@
 <html>
   <head>
     <link rel="stylesheet" href="csscollection/status.css">
+    <link rel="stylesheet" href="csscollection/profileModiCss.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <title>같이 타랑께 - profile revise</title>
   </head>
   <body>
-
+    <div class="status-bar">
+      <div class="status-bar__column">
+          <span>No Service</span>
+          <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+          <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+          <span>73%</span>
+          <i class="fas fa-battery-full fa-lg"></i>
+          <i class="fas fa-bolt"></i>
+      </div>
+  </div>
     <section class="profile__modify">
-        <h1>프로필수정</h1>
+      
+        <h1>프로필 수정</h1>
+        <a href="myProfile.html">
+          <i class="fas fa-arrow-left fa-2x"></i>
+        </a>
         <form action="myprofile.html" id="profile__modify-con">
+            <img src="exampleimage/jung.png">
             <div class="profile__modify__pic">
-                <input type="file" name="profile__modify__pic" id="modi-pic" autocomplete="off">
-                <label for="modi-pic">USER image</label>
+                <label class="profile__modify__pic-label" for="modi-pic">사진 업로드</label>
+                <input type="file" name="profile__modify__pic" id="modi-pic" autocomplete="off" style="visibility: hidden;">
             </div>
             <div class="profile__modify__name">
-              <input type="text" name="profile__modify__name" id="modi-name" autocomplete="off">
-              <label for="modi-name">USER NAME</label>
-          </div>
+              <input type="text" name="profile__modify__name" id="modi-name" autocomplete="off" placeholder="변경할 닉네임을 입력하세요">
+            </div>
         </form>
-        <input type="submit" name="profile__modify-submit" form="profile__modify-con" value="변경">
+        <div class="profile__modify-input">
+          <input type="submit" name="profile__modify-submit" form="profile__modify-con" value="변경" class="profile__modify-input__btn">
+        </div>
+        
 
-    <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/762239f8d9.js" crossorigin="anonymous"></script>
   </body>
 </html>

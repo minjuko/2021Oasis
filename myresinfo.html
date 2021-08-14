@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="csscollection/status.css">
+    <link rel="stylesheet" href="csscollection/myResInfoCss.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,8 +25,9 @@
     </div>
     
     <div class="map__info">
-        <img src="/exampleimage/mapexample.png">
+        <img src="exampleimage/mapexample.png">
         <span>중간 경유 가능</span>
+        <span>동성 전용</span>
     </div>
     <div class="deparrtemre">
         <div class="deparrtemre__dear">
@@ -42,42 +44,54 @@
     </div>
     <div class="user">
         <div class="user__indi">
-            <div class="user__indi-profile"><img src="/exampleimage/userduck.jpg"></div>
-            <div class="user__indi-name"><span>duck</span></div>
-            <div class="user__indi-temper">
-                <span>매너온도 </span>
-                <span> 60℃</span>
-                <i class="fas fa-thermometer-three-quarters"></i>
+            <div class="user__indi-parti1">
+                <div class="user__indi-profile"><img src="exampleimage/userduck.jpg"></div>
+                <div class="user__indi-name"><span>duck</span></div>
             </div>
-            <div class="user__indi-auth">
-                <span>추방</span>
-                <i class="fas fa-crown"></i>   
-            </div>
-        </div>
-        <div class="user__indi">
-            <div class="user__indi-profile"><img src="/exampleimage/userduck.jpg"></div>
-            <div class="user__indi-name"><span>duck</span></div>
-            <div class="user__indi-temper">
-                <span>매너온도 </span>
-                <span> 60℃</span>
-                <i class="fas fa-thermometer-three-quarters"></i>
-            </div>
-            <div class="user__indi-auth">
-                <span>추방</span>
-                <i class="fas fa-crown"></i>   
+            <div class="user__indi-parti2">
+                <div class="user__indi-temper">
+                    <span>매너온도 </span>
+                    <span> 60℃</span>
+                    <i class="fas fa-thermometer-three-quarters"></i>
+                </div>
+                <div class="user__indi-auth">
+                    <i class="far fa-thumbs-down"></i>
+                    <i class="fas fa-crown"></i>   
+                </div>
             </div>
         </div>
         <div class="user__indi">
-            <div class="user__indi-profile"><img src="/exampleimage/userduck.jpg"></div>
-            <div class="user__indi-name"><span>duck</span></div>
-            <div class="user__indi-temper">
-                <span>매너온도 </span>
-                <span> 60℃</span>
-                <i class="fas fa-thermometer-three-quarters"></i>
+            <div class="user__indi-parti1">
+                <div class="user__indi-profile"><img src="exampleimage/userduck.jpg"></div>
+                <div class="user__indi-name"><span>duck</span></div>
             </div>
-            <div class="user__indi-auth">
-                <span>추방</span>
-                <i class="fas fa-crown"></i>   
+            <div class="user__indi-parti2">
+                <div class="user__indi-temper">
+                    <span>매너온도 </span>
+                    <span> 60℃</span>
+                    <i class="fas fa-thermometer-three-quarters"></i>
+                </div>
+                <div class="user__indi-auth">
+                    <i class="far fa-thumbs-down"></i>
+                    <i class="fas fa-crown"></i>   
+                </div>
+            </div>
+        </div>
+        <div class="user__indi">
+            <div class="user__indi-parti1">
+                <div class="user__indi-profile"><img src="exampleimage/userduck.jpg"></div>
+                <div class="user__indi-name"><span>duck</span></div>
+            </div>
+            <div class="user__indi-parti2">
+                <div class="user__indi-temper">
+                    <span>매너온도 </span>
+                    <span> 60℃</span>
+                    <i class="fas fa-thermometer-three-quarters"></i>
+                </div>
+                <div class="user__indi-auth">
+                    <i class="far fa-thumbs-down"></i>
+                    <i class="fas fa-crown"></i>   
+                </div>
             </div>
         </div>
     </div>
@@ -85,13 +99,18 @@
     <div class="minmax">
         <span>최대 3석 최소 1석</span>
     </div>
+    
     <div class="mine__canclose">
-        <div class="mine__canclose-cancle">
-            <span>취소하기</span>
-        </div>
-        <div class="mine__canclose-close">
-            <span>마감하기</span>
-        </div>
+        <a href="carpoolCollect.html">
+            <div class="mine__canclose-cancle">
+                <span>취소하기</span>
+            </div>
+        </a>
+        <a href="carpoolFull.html">
+            <div class="mine__canclose-close">
+                <span>마감하기</span>
+            </div>
+        </a>
     </div>
 
     <script src="https://kit.fontawesome.com/762239f8d9.js" crossorigin="anonymous"></script>

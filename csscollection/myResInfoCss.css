@@ -5,16 +5,10 @@ a {
 .map__info img {
   width: 100%;
   height: 250px;
-  margin-top: 5px;
+  margin-top: 25px;
   position: relative;
 }
-.map__info i {
-  position: fixed;
-  margin-top: 30px;
-  margin-left: 5px;
-  z-index: 2;
-}
-.map__info-top strong {
+.map__info span {
   position: absolute;
   top: 50px;
   right: 20px;
@@ -23,7 +17,7 @@ a {
   border-radius: 5%;
   color: wheat;
 }
-.map__info-top strong:last-child {
+.map__info span:last-child {
   position: absolute;
   top: 85px;
   right: 20px;
@@ -53,65 +47,68 @@ a {
 .deparrtemre__time {
   font-size: xx-large;
 }
-.user__manner {
+.user__indi {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-  font-size: x-large;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
 }
-.user__manner__profile img {
+.user__indi-profile img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-right: 10px;
 }
-.user__manner_name {
+.user__indi-parti1 {
   display: flex;
+  justify-content: flex-start;
+  font-size: x-large;
   align-items: center;
-  font-size: xx-large;
 }
-.user__manner_temper {
+.user__indi-parti2 {
   display: flex;
+  justify-content: flex-end;
+  font-size: larger;
   align-items: center;
-  margin-right: 15px;
 }
-.user__manner_temper span {
-  margin-right: 7px;
-}
-.user__manner_temper span:nth-child(2) {
+.user__indi-temper span:nth-child(2) {
   text-decoration: underline;
 }
-.user__manner-div {
-  display: flex;
-  justify-content: space-between;
+.user__indi-auth {
+  margin-left: 20px;
 }
-
-.detail__inscript {
-  font-size: large;
+.user__indi-auth i:first-child {
+  padding: 8px 8px;
+  background-color: crimson;
+  border-radius: 50%;
 }
-
-.money__apply {
-  bottom: 0px;
+.user__indi-auth i:last-child {
+  padding: 8px 8px;
+  background-color: cornsilk;
+  border-radius: 50%;
+}
+.minmax {
+  padding: 10px 0px;
+  font-size: larger;
+}
+.mine__canclose {
+  bottom: 0;
   display: flex;
   justify-content: space-around;
   position: fixed;
-  padding: 8px 0px;
   width: 100%;
   box-sizing: border-box;
   z-index: 2;
-  background-color: #6495ed;
-  font-size: larger;
+  font-size: x-large;
+  background-color: antiquewhite;
+}
+.mine__canclose-cancle {
+  padding: 15px 72.5px;
+  background-color: crimson;
+  margin: 0px 0px;
   color: aliceblue;
 }
-.money__apply__reap {
-  background-color: rgb(84, 84, 255);
-  padding: 5px 10px;
-}
-.money__apply__reap span {
-  color: aliceblue;
-}
-.money__apply__cost {
-  display: flex;
-  align-items: center;
+.mine__canclose-close {
+  background-color: darkgreen;
+  padding: 15px 72.5px;
+  margin: 0px 0px;
   color: aliceblue;
 }

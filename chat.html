@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="csscollection/status.css">
+    <link rel="stylesheet" href="csscollection/chatCss.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,22 +26,19 @@
     
     <div class="chat-header">
         <div class="chat-header__arrow">
-            <i class="fas fa-arrow-left"></i>
-        </div>
-        <div></div>
-        <div class="chat-header__name">
+            <a href="chatList.html"><i class="fas fa-arrow-left fa-lg"></i></a>
             <span>조쉬</span>
         </div>
         <div class="chat-header__notifi">
-            <i class="fas fa-bell"></i>
-        </div>
-        <div class="chat-header__tem">
-            <span>매너온도</span>
-            <i class="fas fa-thermometer-empty"></i>
-        </div>
-        <div class="chat-header__option">
-            <i class="fas fa-ellipsis-v"></i>
-        </div>
+            <i class="fas fa-bell fa-lg"></i>
+            <div class="chat-header__tem">
+                <span>매너온도</span>
+                <span>63℃</span>
+                <i class="fas fa-thermometer-empty fa-lg"></i>
+            </div>
+            <i class="fas fa-ellipsis-v fa-lg"></i>
+            </div>
+    </div>
     </div>
     <div class="dearsub">
         <span> A -> B</span>
@@ -51,16 +49,18 @@
             <span>2021년 7월 31일</span>
         </div>
         <div class="chat__context-text">
-            <img src="/exampleimage/userduck.jpg">
-            <span>타시나요?</span>
-            <span>오후 8:27</span>
+            <img src="exampleimage/userduck.jpg">
+            <div class="chat__context-text__text">
+                <span>조쉬</span><br>
+                <span>타시나요?</span><br>
+                <span>오후 8:27</span>
+            </div>
         </div>
     </div>
 
     <form class="chat__bar">
-        <i class="fas fa-plus"></i>
-        <input type="text" placeholder="메세지를 입력하세요">
-        <input type="submit">
+        <input type="text" placeholder="메세지를 입력하세요" class="chat__bar-mes">
+        <input type="submit" class="chat__bar-submit" value="→">
     </form>
     <script src="https://kit.fontawesome.com/762239f8d9.js" crossorigin="anonymous"></script>
 </body>
