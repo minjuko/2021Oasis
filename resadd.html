@@ -26,55 +26,57 @@
     <div class="resadd">
         <div class="resadd__res"><span>예약 만들기</span></div>
         <div class="resadd__conf">
-            <div class="resadd__conf__no">
-                <i class="fas fa-times"></i>
-                <span>취소</span>
-            </div>
+            <a href="home.html">
+                <div class="resadd__conf__no">
+                    <i class="fas fa-times"></i>
+                    <span>취소</span>
+                </div>
+            </a>
             <div class="resadd__conf__yes">
                 <i class="fas fa-check"></i>
-                <span>게시</span>
+                <input type="submit" value="게시" name="resadd__yes" form="resadd-form">
             </div>
         </div>
     </div>
-    <form action="rescomplete.html" method="GET" class="resadd-form">
+    <form action="home.html" method="GET" id="resadd-form">
         <div class="resadd-form__departure">
             <span>출발지</span>
-            <input name="departure" type="text">
+            <input name="resadd__departure" type="text">
             <i class="fas fa-search"></i>
         </div>
         <div class="resadd-form__arrival">
             <span>도착지</span>
-            <input name="departure" type="text">
+            <input name="resadd__arrival" type="text">
             <i class="fas fa-search"></i>
         </div>
         <div class="resadd-form__time">
             <span>예약 시간</span>
-            <input name="time" type="datetime">
+            <input name="resadd__time" type="datetime">
         </div>
         <div class="resadd-form__maxx">
             <span>최대 인원 </span>
-            <input name="max" type="number" max="4" min="0" >
+            <input name="resadd__maxx" type="number" max="4" min="0" >
         </div>
         <div class="resadd-form__minn">
             <span>최대 인원 </span>
-            <input name="minn" type="number" max="4" min="0" >
+            <input name="resadd__minn" type="number" max="4" min="0" >
         </div>
         <div class="resadd-form__memo">
             <span>추가 메모</span>
-            <input name="memo" type="text">
+            <input name="resadd__memo" type="text">
         </div>
         <div class="resadd-form__midinter">
             <span>중간 경유 여부</span>
-            <input type="radio" name="midinter" value="interable">
+            <input type="radio" name="resadd__midinter" value="interable">
             <label for="interable">경유 가능</label>
-            <input type="radio" name="midinter" value="uninterable">
+            <input type="radio" name="resadd__midinter" value="uninterable">
             <label for="uninterable">경유 불가능</label>
         </div>
         <div class="resadd-form__sexseper">
             <span>동일 성별 승차 여부</span>
-            <input type="radio" name="sexseper" value="comsex">
+            <input type="radio" name="resadd__sexseper" value="comsex">
             <label for="comsex">동일 성별</label>
-            <input type="radio" name="sexseper" value="unisex">
+            <input type="radio" name="resadd__sexseper" value="unisex">
             <label for="unisex">공동</label>
         </div>
     </form>
