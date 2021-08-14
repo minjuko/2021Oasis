@@ -15,26 +15,23 @@
     <section class="login-form">
             <h1>로그인</h1>
             <form action="">
-                 <div class="int-area">
-                        <label for="id">&nbsp&nbsp&nbsp&nbsp이메일 </label>
-                        <input type="text" name=''id" id="id"
+                 <div class="login-form__info">
+                        <label for="login__email">&nbsp&nbsp&nbsp&nbsp이메일 </label>
+                        <input type="text" name=''login__email" id="login__email"
                         autocomplete="off" required>
-                        </div>
-                        <div class="int-area">
-                               <label for="pw">비밀번호</label>
-                                <input type="password" name="pw" id="pw"
+                 
+                               <label for="login__pw">비밀번호</label>
+                                <input type="password" name="login__pw" id="login__pw"
                                 autocomplete="off" required>
                         </div>
-                        <div class="btn-area">
-                                <br><button type="submit" class="btn-login" id="btn-login" onclick="location.href='home.html'">로그인</button>
+                        <div class="login-btn">
+                               <br> <button type="submit" class="login-btn__lg" id="login-btn__lg" onclick="location.href='home.html'">로그인</button>
+                               <br><br> 
+                               <button type="button" class="login-btn__sign" id="login-btn__sign" onclick="location.href='sign.html'">회원가입</button>
+                    <button type="button" class="login-btn_psfind" id="login-btn_psfind" onclick="location.href='psfind.html'">비밀번호 찾기</button>
                         </div>
             </form>
             <br>
-            <dic class="caption">
-                    <button type="button" class="btn-sign" id="btn-sign" onclick="location.href='sign.html'">회원가입</button>
-                    <button type="button" class="btn-psfind" id="btn-psfind" onclick="location.href='psfind.html'">비밀번호 찾기</button>
-                    </div>
     </section>   
 </body>
 </html>
-
