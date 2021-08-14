@@ -1,0 +1,109 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+.map__info img {
+  width: 100%;
+  height: 250px;
+  margin-top: 5px;
+  position: relative;
+}
+.map__info i {
+  position: fixed;
+  margin-top: 30px;
+  margin-left: 5px;
+  z-index: 2;
+}
+.map__info-top {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background-color: cornflowerblue;
+  padding: 5px;
+  border-radius: 5%;
+  color: wheat;
+}
+
+.deparrtemre {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 5px 0px;
+}
+.deparrtemre__remain {
+  border-radius: 50%;
+  background-color: cornflowerblue;
+  padding: 8px;
+  font-size: large;
+  margin-right: 8px;
+}
+.deparrtemre__dear {
+  font-size: xx-large;
+  text-align: center;
+}
+.deparrtemre__time {
+  font-size: xx-large;
+}
+.user__manner {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  font-size: x-large;
+}
+.user__manner__profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.user__manner_name {
+  display: flex;
+  align-items: center;
+  font-size: xx-large;
+}
+.user__manner_temper {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.user__manner_temper span {
+  margin-right: 7px;
+}
+.user__manner_temper span:nth-child(2) {
+  text-decoration: underline;
+}
+.user__manner-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail__inscript {
+  font-size: large;
+}
+
+.money__apply {
+  bottom: 0px;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  padding: 8px 0px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+  background-color: #6495ed;
+  font-size: larger;
+  color: aliceblue;
+}
+.money__apply__reap {
+  background-color: rgb(84, 84, 255);
+  padding: 5px 10px;
+}
+.money__apply__reap span {
+  color: aliceblue;
+}
+.money__apply__cost {
+  display: flex;
+  align-items: center;
+  color: aliceblue;
+}

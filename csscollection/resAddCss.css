@@ -1,0 +1,36 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+.resadd {
+  padding-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.resadd__res {
+  font-size: x-large;
+}
+.resadd__conf {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 15px;
+  font-size: medium;
+  align-items: flex-end;
+}
+.resadd__conf__no {
+  margin-right: 15px;
+}
+.resadd__conf__yes {
+  color: brown;
+}
+.resadd__conf__yes input {
+  border: 0;
+  background-color: white;
+  font-size: medium;
+  margin-left: -1px;
+  padding: 0px 0px;
+  color: brown;
+}
