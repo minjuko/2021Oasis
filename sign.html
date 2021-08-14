@@ -3,27 +3,32 @@
 <head>
   <meta charset="utf-8"/>
   <title>회원 가입</title>
+   <link rel="stylesheet" href="sign.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <link rel="stylesheet" href="csscollection/status.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  
-  <section>
-    <h1>회원 가입 </h1>
+
   </section>
   
-  <section>
+  <section class="sign-form">
+    <h1>회원 가입 </h1>
+    <section class="sign-form1">
     <form name="login" action="index.html" method="post">
       이메일 <br>
       <input type="text" name="user_ID" placeholder="이메일 입력" >
-      <input type="button" name="user_IDcheck" value="이메일 확인">
-      <br>
+      <input type="button" name="user_IDcheck" class="btn_email_check" id="btn_email_check" value="이메일 확인">
+     
      <br> 비밀번호<br> 
       <input type="password" name="user_PW1" value=""><br>
-      <br>비밀번호 확인<br> 
+      비밀번호 확인<br> 
       <input type="password" name="user_PW2" >
-      <input type="button" name="user_PWcheck" value="비밀번호 확인">
-      <br><br>
+      <input type="button" name="user_PWcheck" class="btn_pw_check" id="btn_pw_check" value="비밀번호 확인">
+      <br>
       이름<br>  <input type="text" name="user_name" value=""> <br>
-      <br> 생년월일<br> 
+      생년월일<br> 
       <select name="year">
         <option value="">-- 선택 --</option>
         <option value="1930">1930</option>
@@ -169,7 +174,7 @@
         <option value="30">30</option>
         <option value="31">31</option>
       </select>
-      <br><br>
+      <br>
       성별<br>  
       <label for="man">남성</label>
       <input type="radio" name="gender" value="m" id="man">
@@ -179,23 +184,26 @@
       <input type="radio" name="gender"value="m" id="none"> <br> <br>
       휴대전화<br>  
       <input type="text" name="user_phone" placeholder="010-****-****">
-      <input type="button" name="certification" value="인증번호 받기"><br>
+      <input type="button" name="certification" class="btn_phone_check" id="btn_phone_check" value="인증번호 받기"><br>
       <input type="text" name="certification" placeholder="인증번호를 입력하세요">
-      <input type="button" name="certification" value="확인"><br><br>
+      <input type="button" name="certification" class="btn_check" id="btn_check"  value="확인"><br><br>
       본인 사진 <br>
-      <input type="file" name="" value="">
-      <br><br><br>
-      약관동의<br>
-      <label for="agree">동의</label>
-      <input type="radio" name="check" value="m" id="agree"
-      <label for="disagree">비동의 </label>
-      <input type="radio" name="check" value="m" id="disagree"
-      <br><br><br>
-      <button type="button" onclick="location.href='finish.html'">가입</button>
-      <button type="button" onclick="location.href='login.html'">취소</button>
+<div class="file_wrap"> 
+            <div class="filebox"> 
+      <form action="http://localhost/upload.php" method="post" enctype="multipart/form-data">
+            <input class="file" name="profile_pic" value="파일선택" disabled="disabled" >
+              <label for="input-file">업로드</label> 
+             <input type="file" id="input-file" class="upload-hidden">
+            </form>
+      </div>
+
+      <button type="button"class="btn_sign_check" id="btn_sign_check"  onclick="location.href='finish.html'">가입</button>
+      <button type="button" class="btn_cancel" id="btn_cancel" onclick="location.href='login.html'">취소</button>
     </form>
+    </section>
   </section>
   
   
 </body>
 </html>
+

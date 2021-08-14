@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="kr">
 <head>
+    <title>로그인</title>
     <meta charset="UTF-8">
-    <title>같이 타랑께 - Log in</title>   
-    <link rel="stylesheet" href="sty">
+     <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+     <link rel="stylesheet" href="csscollection/status.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
+    </div>
     <section class="login-form">
             <h1>로그인</h1>
-            <form action="home.html">
+            <form action="">
                  <div class="int-area">
-                        <label for="id">&nbsp&nbsp&nbsp이메일 </label>
+                        <label for="id">&nbsp&nbsp&nbsp&nbsp이메일 </label>
                         <input type="text" name=''id" id="id"
                         autocomplete="off" required>
                         </div>
@@ -20,13 +26,13 @@
                                 autocomplete="off" required>
                         </div>
                         <div class="btn-area">
-                                <button type="submit" value="login">로그인</button>
+                                <br><button type="submit" class="btn-login" id="btn-login" onclick="location.href='home.html'">로그인</button>
                         </div>
             </form>
             <br>
             <dic class="caption">
-                    <button type="button" onclick="location.href='sign.html'">회원가입</button>
-                    <button type="button" onclick="location.href='psfind.html'">비밀번호 찾기</button>
+                    <button type="button" class="btn-sign" id="btn-sign" onclick="location.href='sign.html'">회원가입</button>
+                    <button type="button" class="btn-psfind" id="btn-psfind" onclick="location.href='psfind.html'">비밀번호 찾기</button>
                     </div>
     </section>   
 </body>
