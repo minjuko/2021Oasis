@@ -4,7 +4,7 @@
   bottom: 0;
   width: 100%;
   box-sizing: border-box;
-  background-color: #84aebf;
+  background-color: whitesmoke;
   box-sizing: border-box;
   border-top: 1px solid rgba(121, 121, 121, 0.3);
   padding-right: 50px;
@@ -19,7 +19,7 @@
 }
 
 .nav__btn i {
-  color: aliceblue;
+  color: #011140;
   transition: transform 0.2s ease-in-out;
 }
 .nav__btn i:hover {
