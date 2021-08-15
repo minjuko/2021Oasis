@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>비밀번호 찾기</title>
+     <link rel="stylesheet" href="psfindCss.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <section class="psfind-form">
+   <h1>비밀번호 찾기 </h1>
+    <form name="login" action="index.html" method="post">
+      이메일 <br>
+      <input type="text" name="user_ID" placeholder="이메일 입력" >
+       <input type="button" name="user_IDcheck" class="email_check" id="email_check" value="이메일 확인">
+      <br>
+      <br> 휴대전화<br>  
+      <input type="text" name="user_phone" placeholder="010-****-****">
+      <input type="button" class="phone_check" id="phone_check" name="certification" value="인증번호 받기"><br>
+      <input type="text" name="certification" placeholder="인증번호를 입력하세요">
+      <input type="button"  class="check" id="check" name="certification" value="확인"><br>
+      
+      <br> 비밀번호 재설정<br>  
+      <input type="password" name="user_PW1" value=""><br>
+      <br>비밀번호 확인<br> 
+      <input type="password" name="user_PW2" >
+      <input type="button" class="pw_check" id="pw_check" name="user_PWcheck" value="비밀번호 확인">
+      <br> <br>
+       <button type="submit" class="reset" id="reset" onclick="location.href='login.html'">재설정 완료</button>
+      <button type="button" class="cancel" id="cancel" onclick="location.href='login.html'">취소</button>
+      <br><br>
+   
+    </form>
+  </section>
+  
+  
+</body>
+</html>
