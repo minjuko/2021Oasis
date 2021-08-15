@@ -4,16 +4,17 @@ a {
   color: black;
 }
 .chat {
-  padding-top: 40px;
+  padding-top: 50px;
   padding-bottom: 15px;
   font-size: x-large;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding-left: 15px;
 }
 .chat__room {
   display: flex;
   justify-content: space-between;
   padding: 6px 0px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .chat__room-pic img {
   display: flex;
