@@ -5,7 +5,7 @@
 
 body {
     margin: 0;
-    background-color: #1d6ee7;
+    background-color: #011140;
 }
 
 .sign-form {
@@ -19,14 +19,8 @@ body {
     text-align: auto;
 }
 
-
-
-
-
-
-
 .btn_email_check{
-    background-color: #1d6ee7;
+    background-color: #011140;
 
     border: none;
   
@@ -48,7 +42,7 @@ body {
 }
 
 .btn_pw_check{
-    background-color: #1d6ee7;
+    background-color: #011140;
 
     border: none;
   
@@ -70,7 +64,7 @@ body {
 }
 
 .btn_phone_check{
-    background-color: #1d6ee7;
+    background-color: #011140;
 
     border: none;
   
@@ -92,7 +86,7 @@ body {
 }
 
 .btn_check{
-    background-color: #1d6ee7;
+    background-color: #011140;
 
     border: none;
   
@@ -114,7 +108,7 @@ body {
 }
 
 .btn_sign_check{
-    background-color: #1d6ee7;
+    background-color: #011140;
 
     border: none;
   
@@ -136,7 +130,7 @@ body {
 }
 
 .btn_cancel{
-    background-color: #1d6ee7;
+    background-color: #011140;
 
     border: none;
   
@@ -167,7 +161,7 @@ body {
   }
   
   .filebox label {
-    background-color: #1d6ee7;
+    background-color: #011140;
 
     border: none;
   
@@ -188,6 +182,4 @@ body {
     cursor: pointer;
   }
   
-
-
 
