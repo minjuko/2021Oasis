@@ -14,30 +14,16 @@ body {
     margin-left:auto;
     margin-right:auto;
     margin-top:50px;
-    border-right:10px;
-    padding: 20px;
-    width: 350px; 
+    border-right:5px;
+    padding: 50px;
+    text-align: auto;
 }
 
-background-color: #ffffff;
-margin-left:auto;
-margin-right:auto;
-margin-top:50px;
-border-right:5px;
-padding: 50px;
-text-align: center;
 
-.sign-form1 {
-    font-size: 12px'
-    border: 0;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    margin-right:-30px;
-    margin-left:300px;
-    width: 100%;
-    text-align:left;
-}
+
+
+
+
 
 .btn_email_check{
     background-color: #1d6ee7;
@@ -202,4 +188,6 @@ text-align: center;
     cursor: pointer;
   }
   
+
+
 
