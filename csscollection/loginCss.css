@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR' , sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #1d6ee7;
+}
+
+.login-form {
+    width: 450px;
+    background-color: #ffffff;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px;
+    border-right:5px;
+    padding: 50px;
+    text-align: center;
+}
+
+.login-btn__login{
+    background-color: #1d6ee7;
+
+    border: none;
+  
+    color: white;
+  
+    padding: 3px 20px;
+  
+    text-align: auto;
+  
+    text-decoration: none;
+  
+    display: inline-block;
+  
+    font-size: 16px;
+  
+    margin-bottom: -10px;
+  
+    cursor: pointer;
+}
+.login-btn__sign{
+    background-color: #1d6ee7;
+
+    border: none;
+  
+    color: white;
+  
+    padding: 3px 20px;
+  
+    text-align: auto;
+  
+    text-decoration: none;
+  
+    display: inline-block;
+  
+    font-size: 16px;
+  
+    margin-bottom: -10px;
+  
+    cursor: pointer;
+}
+.login-btn_psfind{
+    background-color: #1d6ee7;
+
+    border: none;
+  
+    color: white;
+  
+    padding:  3px 20px;
+  
+    text-align: center;
+  
+    text-decoration: none;
+  
+    display: inline-block;
+  
+    font-size: 16px;
+  
+    margin: 10px 2px;
+  
+    cursor: pointer;
+}
+
+
+
+
