@@ -1,119 +1,56 @@
 
-* {
-    box-sizing: border-box;
-    font-family: 'Noto Sans KR' , sans-serif;
-}
-
-body {
-    margin: 0;
-    background-color: #011140;
-}
-
-.psfind-form {
-    width: 450px;
-    background-color: #ffffff;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:50px;
-    border-right:5px;
-    padding: 50px;
-    text-align: auto;
-
-
-}
-
-.email_check{
-    background-color: #011140;
-    border: none;
-    color: white;
-    padding:  3px 20px;
-    text-decoration: none;
-    display: inline;
-    font-size: 12px
-    margin: 10px 2px;
-    cursor: pointer;
-    text-align: auto;
-}
-
-.phone_check{
-    background-color: #011140;
-    border: none;
-    color: white;
-    padding:  3px 20px;
-    text-align: auto;
-    text-decoration: none;
-    display: inline;
-    font-size: 12px;
-    margin: 10px 2px;
-    cursor: pointer;
-}
-
-.check{
-    background-color: #011140;
-    border: none;
-    color: white;
-    padding:  3px 20px;
-    text-align: auto;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 10px 2px;
-    cursor: pointer;
-}
-
-.pw_check{
-    background-color: #011140;
-    border: none;
-    color: white;
-    padding:  3px 20px;
-    text-align: auto;
-    text-decoration: none;
-    display: inline;
-    font-size: 12px;
-    margin: 10px 2px;
-    cursor: pointer;
-}
-
-.reset{
-    background-color: #011140;
-
-    border: none;
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=360px, height=640px">
+  <meta charset="utf-8"/>
+  <title>비밀번호 찾기</title>
+  <link rel="stylesheet" href="csscollection/psfindCss.css">
+     <link rel="stylesheet" href="csscollection/status.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="status-bar">
+    <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+    </div>
+    <div class="status-bar__column">
+        <span>18:43</span>
+    </div>
+    <div class="status-bar__column">
+        <span>73%</span>
+        <i class="fas fa-battery-full fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+    </div>
+</div>
+  <section class="psfind-form">
+   <h1>비밀번호 찾기 </h1>
+    <form name="login" action="login.html" method="post">
+      이메일 <br>
+      <input type="text" name="psfind-email" placeholder="이메일 입력"required >
+       <input type="button" name="psfind-email__btn" class="psfind-email__btn" id="psfind-email__btn" value="이메일 확인">
+      <br>
+      <br> 휴대전화<br>  
+      <input type="text" name="psfind-phone" placeholder="010-****-****">
+      <input type="button" class="psfind-phone__btn" id="psfind-phone__btn" name="psfind-phone__btn" value="인증번호 받기"><br>
+      <input type="text" name="psfind-number__btn" placeholder="인증번호를 입력하세요">
+      <input type="button"  class="psfind-check__btn" id="psfind-check__btn" name="psfind-check__btn" value="확인"><br>
+      <br> 비밀번호 재설정<br>  
+      <input type="password" name="psfind-pw" value=""><br>
+      <br>비밀번호 확인<br> 
+      <input type="password" name="psfind-pwcheck" >
+      <input type="button" class="psfind-pwcheck__btn" id="psfind-pwcheck__btn" name="psfind-pwcheck__btn" value="비밀번호 확인">
+      <br> <br>
+       <button type="submit" class="psfind-reset__btn" id="psfind-reset__btn" onclick="location.href='login.html'">재설정 완료</button>
+      <button type="button" class="psfind-cancel__btn" id="psfind-cancel__btn" onclick="location.href='login.html'">취소</button>
+      <br><br>
+   
+    </form>
+  </section>
   
-    color: white;
-  
-    padding:  3px 20px;
-  
-    text-align: auto;
-  
-    text-decoration: none;
-  
-    display: inline;
-  
-    font-size: 12px;
-  
-    margin: 10px 2px;
-  
-    cursor: pointer;
-}
-
-.cancel{
-    background-color: #011140;
-
-    border: none;
-  
-    color: white;
-  
-    padding:  3px 20px;
-  
-    text-align: auto;
-  
-    text-decoration: none;
-  
-    display: inline;
-  
-    font-size: 12px;
-  
-    margin: 10px 2px;
-  
-    cursor: pointer;
-}
+  <script src="https://kit.fontawesome.com/762239f8d9.js" crossorigin="anonymous"></script>
+</body>
+</html>
