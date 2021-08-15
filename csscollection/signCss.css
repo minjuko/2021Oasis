@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR' , sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #1d6ee7;
+}
+
+.sign-form {
+    width: 450px;
+    background-color: #ffffff;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+    border-right:10px;
+    padding: 20px;
+    
+}
+width: 350px;
+background-color: #ffffff;
+margin-left:auto;
+margin-right:auto;
+margin-top:50px;
+border-right:5px;
+padding: 50px;
+text-align: center;
+
+.sign-form1 {
+    font-size: 12px'
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-right:-30px;
+    margin-left:300px;
+    width: 100%;
+    text-align:left;
+}
+
+.btn_email_check{
+    background-color: #1d6ee7;
+
+    border: none;
+  
+    color: white;
+  
+    padding:  3px 20px;
+  
+    text-align: center;
+  
+    text-decoration: none;
+  
+    display: inline-block;
+  
+    font-size: 12px;
+  
+    margin: 10px 2px;
+  
+    cursor: pointer;
+}
+
+.btn_pw_check{
+    background-color: #1d6ee7;
+
+    border: none;
+  
+    color: white;
+  
+    padding:  3px 20px;
+  
+    text-align: center;
+  
+    text-decoration: none;
+  
+    display: inline-block;
+  
+    font-size: 12px;
+  
+    margin: 10px 2px;
+  
+    cursor: pointer;
+}
+
+.btn_phone_check{
+    background-color: #1d6ee7;
+
+    border: none;
+  
+    color: white;
+  
+    padding:  3px 20px;
+  
+    text-align: center;
+  
+    text-decoration: none;
+  
+    display: inline-block;
+  
+    font-size: 12px;
+  
+    margin: 10px 2px;
+  
+    cursor: pointer;
+}
+
+.btn_check{
+    background-color: #1d6ee7;
+
+    border: none;
+  
+    color: white;
+  
+    padding:  3px 20px;
+  
+    text-align: center;
+  
+    text-decoration: none;
+  
+    display: inline-block;
+  
+    font-size: 12px;
+  
+    margin: 10px 2px;
+  
+    cursor: pointer;
+}
+
+.btn_sign_check{
+    background-color: #1d6ee7;
+
+    border: none;
+  
+    color: white;
+  
+    padding:  3px 20px;
+  
+    text-align: center;
+  
+    text-decoration: none;
+  
+    display: inline-block;
+  
+    font-size: 12px;
+  
+    margin: 10px 2px;
+  
+    cursor: pointer;
+}
+
+.btn_cancel{
+    background-color: #1d6ee7;
+
+    border: none;
+  
+    color: white;
+  
+    padding:  3px 20px;
+  
+    text-align: center;
+  
+    text-decoration: none;
+  
+    display: inline-block;
+  
+    font-size: 12px;
+  
+    margin: 10px 2px;
+  
+    cursor: pointer;
+}
+
+.filebox input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+  }
+  
+  .filebox label {
+    background-color: #1d6ee7;
+
+    border: none;
+  
+    color: white;
+  
+    padding:  3px 20px;
+  
+    text-align: center;
+  
+    text-decoration: none;
+  
+    display: inline-block;
+  
+    font-size: 12px;
+  
+    margin: 10px 2px;
+  
+    cursor: pointer;
+  }
+  
+
