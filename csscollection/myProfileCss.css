@@ -4,9 +4,12 @@ a {
 }
 .profile__span {
   padding-top: 30px;
+  padding-left: 10px;
   padding-bottom: 10px;
   font-size: xx-large;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  font-size: x-large;
+
 }
 .profile__info img {
   padding: 10px 3px;
@@ -34,14 +37,16 @@ a {
   padding: 13px 0px;
   text-align: center;
   font-size: larger;
-  background-color: darkgrey;
+  background-color: #012340;
+  color: aliceblue;
 }
 .profile__carpoollist {
   padding: 11.5px 0px;
   text-align: center;
   font-size: larger;
   margin-top: 3px;
-  background-color: gray;
+  background-color: #012340;
+  color: aliceblue;
 }
 .profile__temperture {
   display: flex;
@@ -70,5 +75,6 @@ a {
   text-align: center;
   font-size: large;
   padding: 12px;
-  background-color: bisque;
+  background-color: #376B8C;
+  color: aliceblue;
 }
