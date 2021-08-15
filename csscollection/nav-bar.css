@@ -25,3 +25,10 @@
 .nav__btn i:hover {
   transform: scale(1.2);
 }
+
+input:focus {
+  border: 0px;
+}
+button:focus {
+  border: 0px;
+}

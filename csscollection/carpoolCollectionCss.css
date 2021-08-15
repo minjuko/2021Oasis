@@ -19,10 +19,10 @@ a {
 }
 .carpool__list {
   margin: 10px 10px;
-  background-color: #f2e3b6;
+  background-color: whitesmoke;
 }
 .carpool__list-list {
-  background-color: #f2e3b6;
+  background-color: whitesmoke;
   display: flex;
   padding: 10px 1px;
   margin: 0px 5px;

@@ -42,14 +42,13 @@ a {
 .deparrtemre__time-arr {
   display: flex;
   justify-content: flex-end;
-  background-color: #376b8c;
+  background-color: white;
   margin-right: 20px;
   border-radius: 10px;
   padding: 5px 10px;
 }
 .deparrtemre__remain {
   border-radius: 50%;
-  background-color: cornflowerblue;
   padding: 8px;
   font-size: large;
   margin-right: 8px;
@@ -104,13 +103,15 @@ a {
 }
 .user__indi-auth i:first-child {
   padding: 8px 8px;
-  background-color: #f23d3d;
+  background-color: rgb(209, 209, 209);
   border-radius: 50%;
 }
 .user__indi-auth i:last-child {
   padding: 8px 8px;
-  background-color: #f2e3b6;
+  background-color: white;
   border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: darkgoldenrod;
 }
 .minmax {
   padding: 10px 20px;
@@ -132,12 +133,13 @@ a {
   padding: 0;
 }
 .mine__canclose-cancle {
-  background-color: #011140;
+  background-color: whitesmoke;
   padding: 8px 45px;
-  color: aliceblue;
+  color: black;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 .mine__canclose-close {
-  background-color: #f2e3b6;
+  background-color: whitesmoke;
   color: black;
   padding: 8px 45px;
   margin: 0px 0px;
