@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="kr">
 <head>
+    <meta name="viewport" content="width=360px, height=640px">
     <title>로그인</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="csscollection/status.css">
@@ -12,6 +13,19 @@
 </head>
 
 <body>
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status-bar__column">
+            <span>73%</span>
+            <i class="fas fa-battery-full fa-lg"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
     </div>
     <section class="login-form">
             <h1>로그인</h1>
@@ -19,7 +33,7 @@
                  <div class="login-form__info">
                         <label for="login__email">&nbsp&nbsp&nbsp&nbsp이메일 </label>
                         <input type="text" name=''login__email" id="login__email"
-                        autocomplete="off" required>
+                        autocomplete="off" required><br>
                  
                                <label for="login__pw">비밀번호</label>
                                 <input type="password" name="login__pw" id="login__pw"
