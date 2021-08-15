@@ -4,17 +4,24 @@ a {
   color: black;
 }
 .chat {
-  padding-top: 50px;
+  padding-top: 45px;
   padding-bottom: 15px;
   font-size: x-large;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: #011140;
   padding-left: 15px;
+  color: aliceblue;
+  font-weight: 900;
 }
 .chat__room {
   display: flex;
   justify-content: space-between;
   padding: 6px 0px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+.chat__room:hover {
+  background-color: #fff0a5;
 }
 .chat__room-pic img {
   display: flex;
@@ -31,8 +38,10 @@ a {
 .chat__room-user__name {
   font-size: larger;
   margin: 5px 0px;
+  font-weight: 600;
 }
 .chat__room-dear {
   padding-right: 15px;
   font-size: larger;
+  font-weight: 540;
 }

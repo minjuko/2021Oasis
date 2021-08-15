@@ -20,4 +20,8 @@
 
 .nav__btn i {
   color: aliceblue;
+  transition: transform 0.2s ease-in-out;
+}
+.nav__btn i:hover {
+  transform: scale(1.2);
 }

@@ -13,6 +13,7 @@ a {
   margin-top: 45px;
   z-index: 2;
   color: #011140;
+  margin-left: 5px;
 }
 .map__info-top strong {
   position: absolute;

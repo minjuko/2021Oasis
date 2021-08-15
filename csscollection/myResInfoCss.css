@@ -1,6 +1,6 @@
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 .map__info i {
   position: fixed;
@@ -18,26 +18,34 @@ a {
   position: absolute;
   top: 50px;
   right: 20px;
-  background-color: cornflowerblue;
+  background-color: #376b8c;
   padding: 5px;
   border-radius: 5%;
-  color: wheat;
+  color: aliceblue;
 }
 .map__info span:last-child {
   position: absolute;
   top: 85px;
   right: 20px;
-  background-color: darkgreen;
+  background-color: #84aebf;
   padding: 5px;
   border-radius: 5%;
-  color: wheat;
+  color: aliceblue;
 }
 .deparrtemre {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 5px 0px;
+}
+.deparrtemre__time-arr {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #376b8c;
+  margin-right: 20px;
+  border-radius: 10px;
+  padding: 5px 10px;
 }
 .deparrtemre__remain {
   border-radius: 50%;
@@ -56,44 +64,60 @@ a {
 .user__indi {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #faf5e357;
 }
 .user__indi-profile img {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
+  margin: 5px 10px;
+  display: flex;
+  align-items: center;
 }
+
 .user__indi-parti1 {
   display: flex;
   justify-content: flex-start;
+  font-weight: 650;
   font-size: x-large;
   align-items: center;
 }
 .user__indi-parti2 {
   display: flex;
   justify-content: flex-end;
-  font-size: larger;
   align-items: center;
+  font-weight: 550;
+  font-size: small;
 }
 .user__indi-temper span:nth-child(2) {
   text-decoration: underline;
+  font-size: large;
+  color: #03a60e;
+}
+.user__indi-temper i {
+  color: #03a60e;
 }
 .user__indi-auth {
-  margin-left: 20px;
+  margin: 0px 20px;
+  font-size: large;
 }
 .user__indi-auth i:first-child {
   padding: 8px 8px;
-  background-color: crimson;
+  background-color: #f23d3d;
   border-radius: 50%;
 }
 .user__indi-auth i:last-child {
   padding: 8px 8px;
-  background-color: cornsilk;
+  background-color: #f2e3b6;
   border-radius: 50%;
 }
 .minmax {
-  padding: 10px 0px;
+  padding: 10px 20px;
   font-size: larger;
+  color: #012340;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .mine__canclose {
   bottom: 0;
@@ -104,17 +128,18 @@ a {
   box-sizing: border-box;
   z-index: 2;
   font-size: x-large;
+  font-weight: 600;
   background-color: antiquewhite;
 }
 .mine__canclose-cancle {
   padding: 15px 72.5px;
-  background-color: crimson;
+  background-color: #011140;
   margin: 0px 0px;
   color: aliceblue;
 }
 .mine__canclose-close {
-  background-color: darkgreen;
+  background-color: #f2e3b6;
   padding: 15px 72.5px;
   margin: 0px 0px;
-  color: aliceblue;
+  color: black;
 }
