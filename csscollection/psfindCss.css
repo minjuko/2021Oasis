@@ -5,7 +5,7 @@
 
 body {
     margin: 0;
-    background-color: #1d6ee7;
+    background-color: #011140;
 }
 
 .psfind-form {
@@ -22,7 +22,7 @@ body {
 }
 
 .email_check{
-    background-color: #1d6ee7;
+    background-color: #011140;
 
     border: none;
   
@@ -43,7 +43,7 @@ body {
 }
 
 .phone_check{
-    background-color: #1d6ee7;
+    background-color: #011140;
 
     border: none;
   
@@ -64,7 +64,7 @@ body {
 }
 
 .check{
-    background-color: #1d6ee7;
+    background-color: #011140;
 
     border: none;
   
@@ -87,7 +87,7 @@ body {
 }
 
 .pw_check{
-    background-color: #1d6ee7;
+    background-color: #011140;
 
     border: none;
   
@@ -109,7 +109,7 @@ body {
 }
 
 .reset{
-    background-color: #1d6ee7;
+    background-color: #011140;
 
     border: none;
   
@@ -131,7 +131,7 @@ body {
 }
 
 .cancel{
-    background-color: #1d6ee7;
+    background-color: #011140;
 
     border: none;
   
