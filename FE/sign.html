@@ -33,16 +33,16 @@
     <section class="sign-form1">
     <form name="login" action="index.html" method="post">
       이메일 <br>
-      <input type="text" name="user_ID" placeholder="이메일 입력" >
+      <input type="text" name="user_ID" placeholder="이메일 입력" required>
       <input type="button" name="user_IDcheck" class="btn_email_check" id="btn_email_check" value="이메일 확인">
      
      <br> 비밀번호<br> 
-      <input type="password" name="user_PW1" value=""><br>
+      <input type="password" name="user_PW1" value="" required><br>
       비밀번호 확인<br> 
       <input type="password" name="user_PW2" >
-      <input type="button" name="user_PWcheck" class="btn_pw_check" id="btn_pw_check" value="비밀번호 확인">
+      <input type="button" name="user_PWcheck" class="btn_pw_check" id="btn_pw_check" value="비밀번호 확인" >
       <br>
-      이름<br>  <input type="text" name="user_name" value=""> <br>
+      이름<br>  <input type="text" name="user_name" value="" required> <br>
       생년월일<br> 
       <select name="year">
         <option value="">-- 선택 --</option>

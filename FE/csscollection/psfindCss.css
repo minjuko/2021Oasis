@@ -9,7 +9,7 @@ body {
 }
 
 .psfind-form {
-    width: 450px;
+    width: 360px;
     background-color: #ffffff;
     margin-left:auto;
     margin-right:auto;
@@ -21,7 +21,7 @@ body {
 
 }
 
-.email_check{
+.psfind-email__btn{
     background-color: #011140;
 
     border: none;
@@ -42,7 +42,7 @@ body {
     text-align: auto;
 }
 
-.phone_check{
+.psfind-phone__btn{
     background-color: #011140;
 
     border: none;
@@ -63,7 +63,7 @@ body {
     cursor: pointer;
 }
 
-.check{
+.psfind-check__btn{
     background-color: #011140;
 
     border: none;
@@ -86,7 +86,7 @@ body {
     cursor: pointer;
 }
 
-.pw_check{
+.psfind-pwcheck__btn{
     background-color: #011140;
 
     border: none;
@@ -108,7 +108,7 @@ body {
     cursor: pointer;
 }
 
-.reset{
+.psfind-reset__btn{
     background-color: #011140;
 
     border: none;
@@ -130,7 +130,7 @@ body {
     cursor: pointer;
 }
 
-.cancel{
+.psfind-cancel__btn{
     background-color: #011140;
 
     border: none;
