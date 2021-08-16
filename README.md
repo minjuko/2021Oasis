@@ -1,25 +1,12 @@
-# 같이 타잉
-
-호남 전용 택시 카풀 서비스
-
-> 호남지역의 교통순환 불편 문제를 해결하기 위해 기획되었습니다. 호남지역에서만 사용이 가능하며 다양한 필터를 제공해 시민들의 교통 이용에 편의를 제공합니다.
-
 ## Table of Contents
 
 - [Sections](#sections)
   - [Title](#title)
   - [Banner](#banner)
-  - [Badges](#badges)
-  - [Short Description](#short-description)
-  - [Long Description](#long-description)
-  - [Table of Contents](#table-of-contents-1)
-  - [Security](#security)
+  - [Description](#short-description)
   - [Background](#background)
-  - [Install](#install)
   - [Usage](#usage)
-  - [Extra Sections](#extra-sections)
   - [API](#api)
-  - [Maintainers](#maintainers)
   - [Thanks](#thanks)
   - [Contributing](#contributing)
   - [License](#license)
@@ -29,61 +16,24 @@
 
 ### Title
 
-**Requirements:**
+# _같이 타잉_
 
-- Title must match repository, folder and package manager names - or it may have another, relevant title with the repository, folder, and package manager title next to it in italics and in parentheses. For instance:
-
-  ```markdown
-  # Standard Readme Style _(standard-readme)_
-  ```
-
-  If any of the folder, repository, or package manager names do not match, there must be a note in the [Long Description](#long-description) explaining why.
-
-**Suggestions:**
-
-- Should be self-evident.
+호남 전용 택시 카풀 서비스
 
 ### Banner
-
-**Status:** Optional.
-
-**Requirements:**
-
-- Must not have its own title.
-- Must link to local image in current repository.
-- Must appear directly after the title.
 
 ### Short Description
 
 **Status:** Required.
 
-**Requirements:**
+> 호남지역의 교통순환 불편 문제를 해결하기 위해 기획되었습니다. 호남지역에서만 사용이 가능하며 다양한 필터를 제공해 시민들의 교통 이용에 편의를 제공합니다.
 
-- Must not have its own title.
-- Must be less than 120 characters.
-- Must not start with `> `
-- Must be on its own line.
-- Must match the description in the packager manager's `description` field.
-- Must match GitHub's description (if on GitHub).
-
-**Suggestions:**
-
-- Use [gh-description](https://github.com/RichardLitt/gh-description) to set and get GitHub description.
-- Use `npm show . description` to show the description from a local [npm](https://npmjs.com) package.
-
-### Table of Contents
-
-**Status:** Required; optional for READMEs shorter than 100 lines.
-
-**Requirements:**
-
-- Must link to all Markdown sections in the file.
-- Must start with the next section; do not include the title or Table of Contents headings.
-- Must be at least one-depth: must capture all `##` headings.
-
-**Suggestions:**
-
-- May capture third and fourth depth headings. If it is a long ToC, these are optional.
+- 동성 전용 필터링 제공
+- 중간 경유 (최종 목적지 전에서 하차) 기능 제공
+- 인원 설정 가능
+- 개최자 양도 가능
+- 매너온도 시스템 도입으로 쾌적한 탑승환경 조정
+- 채팅 제공
 
 ### Background
 
