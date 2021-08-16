@@ -1,8 +1,8 @@
-# 호남 택시 카풀 서비스 - 같이 타랑께
+# 같이 타잉
 
-A compliant README must satisfy all the requirements listed below.
+호남 전용 택시 카풀 서비스
 
-> Note: Standard Readme is designed for open source libraries. Although it's [historically](README.md#background) made for Node and npm projects, it also applies to libraries in other languages and package managers.
+> 제작 의도 : 호남 지역의 시내버스 순환 불편을 해소하기위해 기획한 택시 동승
 
 **Requirements:**
 
