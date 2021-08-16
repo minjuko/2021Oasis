@@ -30,6 +30,7 @@ a {
   border-radius: 50%;
   align-items: center;
   margin-right: 16px;
+  margin-left: 10px;
 }
 .chat__room-pic {
   display: flex;
