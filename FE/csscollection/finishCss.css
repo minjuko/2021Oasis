@@ -5,7 +5,7 @@
 
 body {
     margin: 0;
-    background-color: #1d6ee7;
+    background-color: #011140;
 }
 
 .finish-form {
@@ -20,8 +20,8 @@ body {
 }
 
 
-.btn_login {
-    background-color: #1d6ee7;
+.finish-btn__login {
+    background-color: #011140;
 
     border: none;
   
