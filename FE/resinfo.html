@@ -33,8 +33,8 @@
             map = new Tmapv2.Map("map_div", {
                 center : new Tmapv2.LatLng(37.49241689559544, 127.03171389453507),
                 width : "100%",
-                height : "300px",
-                zoom : 11,
+                height : "250px",
+                zoom : 10,
                 zoomControl : true,
                 scrollwheel : true
             });
@@ -445,6 +445,8 @@
 <body onload="initTmap();">
     <div class="ft_area">
         <div class="ft_select_wrap">
+            <br>
+            <br>
             <div class="ft_select">
                 <select id="selectLevel">
                     <option value="0" selected="selected">교통최적+추천</option>
@@ -472,7 +474,7 @@
     </div>
     <div class="map_act_btn_wrap clear_box"></div>
     <p id="result"></p>
-    <br />
+    
 
     
 
@@ -494,8 +496,9 @@
     
     <div class="map__info">
         <a href="home.html"><i class="fas fa-arrow-left fa-2x"></i></a>
-        
+       
         <div class="map__info-top">
+            
             <strong><span>중간 경유 가능</span></strong>
             <strong><span>성별 무관</span></strong>
         </div>
