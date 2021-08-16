@@ -2,9 +2,8 @@
 
 호남 전용 택시 카풀 서비스
 
-> 제작 의도 : 호남 지역의 시내버스 순환 불편을 해소하기위해 기획한 택시 동승
-
-**Requirements:**
+> 호남지역의 교통순환 불편 문제를 해결하기 위해 기획되었습니다. 호남지역에서만 사용이 가능하며 다양한 필터를 제공해 시민들의 교통 이용에 편의를 제공합니다.
+> **Requirements:**
 
 - Be called README.md (with capitalization).
 - If the project supports i18n, the file must be named accordingly: `README.de.md`, where `de` is the BCP 47 Language tag. For naming, prioritize non-regional subtags for languages. If there is only one README and the language is not English, then a different language in the text is permissible without needing to specify the BCP tag: e.g., `README.md` can be in German if there is no `README.md` in another language. Where there are multiple languages, `README.md` is reserved for English.
