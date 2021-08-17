@@ -12,6 +12,7 @@
     - [Login](#Login)
     - [Sign](#Sign)
     - [Psfind](#Psfind)
+    - [Complete](#Complete)
 - # [Definitions](#definitions)
 
 ## Sections
@@ -77,7 +78,67 @@
 
 <img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675146-286ab8fe-4552-4206-9192-b6d05e51c340.PNG">
 
-- finish.html, login.html, finishCss.css, loginCss.css
+- sign.html, signCss.css
   > 회원가입 창 form으로 회원 정보 전달
 
 #### Psfind
+
+<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675111-b3421fad-00eb-4d02-834b-760307dfcb1c.PNG">
+
+- psfind.html, psfindCss.css
+  > 프로토타입 형태로 비밀번호 찾기 등의 기능은 제공하지 않음
+
+#### Complete
+
+<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675141-16542f71-159b-47b6-8faf-70ea6bf313c8.PNG">
+
+- finish.html, finishCss.css
+  > 회원가입 성공시 뜨는 창
+
+#### Home
+
+<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675144-434ffec2-0b46-4574-9250-78ffb1d37801.PNG">
+-home.html, homeCss.css
+> 왼쪽 상단의 현재 위치 중심으로 존재하는 카풀 방들을 게시글 형식으로 나열
+> 오른쪽 하단 + 버튼으로 예약 생성 가능
+> 시작점, 도착지, 시간, 부가 설명, 잔여석, 예상금액, 동행가능여부 정보가 포함된다.
+> 검색 기능은 연동되지 않았다.
+
+#### ResAdd
+
+<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675142-c3b23a0b-610d-4390-b416-47ab5e9b42ef.PNG">
+-resAdd.html, resAddCss.css
+> 예약 생성 화면
+> 폼형태로 정보를 서버에 보낸다.
+
+#### ResInfo
+
+<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675114-618fe756-3564-42db-874e-363bbf4a5814.PNG">
+-resInfo.html, resInfoCss.css
+> 홈에서 보이는 게시글을 클릭했을 때 보이는 화면
+> 지도, 인원, 시간, 출발지, 도착지, 예상 금액, 개최자의 온도와 정보가 담겨있다.
+> 맵은 티맵 API를 사용하여 택시비와 지도, 경로를 보일 수 있게 하였다.
+
+#### Chatlist
+
+<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675129-d59b59fc-6573-4cb0-b5e9-d423d520447c.PNG">
+-chatList.html, chatListCss.css
+> 예약에 참가하면 참가자들과의 채팅방이 생긴다.
+> 기존의 채팅룸들이 리스트 형태로 보인다.
+> 프로필 사진, 이름, 가장 최근의 채팅 내역, 출발지와 도착지를 보여준다.
+
+#### Chat
+
+<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675123-0451857f-2010-4ff6-bab4-1538d99f8e14.PNG">
+<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675126-0be8a964-65e0-45d8-90a4-f40246a59cb5.PNG">
+<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675132-00389c26-ec21-4c09-ab69-32a9f5ef58ea.PNG">
+- chat.html, chatBong.html, chatMin.html, chatCss.css
+> 채팅방의 자세 내역이다. 단체방을 구현하지는 않았지만 이후 프로젝트를 마저 진행한다면 단체방을 구현할 예정이다. 
+> 메가폰 옆의 글은 게시글의 메모이다.
+
+#### myProfile
+
+<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675133-72afc7ac-7091-4b11-b683-e1721b88c250.PNG">
+- myProfile.html, myProfileCss.css
+> 내 프로필에서는 자신의 코드, 주소, 메너온도를 확인할 수 있다. 
+> 로그아웃 기능은 login.html로 사용자를 보낸다.
