@@ -8,6 +8,7 @@
   - [Thanks](#thanks)
   - [Contributing](#contributing)
   - [Wireframe](#Wireframe)
+  - [Detail](#Detail)
 - # [Definitions](#definitions)
 
 ## Sections
@@ -46,7 +47,7 @@
 
 ### API
 
-카카오맵 API 사용
+티맵 API 사용
 
 ### Thanks
 
@@ -59,3 +60,7 @@
 ### Wireframe
 
 <img width="70%" src="https://user-images.githubusercontent.com/71256649/129674426-1cfec27f-648f-4f94-bca3-80da46a0d844.jpg"/>
+
+### Detail
+
+<img width="200px" height="500px" src="https://user-images.githubusercontent.com/71256649/129675146-286ab8fe-4552-4206-9192-b6d05e51c340.PNG">
