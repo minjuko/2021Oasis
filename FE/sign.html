@@ -32,18 +32,18 @@
     <h1>회원 가입 </h1>
     <section class="sign-form1">
     <form name="login" action="index.html" method="post">
-      이메일 <br>
+      이메일 (*필수)<br>
       <input type="text" name="user_ID" placeholder="이메일 입력" required>
       <input type="button" name="user_IDcheck" class="btn_email_check" id="btn_email_check" value="이메일 확인">
-     
-     <br> 비밀번호<br> 
-      <input type="password" name="user_PW1" value="" required><br>
-      비밀번호 확인<br> 
+     <br>
+     <br> 비밀번호 (*필수)<br> 
+      <input type="password" name="user_PW1" placeholder="6자 이상 입력하세요" value="" required><br>
+        비밀번호 확인<br> 
       <input type="password" name="user_PW2" >
       <input type="button" name="user_PWcheck" class="btn_pw_check" id="btn_pw_check" value="비밀번호 확인" >
-      <br>
-      이름<br>  <input type="text" name="user_name" value="" required> <br>
-      생년월일<br> 
+      <br> <br>
+      이름 (*필수)<br>  <input type="text" name="user_name" value="" required> <br>
+      <br>생년월일<br> 
       <select name="year">
         <option value="">-- 선택 --</option>
         <option value="1930">1930</option>
@@ -189,8 +189,8 @@
         <option value="30">30</option>
         <option value="31">31</option>
       </select>
-      <br>
-      성별<br>  
+      <br> <br>
+      성별 (*필수) <br>  
       <label for="man">남성</label>
       <input type="radio" name="gender" value="m" id="man">
       <label for="woman">여성</label>
@@ -199,10 +199,8 @@
       <input type="radio" name="gender"value="m" id="none"> <br> <br>
       휴대전화<br>  
       <input type="text" name="user_phone" placeholder="010-****-****">
-      <input type="button" name="certification" class="btn_phone_check" id="btn_phone_check" value="인증번호 받기"><br>
-      <input type="text" name="certification" placeholder="인증번호를 입력하세요">
-      <input type="button" name="certification" class="btn_check" id="btn_check"  value="확인"><br><br>
-      본인 사진 <br>
+      <br>
+      <br>본인 사진 <br>
 <div class="file_wrap"> 
             <div class="filebox"> 
       <form action="http://localhost/upload.php" method="post" enctype="multipart/form-data">
@@ -221,4 +219,6 @@
   <script src="https://kit.fontawesome.com/762239f8d9.js" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
 
