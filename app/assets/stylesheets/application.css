@@ -12,9 +12,4 @@
  *
  *= require_tree .
  *= require_self
- *= stub active_admin
  */
-
- .small_image{
-     max-width: 80px;
- }

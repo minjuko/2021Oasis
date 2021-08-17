@@ -1,4 +1,4 @@
-## Table of Contents
+# README
 
 - [Sections](#sections)
   - [Title](#title)
@@ -10,30 +10,7 @@
   - [Thanks](#thanks)
   - [Contributing](#contributing)
   - [Wireframe](#Wireframe)
-- [Definitions](#definitions)
-
-## Sections
-
-### Title
-
-# _같이 타잉_
-
-호남 전용 택시 카풀 서비스
-
-### Banner
-
-### Short Description
-
-> 호남지역의 교통순환 불편 문제를 해결하기 위해 기획되었습니다. 호남지역에서만 사용이 가능하며 다양한 필터를 제공해 시민들의 교통 이용에 편의를 제공합니다.
-
-- 동성 전용 필터링 제공
-- 중간 경유 (최종 목적지 전에서 하차) 기능 제공
-- 인원 설정 가능
-- 개최자 양도 가능
-- 매너온도 시스템 도입으로 쾌적한 탑승환경 조정
-- 채팅 제공
-
-### Background
+- # [Definitions](#definitions)
 
 저희팀은 두 명의 호남 본토박이와 두명의 타지역 출신 학생으로 구성되어 있습니다. 타지인 입장에서의 문제, 현지인의 경험 등을 바탕으로 호남의 문제를 적극적으로 성찰할 수 있었으며 저희는 "교통"을 호남 제일의 문제로 꼽았습니다.
 
