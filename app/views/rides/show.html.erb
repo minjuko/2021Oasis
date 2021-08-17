@@ -52,3 +52,61 @@
 
 <%= link_to 'Edit', edit_ride_path(@ride) %> |
 <%= link_to 'Back', rides_path %>
+
+
+ <div class="map__info">
+        <a href="/rides"><i class="fas fa-arrow-left fa-2x"></i></a>
+        <img src="exampleimage/mapexample.png">
+        <div class="map__info-top">
+            <% if @ride.via %>
+            <strong><span>중간 경유 가능</span></strong>
+            <% end %>
+            <% if !@ride.samesex %>
+            <strong><span>성별 무관</span></strong>
+            <% end %>
+        </div>
+    </div>
+    <div class="deparrtemre">
+        <div class="deparrtemre__dear">
+            <span><%= @ride.departure %></span>
+            <span> → </span>
+            <span><%= @ride.arrival %></span>
+        </div>
+        <div class="deparrtemre__arr">
+            <div class="deparrtemre__time">
+                <span> <%= @ride.reservation %> </span>
+            </div>
+            <div class="deparrtemre__remain">
+                <span>3석</span>
+            </div>
+        </div>
+        
+    </div>
+    <div class="user__manner">
+        <div class="user__manner-div">
+            <div class="user__manner__profile"><img src="exampleimage/userduck.jpg"></div>
+            <div class="user__manner_name"><span>duck</span></div>
+        </div>
+        <div class="user__manner_temper">
+            <span>매너온도 </span>
+            <span> 60℃</span>
+            <i class="fas fa-thermometer-three-quarters"></i>
+        </div>
+    </div>
+    <div class="detail__inscript">
+        <p>
+            <%= @ride.memo%>
+        </p>
+    </div>
+    <div class="money__apply">
+        <div class="money__apply__cost">
+            <span>예상 금액 </span>
+            <span>13000원</span>
+        </div>
+        <div class="money__apply__reap">
+            <a href="home.html">
+                <span>잔여 1석</span>
+                <span>신청하기</span>
+            </a>
+        </div>
+    </div>

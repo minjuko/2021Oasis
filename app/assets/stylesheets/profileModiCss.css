@@ -1,23 +1,23 @@
-.profile__modify{
+.profile__modify {
   width: 100%;
 }
-.profile__modify-ali i{
+.profile__modify-ali i {
   left: 10px;
   color: white;
   margin-top: 5px;
 }
-.profile__modify-ali{
+.profile__modify-ali {
   padding: 10px 0px;
-  font-size: x-large  ;
+  font-size: x-large;
   margin-top: 30px;
-  background-color:#011140 ;
-  color:white;
+  background-color: #011140;
+  color: white;
   text-align: center;
   font-weight: 550;
   display: flex;
   justify-content: flex-start;
 }
-.profile__modify-ali span{
+.profile__modify-ali span {
   margin-left: 60px;
 }
 
@@ -45,6 +45,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   font-size: large;
   text-align: center;
+  margin: 10px 0px;
 }
 .profile__modify-input {
   bottom: 0px;
@@ -55,7 +56,7 @@
   width: 100%;
   box-sizing: border-box;
   z-index: 2;
-  background-color: rgb(122, 122, 122);;
+  background-color: rgb(122, 122, 122);
 }
 .profile__modify-input__btn {
   border: 0;

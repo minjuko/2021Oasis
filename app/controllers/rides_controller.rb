@@ -41,7 +41,7 @@ class RidesController < ApplicationController
     @ride = Ride.new(ride_params)
     @ride.user = current_user
     @ride.end = false
-    @ride.left = @ride.min
+    @ride.left = @ride.min-1
     respond_to do |format|
       if @ride.save
         format.html { redirect_to @ride, notice: "Ride was successfully created." }
