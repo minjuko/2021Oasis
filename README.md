@@ -58,4 +58,4 @@
 
 ### Wireframe
 
-<img src="exampleimage/wireframe.jpg">
+<img width="70%" src="exampleimage/wireframe.jpg"/>
