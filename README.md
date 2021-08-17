@@ -63,4 +63,4 @@
 
 ### Detail
 
-<img width="200px" height="500px" src="https://user-images.githubusercontent.com/71256649/129675146-286ab8fe-4552-4206-9192-b6d05e51c340.PNG">
+<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675146-286ab8fe-4552-4206-9192-b6d05e51c340.PNG">
