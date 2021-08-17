@@ -1,16 +1,20 @@
-<h2>Forgot your password?</h2>
+<section class="psfind-form">
+  <h1>비밀번호 찾기</h1>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <div class="field">
+      <%= f.label :이메일 %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" ,:placeholder => "이메일 입력"%>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
+    <div class="actions">
+      <%= f.submit "초기화된 비밀번호 받기" ,:class => "psfind-email__btn"%>
+    </div>
+  <% end %>
 
-<%= render "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
+</section>
+
+<%= stylesheet_link_tag 'find-password', media: 'all', 'data-turbolinks-track' => true %>

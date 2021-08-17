@@ -1,0 +1,97 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+.main{
+  width: 100%;
+}
+.profile__span {
+  padding-top: 50px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: #012340;
+  color:white;
+  font-size: 20px;
+  width: 100%;
+}
+.profile__info img {
+  padding: 10px 3px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.profile__info {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 5px;
+}
+
+.profile__info-text__name{
+  font-size: larger;
+  font-weight: 600;
+}
+
+.profile__info-text__adnum{
+  font: size 9px;
+  color:#797979
+}
+.profile__info-text {
+  margin-left: 25px;
+}
+.profile__info-text__name {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: x-large;
+}
+.profile__revise {
+  padding: 13px 0px;
+  text-align: center;
+  font-size: larger;
+  background-color: rgb(231, 231, 231);
+  color: rgb(0, 0, 0);
+  margin-left: 10px;
+}
+
+.profile__temperture-context {
+  text-align: center;
+  font-size: large;
+}
+.profile__carpoollist {
+  padding: 11.5px 0px;
+  text-align: center;
+  font-size: larger;
+  margin-top: 3px;
+  background-color: rgb(231, 231, 231);
+  color: rgb(0, 0, 0);
+  margin-left: 10px;
+}
+.profile__temperture {
+  display: flex;
+  justify-content: space-around;
+  margin: 35px 30px;
+}
+.profile__temperture img {
+  margin: 0px 50px;
+  width: 60px;
+  height: 180px;
+}
+
+.profile__temperture-context__my {
+  margin-top: 10px;
+}
+.profile__temperture-context__tem {
+  font-size: xx-large;
+  font-weight: 550;
+  margin-top: 20px;
+  color:tomato;
+  margin-bottom: 15px;
+}
+.profile__logout {
+  margin-top: 10px;
+  text-align: center;
+  font-size: large;
+  padding: 12px;
+  background-color: #ffffff;
+  color: rgb(173, 173, 173);
+}

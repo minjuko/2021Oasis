@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #011140;
+}
+
+.psfind-form {
+  width: 360px;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border-right: 5px;
+  padding: 50px;
+  text-align: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.psfind-email__btn {
+  background-color: #011140;
+
+  border: none;
+
+  color: white;
+
+  padding: 3px 20px;
+
+  text-decoration: none;
+
+  display: inline;
+
+  font-size: 16px;
+
+  margin: 10px 2px;
+
+  cursor: pointer;
+  text-align: auto;
+}
+
+.psfind-phone__btn {
+  background-color: #011140;
+
+  border: none;
+
+  color: white;
+
+  padding: 3px 20px;
+
+  text-align: auto;
+
+  text-decoration: none;
+  display: inline;
+
+  font-size: 12px;
+
+  margin: 10px 2px;
+
+  cursor: pointer;
+}
+
+.psfind-check__btn {
+  background-color: #011140;
+
+  border: none;
+
+  color: white;
+
+  padding: 3px 20px;
+
+  text-align: auto;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+  font-size: 16px;
+
+  margin: 10px 2px;
+
+  cursor: pointer;
+}
+
+.psfind-pwcheck__btn {
+  background-color: #011140;
+
+  border: none;
+
+  color: white;
+
+  padding: 3px 20px;
+
+  text-align: auto;
+
+  text-decoration: none;
+
+  display: inline;
+
+  font-size: 12px;
+
+  margin: 10px 2px;
+
+  cursor: pointer;
+}
+
+.psfind-reset__btn {
+  background-color: #011140;
+
+  border: none;
+
+  color: white;
+
+  padding: 3px 20px;
+
+  text-align: auto;
+
+  text-decoration: none;
+
+  display: inline;
+
+  font-size: 16px;
+
+  margin: 10px 2px;
+
+  cursor: pointer;
+}
+
+.psfind-cancel__btn {
+  background-color: #011140;
+
+  border: none;
+
+  color: white;
+
+  padding: 3px 20px;
+
+  text-align: auto;
+
+  text-decoration: none;
+
+  display: inline;
+
+  font-size: 12px;
+
+  margin: 10px 2px;
+
+  cursor: pointer;
+}
+.login-btn__sign {
+  background-color: #011140;
+
+  border: none;
+
+  color: white;
+
+  padding: 3px 20px;
+
+  text-decoration: none;
+
+  display: inline;
+
+  font-size: 16px;
+
+  margin: 10px 2px;
+
+  cursor: pointer;
+
+  text-align: auto;
+}
+.login-btn_psfind {
+  background-color: #011140;
+
+  border: none;
+
+  color: white;
+
+  padding: 3px 20px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+  font-size: 16px;
+
+  margin: 10px 2px;
+
+  cursor: pointer;
+}

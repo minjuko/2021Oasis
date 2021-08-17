@@ -1,0 +1,68 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.carpool {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 20px;
+  padding-top: 45px;
+  padding-left: 10px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: #011140;
+  color: aliceblue;
+  width: 100%;
+}
+.carpool span {
+  margin-left: 20px;
+}
+.carpool__list {
+  margin: 10px 10px;
+  background-color: whitesmoke;
+}
+.carpool__list-list {
+  background-color: whitesmoke;
+  display: flex;
+  padding: 10px 1px;
+  margin: 0px 5px;
+  justify-content: space-between;
+  font-weight: 550;
+}
+.carpool__list-list li:first-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.carpool__info {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: large;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 3px 5px;
+}
+.carpool__info-two {
+  padding: 0px 15px;
+}
+.carpool__info-one span:first-child {
+  font-weight: 550;
+}
+.carpool__info-one span:nth-child(3) {
+  color: tomato;
+  font-weight: 500;
+}
+.carpool__info-two span:first-child {
+  font-weight: 550;
+}
+.carpool__info-two span:nth-child(3) {
+  color: tomato;
+}
+.carpool__info-three span:first-child {
+  font-weight: 550;
+}
+.carpool__info-three span:nth-child(3) {
+  color: green;
+}

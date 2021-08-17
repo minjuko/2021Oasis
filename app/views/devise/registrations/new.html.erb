@@ -1,43 +1,33 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :sex %><br />
-    <%= f.select :sex, User.statuses.keys %>
-  </div>
-
-  <div class="field">
-    <%= f.label :profile %><br />
-    <%= f.file_field :profile %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<section class = "sign-form">
+  <h1>회원 가입</h1>
+  <section class = "sign-form1">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+      &#42<%= f.label :이메일 %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "이메일 입력"%><br>
+      <input type="button" name="user_IDcheck" class="btn_email_check" id="btn_email_check" value="이메일 확인">
+      <br>
+      &#42<%= f.label :비밀번호 %><br />
+      <% if @minimum_password_length %>
+      <%= f.password_field :password, autocomplete: "new-password", :placeholder => "6자 이상 입력하세요." %><br>
+      <% end %>
+      &#42<%= f.label :비밀번호_확인 %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      <input type="button" name="user_PWcheck" class="btn_pw_check" id="btn_pw_check" value="비밀번호 확인" >
+      <br />
+      &#42<%= f.label :이름 %><br />
+      <%= f.text_field :name %><br>
+      &#42<%= f.label :성별 %><br />
+      <%= f.select :sex, User.statuses.keys %><br>
+      휴대전화<br>  
+      <input type="text" name="user_phone" placeholder="010-****-****"><br>
+      <%= f.label :본인_사진 %><br />
+      <%= f.file_field :profile %>
+      <div class="filebox">
+        <%= f.submit "가입", :class => "btn_sign_check"%>
+        <a href="/users/sign_in" type="button" class="btn_cancel" id="btn_cancel">취소</a>
+      </div>
+  <% end %>
+  </section>
+</section>
+<%= stylesheet_link_tag 'sign-in', media: 'all', 'data-turbolinks-track' => true %>
