@@ -9,6 +9,9 @@
   - [Contributing](#contributing)
   - [Wireframe](#Wireframe)
   - [Detail](#Detail)
+    - [Login](#Login)
+    - [Sign](#Sign)
+    - [Psfind](#Psfind)
 - # [Definitions](#definitions)
 
 ## Sections
@@ -63,4 +66,18 @@
 
 ### Detail
 
+#### Login
+
 <img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675146-286ab8fe-4552-4206-9192-b6d05e51c340.PNG">
+
+- login.html, loginCss.css
+  > 가장 처음 시작하는 로그인창
+
+#### Sign
+
+<img width="200px" height="350px" src="<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675146-286ab8fe-4552-4206-9192-b6d05e51c340.PNG">
+
+- finish.html, login.html, finishCss.css, loginCss.css
+  > 회원가입 창 form으로 회원 정보 전달
+
+#### Psfind
