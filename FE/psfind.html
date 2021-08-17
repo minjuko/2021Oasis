@@ -1,50 +1,88 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta name="viewport" content="width=360px, height=640px">
-  <meta charset="utf-8"/>
-  <title>비밀번호 찾기</title>
-  <link rel="stylesheet" href="csscollection/psfindCss.css">
-     <link rel="stylesheet" href="csscollection/status.css">
-    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-  <div class="status-bar">
-    <div class="status-bar__column">
+  <head>
+    <meta name="viewport" content="width=360px, height=640px" />
+    <meta charset="utf-8" />
+    <title>비밀번호 찾기</title>
+    <link rel="stylesheet" href="csscollection/psfindCss.css" />
+    <link rel="stylesheet" href="csscollection/status.css" />
+    <link
+      href="https://fonts.googleapis.com/earlyaccess/notosanskr.css"
+      rel="stylesheet"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
         <span>No Service</span>
         <i class="fas fa-wifi"></i>
-    </div>
-    <div class="status-bar__column">
+      </div>
+      <div class="status-bar__column">
         <span>18:43</span>
-    </div>
-    <div class="status-bar__column">
+      </div>
+      <div class="status-bar__column">
         <span>73%</span>
         <i class="fas fa-battery-full fa-lg"></i>
         <i class="fas fa-bolt"></i>
+      </div>
     </div>
-</div>
-  <section class="psfind-form">
-   <h1>비밀번호 찾기 </h1>
-    <form name="login" action="login.html" method="post">
-      이메일 <br>
-      <input type="text" name="psfind-email" placeholder="이메일 입력"required >
-       <input type="button" name="psfind-email__btn" class="psfind-email__btn" id="psfind-email__btn" value="이메일 확인">
-      <br>
-      <br> 비밀번호 재설정<br>  
-      <input type="password" name="psfind-pw" value=""><br>
-      비밀번호 확인<br> 
-      <input type="password" name="psfind-pwcheck" >
-      <input type="button" class="psfind-pwcheck__btn" id="psfind-pwcheck__btn" name="psfind-pwcheck__btn" value="비밀번호 확인">
-      <br> <br>
-       <button type="submit" class="psfind-reset__btn" id="psfind-reset__btn" onclick="location.href='login.html'">재설정 완료</button>
-      <button type="button" class="psfind-cancel__btn" id="psfind-cancel__btn" onclick="location.href='login.html'">취소</button>
-      <br><br>
-   
-    </form>
-  </section>
-  
-  <script src="https://kit.fontawesome.com/762239f8d9.js" crossorigin="anonymous"></script>
-</body>
+    <section class="psfind-form">
+      <h1>비밀번호 찾기</h1>
+      <form name="login" action="login.html" method="post">
+        이메일 <br />
+        <input
+          type="text"
+          name="psfind-email"
+          placeholder="이메일 입력"
+          required
+        />
+        <input
+          type="button"
+          name="psfind-email__btn"
+          class="psfind-email__btn"
+          id="psfind-email__btn"
+          value="이메일 확인"
+        />
+        <br />
+        <br />
+        비밀번호 재설정<br />
+        <input type="password" name="psfind-pw" value="" /><br />
+        비밀번호 확인<br />
+        <input type="password" name="psfind-pwcheck" />
+        <input
+          type="button"
+          class="psfind-pwcheck__btn"
+          id="psfind-pwcheck__btn"
+          name="psfind-pwcheck__btn"
+          value="비밀번호 확인"
+        />
+        <br />
+        <br />
+        <button
+          type="submit"
+          class="psfind-reset__btn"
+          id="psfind-reset__btn"
+          onclick="location.href='login.html'"
+        >
+          재설정 완료
+        </button>
+        <button
+          type="button"
+          class="psfind-cancel__btn"
+          id="psfind-cancel__btn"
+          onclick="location.href='login.html'"
+        >
+          취소
+        </button>
+        <br /><br />
+      </form>
+    </section>
+
+    <script
+      src="https://kit.fontawesome.com/762239f8d9.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

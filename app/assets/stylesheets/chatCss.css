@@ -1,0 +1,133 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.chat-ali {
+  width: 100%;
+  position: fixed;
+}
+.chat-header {
+  top: 0px;
+  padding: 18px 5px;
+  padding-top: 45px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  background-color: #011140;
+  color: aliceblue;
+}
+.chat-header__arrow {
+  margin-left: 10px;
+  font-size: x-large;
+}
+.chat-header__arrow span {
+  margin-left: 10px;
+  font-weight: 800;
+}
+.chat-header__notifi {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 15px;
+  align-items: center;
+}
+.chat-header__notifi i:first-child {
+  color: #ffb03b;
+}
+.chat-header__tem {
+  margin: 0px 16px;
+  color: #468966;
+  font-weight: 700;
+  font-size: large;
+}
+.chat-header__tem span:first-child {
+  color: aliceblue;
+  font-size: small;
+  font-weight: 500;
+}
+.chat-header__tem span:nth-child(2) {
+  text-decoration: underline;
+}
+.dearsub {
+  top: 100px;
+  padding: 13px 30px;
+  background-color: white;
+}
+.dearsub i {
+  margin-right: 10px;
+}
+.dearsub span {
+  font-size: large;
+}
+.chat__context {
+  padding-top: 170px;
+  width: 100%;
+  height: 100%;
+  background-color: #c5d9d9;
+}
+.chat__context-date {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding: 5px 0px;
+}
+.chat__context-date span {
+  background-color: #bfb4b0;
+  margin: 10px 0px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  color: white;
+}
+.chat__context-text {
+  display: flex;
+  justify-content: flex-start;
+}
+.chat__context-text img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+.chat__context-text__text span:first-child {
+  font-size: larger;
+  font-weight: 900;
+}
+.chat__context-text__text span:last-child {
+  font-size: small;
+}
+.chat__context-text__text {
+  justify-content: space-evenly;
+  margin-left: 10px;
+}
+.chat__context-text__text-ali span:first-child {
+  background-color: wheat;
+  padding: 3px 10px;
+  border-radius: 5%;
+  font-size: medium;
+  font-weight: 530;
+}
+.chat__context-text__text-ali {
+  margin-top: 8px;
+}
+.chat__bar {
+  bottom: 0px;
+  position: fixed;
+  background-color: whitesmoke;
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+}
+.chat__bar-mes {
+  width: 85%;
+  height: 30px;
+  border: 0;
+  margin: 0px 10px;
+}
+.chat__bar-submit {
+  border: 0;
+  border-radius: 50%;
+  font-size: x-large;
+  color: black;
+  background-color: #bfb4b0;
+  text-align: center;
+}
