@@ -17,21 +17,20 @@ a {
 }
 .map__info-top strong {
   position: absolute;
-  top: 50px;
-  right: 20px;
-  background-color: #376b8c;
+  top: 52px;
+  right: 10px;
   padding: 5px;
   border-radius: 5%;
-  color: aliceblue;
+  color: #011140;
+  font-size: 13px;
 }
 .map__info-top strong:last-child {
   position: absolute;
-  top: 85px;
-  right: 20px;
-  background-color: #84aebf;
-  padding: 5px;
+  top: 79px;
+  right: 10px;
+  padding: auto;
   border-radius: 5%;
-  color: aliceblue;
+  color: #011140;
 }
 .deparrtemre {
   display: flex;
@@ -136,6 +135,7 @@ a {
 .money__apply__reap {
   background-color: #376b8c;
   padding: 8px 8px;
+  margin-right:5px;
   border-radius: 5px;
   text-align: center;
   font-size: 19px;
@@ -155,4 +155,20 @@ a {
   margin-left: 10px;
   color: tomato;
   font-weight: 900;
+}
+
+.money__apply__cost span:first-child {
+  font-size: 15px;
+  margin-left: 10px;
+  color: aliceblue;
+  font-weight: 900;
+}
+
+.ft_select {
+  background-color: white;
+  padding: 8px 8px;
+  margin-right:5px;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 20px;
 }
