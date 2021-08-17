@@ -58,4 +58,4 @@
 
 ### Wireframe
 
-<img src="exampleimage/wireframe.jgp">
+<img src="exampleimage/wireframe.jpg">
