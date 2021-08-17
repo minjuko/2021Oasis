@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  departure: MyString
+  arrival: MyString
+  reservation: 2021-08-17 15:47:23
+  min: 1
+  max: MyString
+  integer: MyString
+  memo: MyText
+  via: false
+  samesex: false
+  left: 1
+  end: false
+
+two:
+  user: two
+  departure: MyString
+  arrival: MyString
+  reservation: 2021-08-17 15:47:23
+  min: 1
+  max: MyString
+  integer: MyString
+  memo: MyText
+  via: false
+  samesex: false
+  left: 1
+  end: false

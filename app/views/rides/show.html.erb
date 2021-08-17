@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @ride.user.name %>
+</p>
+
+<p>
+  <strong>Departure:</strong>
+  <%= @ride.departure %>
+</p>
+
+<p>
+  <strong>Arrival:</strong>
+  <%= @ride.arrival %>
+</p>
+
+<p>
+  <strong>Reservation:</strong>
+  <%= @ride.reservation %>
+</p>
+
+<p>
+  <strong>Min:</strong>
+  <%= @ride.min %>
+</p>
+
+<p>
+  <strong>Memo:</strong>
+  <%= @ride.memo %>
+</p>
+
+<p>
+  <strong>Via:</strong>
+  <%= @ride.via %>
+</p>
+
+<p>
+  <strong>Samesex:</strong>
+  <%= @ride.samesex %>
+</p>
+
+<p>
+  <strong>Left:</strong>
+  <%= @ride.left %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @ride.end %>
+</p>
+
+<%= link_to 'Edit', edit_ride_path(@ride) %> |
+<%= link_to 'Back', rides_path %>
