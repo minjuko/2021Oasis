@@ -218,5 +218,7 @@
 <img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675139-994b267d-a401-4cba-b5fc-88142aedc391.PNG">
 
 - myRideInfo.html, myRideInfoCss.css
+
   > 내가 동승 참여자인 동승 내역을 조회했을 때 뜨는 페이지이다.
+
   > 취소하기 버튼으로 파티에서 떠날 수 있다.(기능 구현x)
