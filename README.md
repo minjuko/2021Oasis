@@ -25,7 +25,6 @@
     - [CarOver](#CarOver)
     - [MyResInfo](#MyResInfo)
     - [MyRideInfo](#MyRideInfo)
-- # [Definitions](#definitions)
 
 ## Sections
 
