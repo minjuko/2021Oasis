@@ -1,0 +1,52 @@
+<%= form_with(model: ride) do |form| %>
+  <% if ride.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ride.errors.count, "error") %> prohibited this ride from being saved:</h2>
+
+      <ul>
+        <% ride.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :departure %>
+    <%= form.text_field :departure %>
+  </div>
+
+  <div class="field">
+    <%= form.label :arrival %>
+    <%= form.text_field :arrival %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reservation %>
+    <%= form.datetime_field :reservation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :min %>
+    <%= form.number_field :min %>
+  </div>
+
+  <div class="field">
+    <%= form.label :memo %>
+    <%= form.text_area :memo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :via %>
+    <%= form.check_box :via %>
+  </div>
+
+  <div class="field">
+    <%= form.label :samesex %>
+    <%= form.check_box :samesex %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
