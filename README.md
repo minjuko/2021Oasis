@@ -9,7 +9,7 @@
   - [API](#api)
   - [Thanks](#thanks)
   - [Contributing](#contributing)
-  - [License](#license)
+  - [Wireframe](#Wireframe)
 - [Definitions](#definitions)
 
 ## Sections
@@ -43,79 +43,19 @@
 
 ### Usage
 
-**Status:** Required by default, optional for [documentation repositories](#definitions).
-
-**Requirements:**
-
-- Code block illustrating common usage.
-- If CLI compatible, code block indicating common usage.
-- If importable, code block indicating both import functionality and usage.
-
-**Subsections:**
-
-- `CLI`. Required if CLI functionality exists.
-
-**Suggestions:**
-
-- Cover basic choices that may affect usage: for instance, if JavaScript, cover promises/callbacks, ES6 here.
-- If relevant, point to a runnable file for the usage code.
+1. login.html 실행
+2. F12 실행 후 Galaxy S5로 화면 맞추기
 
 ### API
 
-**Status:** Optional.
-
-**Requirements:**
-
-- Describe exported functions and objects.
-
-**Suggestions:**
-
-- Describe signatures, return types, callbacks, and events.
-- Cover types covered where not obvious.
-- Describe caveats.
-- If using an external API generator (like go-doc, js-doc, or so on), point to an external `API.md` file. This can be the only item in the section, if present.
+카카오맵 API 사용
 
 ### Thanks
 
-**Status**: Optional.
+> html 개발 : 노수지, 고민주, 최은성
+> css개발 : 노수지, 고민주
+> API 연동 : 고민주, 최은성
+> 데이터 및 서버관리 : 정효인
+> 특별 디자인 도움 : 조수빈
 
-**Requirements:**
-
-- Must be called `Thanks`, `Credits` or `Acknowledgements`.
-
-**Suggestions:**
-
-- State anyone or anything that significantly helped with the development of your project.
-- State public contact hyper-links if applicable.
-
-### Contributing
-
-**Status**: Required.
-
-**Requirements:**
-
-- State where users can ask questions.
-- State whether PRs are accepted.
-- List any requirements for contributing; for instance, having a sign-off on commits.
-
-**Suggestions:**
-
-- Link to a CONTRIBUTING file -- if there is one.
-- Be as friendly as possible.
-- Link to the GitHub issues.
-- Link to a Code of Conduct. A CoC is often in the Contributing section or document, or set elsewhere for an entire organization, so it may not be necessary to include the entire file in each repository. However, it is highly recommended to always link to the code, wherever it lives.
-- A subsection for listing contributors is also welcome here.
-
-### License
-
-**Status:** Required.
-
-**Requirements:**
-
-- State license full name or identifier, as listed on the [SPDX](https://spdx.org/licenses/) license list. For unlicensed repositories, add `UNLICENSED`. For more details, add `SEE LICENSE IN <filename>` and link to the license file. (These requirements were adapted from [npm](https://docs.npmjs.com/files/package.json#license)).
-- State license owner.
-- Must be last section.
-
-**Suggestions:**
-
-- Link to longer License file in local repository.
+### Wireframe
