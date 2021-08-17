@@ -75,7 +75,7 @@
 
 #### Sign
 
-<img width="200px" height="350px" src="<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675146-286ab8fe-4552-4206-9192-b6d05e51c340.PNG">
+<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675146-286ab8fe-4552-4206-9192-b6d05e51c340.PNG">
 
 - finish.html, login.html, finishCss.css, loginCss.css
   > 회원가입 창 form으로 회원 정보 전달
