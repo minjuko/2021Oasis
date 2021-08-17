@@ -58,4 +58,4 @@
 
 ### Wireframe
 
-<img width="70%" src="exampleimage/wireframe.jpg"/>
+<img width="70%" src="https://user-images.githubusercontent.com/71256649/129674426-1cfec27f-648f-4f94-bca3-80da46a0d844.jpg"/>
