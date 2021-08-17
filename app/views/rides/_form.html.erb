@@ -1,4 +1,19 @@
-<%= form_with(model: ride) do |form| %>
+<%= form_with(model: ride, html: {:id => "resadd-form"}) do |form| %>
+<div class="resadd">
+    <div class="resadd__res"><span>예약 만들기</span></div>
+    <div class="resadd__conf">
+        <a href="/rides">
+            <div class="resadd__conf__no">
+                <i class="fas fa-times"></i>
+                <span>취소</span>
+            </div>
+        </a>
+        <div class="resadd__conf__yes">
+            <i class="fas fa-check"></i>
+            <%= form.submit "게시" %>
+        </div>
+    </div>
+</div>
   <% if ride.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(ride.errors.count, "error") %> prohibited this ride from being saved:</h2>
@@ -10,43 +25,41 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :departure %>
+  <div class="resadd-form__departure">
+    <span>출발지</span>
     <%= form.text_field :departure %>
+    <i class="fas fa-search"></i>
   </div>
 
-  <div class="field">
-    <%= form.label :arrival %>
+  <div class="resadd-form__arrival">
+    <span>도착지</span>
     <%= form.text_field :arrival %>
+    <i class="fas fa-search"></i>
   </div>
 
-  <div class="field">
-    <%= form.label :reservation %>
+  <div class="resadd-form__time">
+    <span>예약 시간</span>
     <%= form.datetime_field :reservation %>
   </div>
 
-  <div class="field">
-    <%= form.label :min %>
+  <div class="resadd-form__maxx">
+    <span>최소 인원 </span>
     <%= form.number_field :min %>
   </div>
 
-  <div class="field">
-    <%= form.label :memo %>
-    <%= form.text_area :memo %>
+  <div class="resadd-form__memo">
+    <%= form.label :추가_메모 %>
+    <%= form.text_field :memo %>
   </div>
 
-  <div class="field">
-    <%= form.label :via %>
+  <div class="resadd-form__midinter">
+    <span>중간 경유 여부</span>
     <%= form.check_box :via %>
   </div>
 
-  <div class="field">
-    <%= form.label :samesex %>
+  <div class="resadd-form__sexseper">
+    <span>동일 성별 승차 여부</span>
     <%= form.check_box :samesex %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  </div>  
 <% end %>
+<%= stylesheet_link_tag 'newride', media: 'all', 'data-turbolinks-track' => true %>
