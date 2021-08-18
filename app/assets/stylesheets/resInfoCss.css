@@ -10,14 +10,14 @@ a {
 }
 .map__info i {
   position: fixed;
-  margin-top: 45px;
+  margin-top: 65px;
   z-index: 2;
   color: #011140;
-  margin-left: 5px;
+  margin-left: 8px;
 }
 .map__info-top strong {
   position: absolute;
-  top: 52px;
+  top: 30px;
   right: 10px;
   padding: 5px;
   border-radius: 5%;
@@ -26,7 +26,7 @@ a {
 }
 .map__info-top strong:last-child {
   position: absolute;
-  top: 79px;
+  top: 50px;
   right: 10px;
   padding: auto;
   border-radius: 5%;
@@ -78,6 +78,7 @@ a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   background-color: #faf5e357;
 }
+
 .user__manner__profile img {
   width: 45px;
   height: 45px;
@@ -98,6 +99,11 @@ a {
   margin-right: 15px;
   color: #3a6b38;
   font-size: large;
+}
+.not__owner {
+  background-color: white;
+  font-weight: 200;
+  font-size: 15px;
 }
 .user__manner_temper span {
   margin-right: 7px;
@@ -134,30 +140,35 @@ a {
 }
 .money__apply__reap {
   background-color: #376b8c;
-  padding: 8px 8px;
-  margin-right:5px;
   border-radius: 5px;
+  padding: 8px 8px;
+  margin-right: 5px;
   text-align: center;
   font-size: 19px;
+  display: flex;
+  justify-content: space-evenly;
+  color: aliceblue;
 }
+/*
 .money__apply__reap span {
   color: aliceblue;
   font-weight: 1000;
-}
+} */
 .money__apply__cost {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   color: aliceblue;
 }
-.money__apply__cost span:last-child {
+.money__apply__cost span:first-child {
   font-size: 20px;
   margin-left: 10px;
   color: tomato;
   font-weight: 900;
 }
 
-.money__apply__cost span:first-child {
+.money__apply__cost span:last-child {
   font-size: 15px;
   margin-left: 10px;
   color: aliceblue;
@@ -167,8 +178,32 @@ a {
 .ft_select {
   background-color: white;
   padding: 8px 8px;
-  margin-right:5px;
+  margin-right: 5px;
   border-radius: 5px;
   text-align: left;
   font-size: 20px;
+}
+.mine__canclose {
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 0;
+}
+.mine__canclose-cancle {
+  background-color: whitesmoke;
+  padding: 8px 45px;
+  color: black;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.mine__canclose-close {
+  background-color: whitesmoke;
+  color: black;
+  padding: 8px 45px;
+  margin: 0px 0px;
 }
