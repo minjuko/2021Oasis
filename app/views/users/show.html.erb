@@ -1,2 +1,65 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="main">
+	<div class="profile__span">
+		<strong> <span>  나의 프로필</span> </strong>
+	</div>
+	<div class="profile__info">
+		<% if current_user.profile.attached? %>
+        <img src="<%= url_for(current_user.profile) %>" alt="" class="profile_img rounded-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      	<% else %>
+        <img src="https://picsum.photos/200" alt="" class="profile_img rounded-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      	<% end %>
+		<div class="profile__info-text">
+		    <div class="profile__info-text__name">
+                <span><%= @user.name %></span>
+            </div>
+			<div class="profile__info-text__adnum">
+				<span>북구</span>
+				<span>#<%= @user.id %></span>
+			</div>
+        </div>
+	</div>
+	<a href="/users/edit">
+		<div class="profile__revise">
+        	<span>프로필 수정</span>
+		</div>
+	</a>
+	<a href="carpoolCollect.html">
+		<div class="profile__carpoollist">
+			<span>동승 내역</span>
+		</div>
+	</a>
+		
+	<div class="profile__temperture">
+		<img src="https://github.com/2021-oasis-hackathon/Bluepoint/blob/main/FE/exampleimage/thermometer.jpg?raw=true"> 
+		<div class="profile__temperture-context">
+			<div class="profile__temperture-context__my"><span>현재 나의 온도</span></div>
+			<div class="profile__temperture-context__tem"><span>78.6도</span></div>
+			<div class="profile__temperture-context__per"><span>상위 3%</span></div>
+		</div>
+	</div>
+</div>
+<a href="/users/sign_out" data-method="delete">
+	<div class="profile__logout">
+		<span>로그아웃</span>
+	</div>
+</a>
+<nav class="nav">
+    <ul type="none" class="nav__list">
+        <li class="nav__btn">
+            <a class="nav__link" href="/rides">
+                <i class="fas fa-home fa-2x"></i>
+            </a>
+        </li>
+        <li class="nav__btn">
+            <a class="nav__link" href="chatlist.html">
+                <i class="far fa-comment fa-2x"></i>
+            </a>
+        </li>
+        <li class="nav__btn">
+            <a class="nav__link" href="#">
+                <i class="fas fa-user fa-2x"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+<%= stylesheet_link_tag 'profile', media: 'all', 'data-turbolinks-track' => true %>
