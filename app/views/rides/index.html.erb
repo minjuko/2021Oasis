@@ -33,12 +33,12 @@
     </div>
     <div class="resinfo__dettwo">
       <span>출발 잔여 <%= ride.left %>석</span>   <br>
-      <span class="money">예상 13000원</span>   <br>
+      <span class="money">예상 ?원</span>   <br>
       <% if ride.via %>
       <span class="via">동행 경유 가능</span> 
       <% end %>
       <% if ride.samesex %>
-        <% if ride.user.sex==0 %>
+        <% if ride.user.sex=='남성' %>
       <span class="samesex">남성만 신청</span> 
         <% else %>
       <span class="samesex">여성만 신청</span> 
@@ -67,7 +67,7 @@
       </a>
     </li>
     <li class="nav__btn">
-      <a class="nav__link" href="chatlist.html">
+      <a class="nav__link" href="/chats/list">
         <i class="far fa-comment fa-2x"></i>
       </a>
     </li>
