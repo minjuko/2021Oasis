@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_17_070028) do
+ActiveRecord::Schema.define(version: 2021_08_17_192546) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -66,6 +66,16 @@ ActiveRecord::Schema.define(version: 2021_08_17_070028) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "ride_id"
+    t.string "departure"
+    t.string "arrival"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
   create_table "rides", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "departure"
@@ -100,5 +110,6 @@ ActiveRecord::Schema.define(version: 2021_08_17_070028) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "comments", "users"
   add_foreign_key "rides", "users"
 end
