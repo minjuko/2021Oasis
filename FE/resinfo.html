@@ -31,10 +31,10 @@
         function initTmap() {
             // 1. 지도 띄우기
             map = new Tmapv2.Map("map_div", {
-                center : new Tmapv2.LatLng(35.180568, 126.905688),
+                center : new Tmapv2.LatLng(35.175, 126.889),
                 width : "100%",
                 height : "250px",
-                zoom : 12,
+                zoom : 13,
                 zoomControl : true,
                 scrollwheel : true
             });
@@ -451,6 +451,21 @@
 
     </script>
 
+    <style>
+        #btn_select{
+            background-color: #ffffff; /* Green */
+  border: none;
+  color: white;
+  padding: 1px 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1px;
+  margin: 1px 1px;
+  cursor: pointer;
+        }
+    </style>
+
 </head>
 
 <body onload="initTmap();">
@@ -515,8 +530,7 @@
     <div class="map__info">
         <a href="home.html"><i class="fas fa-arrow-left fa-2x"></i></a>
        
-        <div class="map__info-top">
-            
+        <div class="map__info-top">    
             <strong><span>중간 경유 가능</span></strong>
             <strong><span>성별 무관</span></strong>
         </div>
