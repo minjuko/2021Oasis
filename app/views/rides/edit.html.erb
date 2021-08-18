@@ -1,6 +1,15 @@
-<h1>Editing Ride</h1>
-
-<%= render 'form', ride: @ride %>
-
-<%= link_to 'Show', @ride %> |
-<%= link_to 'Back', rides_path %>
+<section class="finish-form">
+    <%= form_with(model: @ride) do |form| %>
+        <div>
+            <strong>마감하시겠습니까?</strong><br>
+            <span>모집 마감시 되돌릴 수 없습니다.</span>
+            <%= form.check_box :end %>
+        </div>
+        <br>
+        <div class="finish-btn">
+            <%= form.submit "예", :class=>"finish-btn__login" %> 
+        </div>
+        <%= link_to '아니요', @ride, :class=>"finish-btn__login"%>
+    <% end %>
+</section>
+<%= stylesheet_link_tag 'finish', media: 'all', 'data-turbolinks-track' => true %>
