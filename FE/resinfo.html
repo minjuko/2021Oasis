@@ -101,7 +101,7 @@
                                                                 .toFixed(0) + "분,";
                                                 var tFare = " 총 요금 : "
                                                         + resultData[0].properties.totalFare
-                                                        + "원,";
+                                                        + "원,"; 
                                                 var taxiFare = " 예상 택시 요금 : "
                                                         + resultData[0].properties.taxiFare
                                                         + "원";
@@ -235,6 +235,7 @@
                                                     }//for문 [E]
                                                 }
                                             },
+
                                             error : function(request, status, error) {
                                                 console.log("code:"
                                                         + request.status + "\n"
@@ -242,9 +243,17 @@
                                                         + request.responseText
                                                         + "\n" + "error:" + error);
                                             }
+
+                                            
+
                                         });
                                 //JSON TYPE EDIT [E]
                             });
+
+                            document.getElementById("btn_select").click();
+
+                            
+
         }
     
         function addComma(num) {
@@ -438,18 +447,22 @@
             resultMarkerArr = [];
             resultdrawArr = [];
         }
+
+
     </script>
 
 </head>
 
 <body onload="initTmap();">
     <div class="ft_area">
+        
         <div class="ft_select_wrap">
             <br>
             <br>
             <div class="ft_select">
-                <select id="selectLevel">
-                    <option value="0" selected="selected">교통최적+추천</option>
+                <!--<select id="selectLevel">-->
+                    <option value="0" selected="selected"><!--교통최적+추천--></option>
+                    <!--
                     <option value="1">교통최적+무료우선</option>
                     <option value="2">교통최적+최소시간</option>
                     <option value="3">교통최적+초보</option>
@@ -457,12 +470,17 @@
                     <option value="10">최단거리+유/무료</option>
                     <option value="12">이륜차도로우선</option>
                     <option value="19">교통최적+어린이보호구역 회피</option>
-                </select> <select id="year">
-                    <option value="N" selected="selected">교통정보 표출 옵션</option>
-                    <option value="Y">Y</option>
-                    <option value="N">N</option>
-                </select>
-                <button id="btn_select">적용하기</button>
+                    -->
+               <!--</select>--><!-- <select id="year">-->
+                    <option value="N" selected="selected"><!--교통정보 표출 옵션--></option>
+                    <!--<option value="Y">Y</option>
+                    <option value="N">N</option>-->
+               <!-- </select>-->
+
+               <button id="btn_select">적용하기</button>
+            
+
+                
             </div>
         </div>
         <div class="map_act_btn_wrap clear_box"></div>
