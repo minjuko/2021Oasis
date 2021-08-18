@@ -8,4 +8,5 @@ class User < ApplicationRecord
   enum status: ["남성", "여성"]
 
   has_many :rides, dependent: :destroy
+  has_many :comments, dependent: :destroy
 end

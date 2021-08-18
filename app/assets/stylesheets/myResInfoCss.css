@@ -1,4 +1,4 @@
-a {
+/* a {
   text-decoration: none;
   color: inherit;
 }
@@ -59,8 +59,8 @@ a {
 }
 .deparrtemre__time {
   font-size: xx-large;
-}
-.user__indi {
+} */
+/* .user__indi {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
@@ -96,10 +96,13 @@ a {
 }
 .user__indi-temper i {
   color: #03a60e;
-}
+} */
 .user__indi-auth {
-  margin: 0px 20px;
+  /* margin: 0px 20px; */
   font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .user__indi-auth i:first-child {
   padding: 8px 8px;
@@ -113,7 +116,7 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.1);
   color: darkgoldenrod;
 }
-.minmax {
+/* .minmax {
   padding: 10px 20px;
   font-size: larger;
   color: #012340;
@@ -143,4 +146,4 @@ a {
   color: black;
   padding: 8px 45px;
   margin: 0px 0px;
-}
+} */

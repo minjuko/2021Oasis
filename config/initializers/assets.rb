@@ -14,6 +14,8 @@ Rails.application.config.assets.precompile += %w( edit-profile.css )
 Rails.application.config.assets.precompile += %w( profile.css )
 Rails.application.config.assets.precompile += %w( ride.css )
 Rails.application.config.assets.precompile += %w( newride.css )
+Rails.application.config.assets.precompile += %w( resInfo.css )
+Rails.application.config.assets.precompile += %w( finish.css )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.

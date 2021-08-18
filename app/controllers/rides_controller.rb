@@ -4,7 +4,7 @@ class RidesController < ApplicationController
   # GET /rides or /rides.json
   def index
     @allRides = Ride.all
-    @rides = @allRides.where(end: false)
+    @rides = @allRides.where(:end => false)
     if params[:departure].present?
       @rides = @rides.where(departure: params[:departure])
     end
@@ -40,8 +40,8 @@ class RidesController < ApplicationController
   def create
     @ride = Ride.new(ride_params)
     @ride.user = current_user
+    @ride.left = @ride.min
     @ride.end = false
-    @ride.left = @ride.min-1
     respond_to do |format|
       if @ride.save
         format.html { redirect_to @ride, notice: "Ride was successfully created." }
@@ -83,6 +83,6 @@ class RidesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def ride_params
-      params.require(:ride).permit(:departure, :arrival, :reservation, :min, :memo, :via, :samesex, :left)
+      params.require(:ride).permit(:departure, :arrival, :reservation, :min, :memo, :via, :samesex, :left, :end)
     end
 end
