@@ -42,6 +42,6 @@ a {
 }
 .chat__room-dear {
   padding-right: 15px;
-  font-size: larger;
-  font-weight: 540;
+  font-size: medium;
+  font-weight: 580;
 }
