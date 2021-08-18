@@ -10,10 +10,10 @@ a {
 }
 .map__info i {
   position: fixed;
-  margin-top: 45px;
+  margin-top: 65px;
   z-index: 2;
   color: #011140;
-  margin-left: 5px;
+  margin-left: 8px;
 }
 .map__info-top strong {
   position: absolute;
@@ -83,6 +83,7 @@ a {
   height: 45px;
   border-radius: 50%;
   margin: 5px 10px;
+  margin-left:40px;
   display: flex;
   align-items: center;
 }
