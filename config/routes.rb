@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root :to => "rides#index"
+  get 'rides/:ride_id/comments/destroy/:id' => 'comments#destroy'
   get 'users/show'
   get 'users/index'
   devise_for :users
