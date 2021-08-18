@@ -13,4 +13,13 @@ class CommentsController < ApplicationController
     @comment.find(params[:id]).destroy
     redirect_to request.referrer
   end
+
+  def swap
+    # @ride = Ride.find(params[:ride_id])
+    # @comment = @ride.comments.find(params[:id])
+    # k = @ride.user
+    # @ride.user = @comment.user 
+    # @comment.user = k
+    redirect_to request.referrer
+  end
 end

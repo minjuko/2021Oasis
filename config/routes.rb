@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   root :to => "rides#index"
+  get 'history/collect' => 'history#collect'
+  get 'history/full' => 'history#full'
+  get 'history/complete' => 'history#complete'
+  get 'chats/list' => 'chats#list'
+  get 'chats/a' => 'chats#a'
+  get 'chats/b' => 'chats#b'
+  get 'chats/c' => 'chats#c'
   get 'rides/:ride_id/comments/destroy/:id' => 'comments#destroy'
+  get 'rides/:ride_id/comments/swap/:id' => 'comments#swap'
   get 'users/show'
   get 'users/index'
   devise_for :users

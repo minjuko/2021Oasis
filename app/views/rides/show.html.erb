@@ -1,4 +1,4 @@
-<body onload="initTmap();">
+<body onload="initTmap()">
     <body class="ft_area">
       <div class="ft_select_wrap">
         <br />
@@ -92,7 +92,7 @@
           <%if @ride.user.id == current_user.id%>
           <div class="user__indi-auth">
             <a href = "/rides/<%=@ride.id%>/comments/destroy/<%=comment.id%>"><i class="far fa-thumbs-down"></i></a>
-            <i class="fas fa-crown"></i>   
+            <a href = "/rides/<%=@ride.id%>/comments/swap/<%=comment.id%>"><i class="fas fa-crown"></i></a>   
           </div>
           <%end%>
         </div>
@@ -109,6 +109,16 @@
       </div>
     </div>
     <% if @ride.user_id != current_user.id%>
+      <% if (@ride.comments.find{|i| i.user_id == current_user.id} != nil)%>
+      <div class="mine__canclose">
+        <div class="mine__canclose-cancle">
+          <a href = "/rides/<%=@ride.id%>/comments/destroy/<%=(@ride.comments.find{|i| i.user_id == current_user.id}).id%>">취소하기</a>
+        </div>
+        <div class="mine__canclose-close">
+          <%= link_to "뒤로가기", '/rides'%>
+        </div>
+      </div>
+      <% else %>
         <div class="money__apply">
         <div class="money__apply__cost">
             <span></span>
@@ -120,7 +130,8 @@
             </div>
         <% end %>
         </div>
-    <% else %>
+        <% end %>
+        <% else %>
         <div class="mine__canclose">
             <div class="mine__canclose-cancle">
                 <%= link_to "취소하기", ride_path(@ride), data: { method: :delete } %>

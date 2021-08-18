@@ -1,0 +1,76 @@
+<div class="chat">
+        <span>채팅</span>
+    </div>
+    <a href="/chats/a">
+        <div class="chat__room">
+            <div class="chat__room-pic">
+                <img src="https://github.com/2021-oasis-hackathon/Bluepoint/blob/main/FE/exampleimage/userduck.jpg?raw=true">
+                <div class="chat__room-user">
+                    <div class="chat__room-user__name"><span>은성 최</span></div>
+                    <div class="chat__room-user__con"><span>타시나요?</span></div>
+                </div>
+            </div>
+            
+            <div class="chat__room-dear">
+                <span>유스퀘어</span><br>
+                <span> → </span>
+                <span>충장로</span>
+            </div>
+        </div>
+    </a>
+    <a href="/chats/b">
+        <div class="chat__room">
+            <div class="chat__room-pic">
+                <img src="https://github.com/2021-oasis-hackathon/Bluepoint/blob/main/FE/exampleimage/bongguprofile.jpg?raw=true">
+                <div class="chat__room-user">
+                    <div class="chat__room-user__name"><span>봉구</span></div>
+                    <div class="chat__room-user__con"><span>반려동물 동반 가능한가요?</span></div>
+                </div>
+            </div>
+            
+            <div class="chat__room-dear">
+                <span>전남대</span><br>
+                <span> → </span>
+                <span>GIST</span>
+            </div>
+        </div>
+    </a>
+    <a href="/chats/c">
+        <div class="chat__room">
+            <div class="chat__room-pic">
+                <img src="https://github.com/2021-oasis-hackathon/Bluepoint/blob/main/FE/exampleimage/minju.jpg?raw=true">
+                <div class="chat__room-user">
+                    <div class="chat__room-user__name"><span>인민주</span></div>
+                    <div class="chat__room-user__con"><span>커피 한 잔 할래요옹?</span></div>
+                </div>
+            </div>
+            
+            <div class="chat__room-dear">
+                <span>익산역</span><br>
+                <span> → </span>
+                <span> 전주역</span>
+            </div>
+        </div>
+    </a>
+    
+    <div class="add__btn">
+  <a href="/rides/new">
+    <i class="fas fa-plus fa-2x"></i>
+  </a>
+</div>
+    
+    <nav class="nav">
+        <ul type="none" class="nav__list">
+            <li class="nav__btn">
+                <a class="nav__link" href="/rides">
+                    <i class="fas fa-home fa-2x"></i>
+                </i></a></li>
+            <li class="nav__btn">
+                <a class="nav__link" href="#">
+                    <i class="fas fa-comment fa-2x"></i>
+            <li class="nav__btn">
+                <a class="nav__link" href="/users/<%=current_user.id%>">
+                    <i class="far fa-user fa-2x"></i></a></li>
+        </ul>
+    </nav>
+<%= stylesheet_link_tag 'chatlist', media: 'all', 'data-turbolinks-track' => true %>

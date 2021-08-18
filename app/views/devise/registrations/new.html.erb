@@ -18,7 +18,7 @@
       &#42<%= f.label :이름 %><br />
       <%= f.text_field :name %><br>
       &#42<%= f.label :성별 %><br />
-      <%= f.select :sex, User.statuses.keys %><br>
+      <%= f.select :sex, User.sexes.keys %><br>
       휴대전화<br>  
       <input type="text" name="user_phone" placeholder="010-****-****"><br>
       <%= f.label :본인_사진 %><br />
