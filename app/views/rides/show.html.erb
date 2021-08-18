@@ -89,10 +89,9 @@
             <span> <%=@ride.user.manner%>℃</span>
             <i class="fas fa-thermometer-three-quarters"></i>
           </div>
-          <%if @ride.id = current_user.id%>
+          <%if @ride.user.id == current_user.id%>
           <div class="user__indi-auth">
-            <i class="far fa-thumbs-down"><%= link_to " ", "/rides/#{@ride.id}/comments/#{comment.id}", method:
-      "delete" %></i>
+            <a href = "/rides/<%=@ride.id%>/comments/destroy/<%=comment.id%>"><i class="far fa-thumbs-down"></i></a>
             <i class="fas fa-crown"></i>   
           </div>
           <%end%>
@@ -109,7 +108,9 @@
         <% end %>
       </div>
     </div>
-    <% if @ride.user.id != current_user.id%>
+    <% if @ride.user_id != current_user.id%>
+    <% @comment = @ride.comments.find(:current_user.id)%>
+    <% if !@comment %>
         <div class="money__apply">
         <div class="money__apply__cost">
             <span></span>
@@ -121,6 +122,7 @@
             </div>
         <% end %>
         </div>
+      <% end %>
     <% else %>
         <div class="mine__canclose">
             <div class="mine__canclose-cancle">
