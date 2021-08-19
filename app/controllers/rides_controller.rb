@@ -3,6 +3,15 @@ class RidesController < ApplicationController
   before_action :authenticate_user!
   # GET /rides or /rides.json
   def index
+    arr = []
+    arr[0] = ["호남대","광주여대","유스퀘어"]
+    arr[1] = ["광주공항","광주광역시청","유스퀘어"]
+    arr[2] = ["광주대","남구청","유스퀘어"]
+    arr[3] = ["조선대","NC스퀘어충장로","유스퀘어"]
+    arr[4] = ["광주교대","광주역","유스퀘어"]
+    arr[5] = ["고려고","전남대","유스퀘어"]
+    arr[6] = ["남부대","보건대","유스퀘어"]
+    arr[7] = ["수완롯데아울렛","신가병원","유스퀘어"]
     @allRides = Ride.all
     @rides = @allRides.where(:end => false)
     if params[:departure].present?
@@ -12,7 +21,7 @@ class RidesController < ApplicationController
     if params[:arrival].present?
       @rides = @rides.where(arrival: params[:arrival])
     end
-  
+
     if params[:start_date].present?
       selected_date = Date.parse(params[:start_date])
       @rides = @rides.where(:reservation=> selected_date.beginning_of_day..selected_date.end_of_day)
