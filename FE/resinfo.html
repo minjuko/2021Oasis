@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta name="viewport" content="width=360px, height=640px" />
+    <link rel="stylesheet" href="csscollection/status.css" />
+    <link rel="stylesheet" href="csscollection/resInfoCss.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13:00 A->B</title>
 
-    <meta name="viewport" content="width=360px, height=640px">
-    <link rel="stylesheet" href="csscollection/status.css">
-    <link rel="stylesheet" href="csscollection/resInfoCss.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>13:00 A->B </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
-    <script	src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=YOUR_TMAP_APP_KEY"></script>
     <script type="text/javascript">
+
+
+
         var map;
         var markerInfo;
         //출발지,도착지 마커
@@ -31,10 +32,10 @@
         function initTmap() {
             // 1. 지도 띄우기
             map = new Tmapv2.Map("map_div", {
-                center : new Tmapv2.LatLng(35.180568, 126.905688),
+                center : new Tmapv2.LatLng(35.175, 126.889),
                 width : "100%",
                 height : "250px",
-                zoom : 12,
+                zoom : 13,
                 zoomControl : true,
                 scrollwheel : true
             });
@@ -101,7 +102,7 @@
                                                                 .toFixed(0) + "분,";
                                                 var tFare = " 총 요금 : "
                                                         + resultData[0].properties.totalFare
-                                                        + "원,";
+                                                        + "원,"; 
                                                 var taxiFare = " 예상 택시 요금 : "
                                                         + resultData[0].properties.taxiFare
                                                         + "원";
@@ -235,6 +236,7 @@
                                                     }//for문 [E]
                                                 }
                                             },
+
                                             error : function(request, status, error) {
                                                 console.log("code:"
                                                         + request.status + "\n"
@@ -242,9 +244,17 @@
                                                         + request.responseText
                                                         + "\n" + "error:" + error);
                                             }
+
+                                            
+
                                         });
                                 //JSON TYPE EDIT [E]
                             });
+
+                            document.getElementById("btn_select").click();
+
+                            
+
         }
     
         function addComma(num) {
@@ -399,57 +409,78 @@
                                 resultdrawArr.push(polyline_);
                             }
                         }
+
                     }
-                } else {
-    
-                }
-            } else {
-                polyline_ = new Tmapv2.Polyline({
-                    path : arrPoint,
-                    strokeColor : "#DD0000",
-                    strokeWeight : 6,
-                    map : map
-                });
-                resultdrawArr.push(polyline_);
-            }
-    
+          } else {
+          }
+        } else {
+          polyline_ = new Tmapv2.Polyline({
+            path: arrPoint,
+            strokeColor: "#DD0000",
+            strokeWeight: 6,
+            map: map,
+          });
+          resultdrawArr.push(polyline_);
         }
-    
-        //초기화 기능
-        function resettingMap() {
-            //기존마커는 삭제
-            marker_s.setMap(null);
-            marker_e.setMap(null);
-    
-            if (resultMarkerArr.length > 0) {
-                for (var i = 0; i < resultMarkerArr.length; i++) {
-                    resultMarkerArr[i].setMap(null);
-                }
-            }
-    
-            if (resultdrawArr.length > 0) {
-                for (var i = 0; i < resultdrawArr.length; i++) {
-                    resultdrawArr[i].setMap(null);
-                }
-            }
-    
-            chktraffic = [];
-            drawInfoArr = [];
-            resultMarkerArr = [];
-            resultdrawArr = [];
+      }
+
+      //초기화 기능
+      function resettingMap() {
+        //기존마커는 삭제
+        marker_s.setMap(null);
+        marker_e.setMap(null);
+
+        if (resultMarkerArr.length > 0) {
+          for (var i = 0; i < resultMarkerArr.length; i++) {
+            resultMarkerArr[i].setMap(null);
+          }
         }
-    </script>
+
+        if (resultdrawArr.length > 0) {
+          for (var i = 0; i < resultdrawArr.length; i++) {
+            resultdrawArr[i].setMap(null);
+          }
+        }
+
+        chktraffic = [];
+        drawInfoArr = [];
+        resultMarkerArr = [];
+        resultdrawArr = [];
+      }
+</script>
+
+  
+
+
+    <style>
+        #btn_select{
+            background-color: #ffffff; /* Green */
+  border: none;
+  color: white;
+  padding: 1px 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1px;
+  margin: 1px 1px;
+  cursor: pointer;
+        }
+    </style>
+
+
 
 </head>
 
 <body onload="initTmap();">
     <div class="ft_area">
+        
         <div class="ft_select_wrap">
             <br>
             <br>
             <div class="ft_select">
-                <select id="selectLevel">
-                    <option value="0" selected="selected">교통최적+추천</option>
+                <!--<select id="selectLevel">-->
+                    <option value="0" selected="selected"><!--교통최적+추천--></option>
+                    <!--
                     <option value="1">교통최적+무료우선</option>
                     <option value="2">교통최적+최소시간</option>
                     <option value="3">교통최적+초보</option>
@@ -457,100 +488,108 @@
                     <option value="10">최단거리+유/무료</option>
                     <option value="12">이륜차도로우선</option>
                     <option value="19">교통최적+어린이보호구역 회피</option>
-                </select> <select id="year">
-                    <option value="N" selected="selected">교통정보 표출 옵션</option>
-                    <option value="Y">Y</option>
-                    <option value="N">N</option>
-                </select>
-                <button id="btn_select">적용하기</button>
+                    -->
+               <!--</select>--><!-- <select id="year">-->
+                    <option value="N" selected="selected"><!--교통정보 표출 옵션--></option>
+                    <!--<option value="Y">Y</option>
+                    <option value="N">N</option>-->
+               <!-- </select>-->
+
+               <button id="btn_select">적용하기</button>
+            
+
+                
             </div>
+
         </div>
-        <div class="map_act_btn_wrap clear_box"></div>
-        <div class="clear"></div>
-    </div>
+      </div>
+      <div class="map_act_btn_wrap clear_box"></div>
+      <div class="clear"></div>
+    </body>
 
     <div id="map_wrap" class="map_wrap">
-        <div id="map_div"></div>
+      <div id="map_div"></div>
     </div>
     <div class="map_act_btn_wrap clear_box"></div>
     <p id="result"></p>
-    
-
-    
-
 
     <div class="status-bar">
-        <div class="status-bar__column">
-            <span>No Service</span>
-            <i class="fas fa-wifi"></i>
-        </div>
-        <div class="status-bar__column">
-            <span>18:43</span>
-        </div>
-        <div class="status-bar__column">
-            <span>73%</span>
-            <i class="fas fa-battery-full fa-lg"></i>
-            <i class="fas fa-bolt"></i>
-        </div>
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>73%</span>
+        <i class="fas fa-battery-full fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
     </div>
-    
-    <div class="map__info">
-        <a href="home.html"><i class="fas fa-arrow-left fa-2x"></i></a>
-       
-        <div class="map__info-top">
-            
-            <strong><span>중간 경유 가능</span></strong>
-            <strong><span>성별 무관</span></strong>
-        </div>
 
-        
+    <div class="map__info">
+
+        <a href="home.html"><i class="fas fa-arrow-left fa-2x"></i></a>
+
+
+      <div class="map__info-top">
+        <strong><span>중간 경유 가능</span></strong>
+        <strong><span>성별 무관</span></strong>
+      </div>
     </div>
     <div class="deparrtemre">
-        <div class="deparrtemre__dear">
-            <span>전남대</span>
-            <span> → </span>
-            <span>유스퀘어</span>
+      <div class="deparrtemre__dear">
+        <span>전남대</span>
+        <span> → </span>
+        <span>유스퀘어</span>
+      </div>
+      <div class="deparrtemre__arr">
+        <div class="deparrtemre__time">
+          <span> 13:00 </span>
         </div>
-        <div class="deparrtemre__arr">
-            <div class="deparrtemre__time">
-                <span> 13:00 </span>
-            </div>
-            <div class="deparrtemre__remain">
-                <span>3석</span>
-            </div>
+        <div class="deparrtemre__remain">
+          <span>3석</span>
         </div>
-        
+      </div>
     </div>
     <div class="user__manner">
-        <div class="user__manner-div">
-            <div class="user__manner__profile"><img src="exampleimage/userduck.jpg"></div>
-            <div class="user__manner_name"><span>duck</span></div>
+      <div class="user__manner-div">
+        <div class="user__manner__profile">
+          <img src="exampleimage/userduck.jpg" />
         </div>
-        <div class="user__manner_temper">
-            <span>매너온도 </span>
-            <span> 60℃</span>
-            <i class="fas fa-thermometer-three-quarters"></i>
-        </div>
+        <div class="user__manner_name"><span>duck</span></div>
+      </div>
+      <div class="user__manner_temper">
+        <span>매너온도 </span>
+        <span> 60℃</span>
+        <i class="fas fa-thermometer-three-quarters"></i>
+      </div>
     </div>
     <div class="detail__inscript">
+
+
         <p>
             매너온도 40이하 안받아요!<br>
             00동은 괜찮은데 xx동은 안갑니다.
         </p>
         
+
     </div>
     <div class="money__apply">
-        <div class="money__apply__cost">
-            <span>예상 금액 </span>
-            <span>13000원</span>
-        </div>
-        <div class="money__apply__reap">
-            <a href="home.html">
-                <span>잔여 1석</span>
-                <span>신청하기</span>
-            </a>
-        </div>
+      <div class="money__apply__cost">
+        <span>예상 금액 </span>
+        <span>13000원</span>
+      </div>
+      <div class="money__apply__reap">
+        <a href="home.html">
+          <span>잔여 1석</span>
+          <span>신청하기</span>
+        </a>
+      </div>
     </div>
+
     <script src="https://kit.fontawesome.com/762239f8d9.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

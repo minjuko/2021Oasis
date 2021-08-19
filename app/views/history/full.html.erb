@@ -1,0 +1,50 @@
+<div class="carpool">
+    <a href="/users/<%=current_user.id%>"><i class="fas fa-arrow-left fa-lg"></i></a>
+    <span>동승 내역</span>
+</div>
+<nav class="carpool__list">
+    <ul class="carpool__list-list" type="none">
+        <li><a href="/history/collect">동승구인중</a></li>
+        <li><a href="#">동승구인완료</a></li>
+        <li><a href="/history/complete">동승완료</a></li>
+    </ul>
+</nav>
+<% @rides.each do |ride| %>
+<a href="/rides/<%=ride.id%>">
+    <div class="carpool__info">
+        <div class="carpool__info-one">
+            <span>출발지 : <%=ride.departure%></span><br />
+            <span>인원수 : <%=ride.comments.count%>/<%=ride.min%></span>        
+        </div>
+        <div class="carpool__info-two">
+            <span>도착지 : <%=ride.departure%></span><br />
+            <span>모집상태 : 구인마감</span>
+        </div>
+        <div class="carpool__info-three">
+            <span><%= ride.reservation.strftime("%m-%d %H:%M") %></span><br />
+            <span>리더</span>
+        </div>
+    </div>
+</a>
+<%end%>
+<% @ridesMember.each do |ride| %>
+<% if @k.include? ride.id %>
+<a href="/rides/<%=ride.id%>">
+    <div class="carpool__info">
+        <div class="carpool__info-one">
+            <span>출발지 : <%=ride.departure%></span><br />
+            <span>인원수 : <%=ride.comments.count%>/<%=ride.min%></span>        
+        </div>
+        <div class="carpool__info-two">
+            <span>도착지 : <%=ride.departure%></span><br />
+            <span>모집상태 : 구인마감</span>
+        </div>
+        <div class="carpool__info-three">
+            <span><%= ride.reservation.strftime("%m-%d %H:%M") %></span><br />
+            <span>멤버</span>
+        </div>
+    </div>
+</a>
+<% end %>
+<%end%>
+<%= stylesheet_link_tag 'full', media: 'all', 'data-turbolinks-track' => true %>

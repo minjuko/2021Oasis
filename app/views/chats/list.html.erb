@@ -1,37 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=360px, height=640px">
-    <link rel="stylesheet" href="csscollection/chatListCss.css">
-    <link rel="stylesheet" href="csscollection/status.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>같이 타랑께 - chatting list </title>
-</head>
-<body>
-    <div class="status-bar">
-        <div class="status-bar__column">
-            <span>No Service</span>
-            <i class="fas fa-wifi"></i>
-        </div>
-        <div class="status-bar__column">
-            <span>18:43</span>
-        </div>
-        <div class="status-bar__column">
-            <span>73%</span>
-            <i class="fas fa-battery-full fa-lg"></i>
-            <i class="fas fa-bolt"></i>
-        </div>
-    </div>
-    
-    <div class="chat">
+<div class="chat">
         <span>채팅</span>
     </div>
-    <a href="chat.html">
+    <a href="/chats/a">
         <div class="chat__room">
             <div class="chat__room-pic">
-                <img src="exampleimage/userduck.jpg">
+                <img src="https://github.com/2021-oasis-hackathon/Bluepoint/blob/main/FE/exampleimage/userduck.jpg?raw=true">
                 <div class="chat__room-user">
                     <div class="chat__room-user__name"><span>은성 최</span></div>
                     <div class="chat__room-user__con"><span>타시나요?</span></div>
@@ -45,10 +18,10 @@
             </div>
         </div>
     </a>
-    <a href="chatBong.html">
+    <a href="/chats/b">
         <div class="chat__room">
             <div class="chat__room-pic">
-                <img src="exampleimage/bongguprofile.jpg">
+                <img src="https://github.com/2021-oasis-hackathon/Bluepoint/blob/main/FE/exampleimage/bongguprofile.jpg?raw=true">
                 <div class="chat__room-user">
                     <div class="chat__room-user__name"><span>봉구</span></div>
                     <div class="chat__room-user__con"><span>반려동물 동반 가능한가요?</span></div>
@@ -62,10 +35,10 @@
             </div>
         </div>
     </a>
-    <a href="chatMin.html">
+    <a href="/chats/c">
         <div class="chat__room">
             <div class="chat__room-pic">
-                <img src="exampleimage/minju.jpg">
+                <img src="https://github.com/2021-oasis-hackathon/Bluepoint/blob/main/FE/exampleimage/minju.jpg?raw=true">
                 <div class="chat__room-user">
                     <div class="chat__room-user__name"><span>인민주</span></div>
                     <div class="chat__room-user__con"><span>커피 한 잔 할래요옹?</span></div>
@@ -80,26 +53,24 @@
         </div>
     </a>
     
-    <a href="resadd.html">
-        <div class="add__btn">
-            <i class="fas fa-plus fa-2x"></i>
-        </div>
-    </a>
+    <div class="add__btn">
+  <a href="/rides/new">
+    <i class="fas fa-plus fa-2x"></i>
+  </a>
+</div>
     
     <nav class="nav">
         <ul type="none" class="nav__list">
             <li class="nav__btn">
-                <a class="nav__link" href="home.html">
+                <a class="nav__link" href="/rides">
                     <i class="fas fa-home fa-2x"></i>
                 </i></a></li>
             <li class="nav__btn">
                 <a class="nav__link" href="#">
                     <i class="fas fa-comment fa-2x"></i>
             <li class="nav__btn">
-                <a class="nav__link" href="myprofile.html">
+                <a class="nav__link" href="/users/<%=current_user.id%>">
                     <i class="far fa-user fa-2x"></i></a></li>
         </ul>
     </nav>
-    <script src="https://kit.fontawesome.com/762239f8d9.js" crossorigin="anonymous"></script>
-</body>
-</html>
+<%= stylesheet_link_tag 'chatlist', media: 'all', 'data-turbolinks-track' => true %>

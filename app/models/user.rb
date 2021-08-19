@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one_attached :profile
-  enum status: ["남성", "여성"]
+  enum sex: ["남성", "여성"]
 
   has_many :rides, dependent: :destroy
+  has_many :comments, dependent: :destroy
 end
