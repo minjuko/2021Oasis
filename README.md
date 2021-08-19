@@ -58,7 +58,7 @@
 
 ### Usage
 
-1. login.html 실행
+1. 서버가 열렸을 때 서버 주소 접속
 2. F12 실행 후 Galaxy S5로 화면 맞추기
 
 ### API
