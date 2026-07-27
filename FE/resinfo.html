@@ -11,7 +11,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=YOUR_TMAP_APP_KEY"></script>
+    <script src="tmap-config.local.js"></script>
+    <script src="js/tmap-loader.js"></script>
     <script type="text/javascript">
 
 
@@ -79,7 +80,7 @@
                                             url : "https://apis.openapi.sk.com/tmap/routes?version=1&format=json&callback=result",
                                             async : false,
                                             data : {
-                                                "appKey" : "YOUR_TMAP_APP_KEY",
+                                                "appKey" : window.TMAP_APP_KEY,
                                                 "startX" : "126.905688",
 												"startY" : "35.180568",
 												"endX" : "126.879347",
