@@ -146,8 +146,8 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=YOUR_TMAP_APP_KEY"></script>
 <script type="text/javascript">
-const dist = document.querySelector(".money__apply__cost span:last-child")
-    const money = document.querySelector(".money__apply__cost span:first-child")
+    const dist = document.querySelector(".money__apply__cost span:last-child");
+    const money = document.querySelector(".money__apply__cost span:first-child");
     var map;
         var markerInfo;
         //출발지,도착지 마커
@@ -241,8 +241,12 @@ const dist = document.querySelector(".money__apply__cost span:last-child")
                                                 // $("#result").text(
                                                 //         tDistance + tTime + tFare
                                                 //                 + taxiFare);
-                                                dist.innerText=tDistance;
-                money.innerText=taxiFare;
+                                                if (dist) {
+                                                    dist.innerText = tDistance;
+                                                }
+                                                if (money) {
+                                                    money.innerText = taxiFare;
+                                                }
     
                                                 //교통정보 표출 옵션값을 체크
                                                 if (trafficInfochk == "Y") {
