@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-  <meta name="viewport" content="width=360px, height=640px">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8"/>
   <title>회원 가입</title>
   <link rel="stylesheet" href="csscollection/status.css">
    <link rel="stylesheet" href="csscollection/signCss.css">
     <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
-    <link rel="stylesheet" href="csscollection/status.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <div class="status-bar">
@@ -26,8 +24,6 @@
         <i class="fas fa-bolt"></i>
     </div>
 </div>
-  </section>
-  
   <section class="sign-form">
     <h1>회원 가입 </h1>
     <section class="sign-form1">
@@ -194,23 +190,21 @@
       <label for="man">남성</label>
       <input type="radio" name="gender" value="m" id="man">
       <label for="woman">여성</label>
-      <input type="radio" name="gender" value="m" id="woman"> 
+      <input type="radio" name="gender" value="f" id="woman">
       <label for="none"> 선택 안함</label>
-      <input type="radio" name="gender"value="m" id="none"> <br> <br>
+      <input type="radio" name="gender" value="none" id="none"> <br> <br>
       휴대전화<br>  
       <input type="text" name="user_phone" placeholder="010-****-****">
       <br>
       <br>본인 사진 <br>
 <div class="file_wrap"> 
             <div class="filebox"> 
-      <form action="http://localhost/upload.php" method="post" enctype="multipart/form-data">
             <input class="file" name="profile_pic" value="파일선택" disabled="disabled" >
-              <label for="input-file">업로드</label> 
-             <input type="file" id="input-file" class="upload-hidden">
-            </form>
+            <label for="input-file">업로드</label>
+            <input type="file" id="input-file" name="profile_image" class="upload-hidden">
       </div>
 
-      <button type="button"class="btn_sign_check" id="btn_sign_check"  onclick="location.href='finish.html'">가입</button>
+      <button type="button" class="btn_sign_check" id="btn_sign_check" onclick="location.href='finish.html'">가입</button>
       <button type="button" class="btn_cancel" id="btn_cancel" onclick="location.href='login.html'">취소</button>
     </form>
     </section>

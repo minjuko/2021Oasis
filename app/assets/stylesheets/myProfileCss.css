@@ -6,6 +6,7 @@ a {
   width: 100%;
 }
 .profile__span {
+  box-sizing: border-box;
   padding-top: 50px;
   padding-left: 10px;
   padding-bottom: 20px;
@@ -13,7 +14,6 @@ a {
   background-color: #012340;
   color:white;
   font-size: 20px;
-  width: 100%;
 }
 .profile__info img {
   padding: 10px 3px;

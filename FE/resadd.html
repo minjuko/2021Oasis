@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta name="viewport" content="width=360px, height=640px">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="csscollection/status.css">
     <link rel="stylesheet" href="csscollection/resAddCss.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>adding a reservation</title>
+    <title>예약 등록</title>
 </head>
 <body>
     <div class="status-bar">
@@ -68,16 +67,16 @@
         </div>
         <div class="resadd-form__midinter">
             <span>중간 경유 여부</span><br>
-            <input type="radio" name="resadd__midinter" value="interable">
+            <input type="radio" id="interable" name="resadd__midinter" value="interable">
             <label for="interable">경유 가능</label>
-            <input type="radio" name="resadd__midinter" value="uninterable">
+            <input type="radio" id="uninterable" name="resadd__midinter" value="uninterable">
             <label for="uninterable">경유 불가능</label>
         </div>
         <div class="resadd-form__sexseper">
             <span>동일 성별 승차 여부</span><br>
-            <input type="radio" name="resadd__sexseper" value="comsex">
+            <input type="radio" id="comsex" name="resadd__sexseper" value="comsex">
             <label for="comsex">동일 성별</label>
-            <input type="radio" name="resadd__sexseper" value="unisex">
+            <input type="radio" id="unisex" name="resadd__sexseper" value="unisex">
             <label for="unisex">상관 없음</label>
         </div>
     </form>
