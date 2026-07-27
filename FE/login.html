@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="ko">
 <head>
-    <meta name="viewport" content="width=360px, height=640px">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>로그인</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="csscollection/status.css">
      <link rel="stylesheet" href="csscollection/loginCss.css">
     <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
-     <link rel="stylesheet" href="csscollection/status.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -31,13 +29,13 @@
             <h1>로그인</h1>
             <form action="home.html">
                  <div class="login-form__info">
-                        <label for="login__email">&nbsp&nbsp&nbsp&nbsp이메일 </label>
-                        <input type="text" name=''login__email" id="login__email"
-                        autocomplete="off" required>
+                        <label for="login__email">&nbsp;&nbsp;&nbsp;&nbsp;이메일 </label>
+                        <input type="email" name="login__email" id="login__email"
+                        autocomplete="email" required>
                  
                                <label for="login__pw">비밀번호</label>
                                 <input type="password" name="login__pw" id="login__pw"
-                                autocomplete="off" required>
+                                autocomplete="current-password" required>
                         </div>
                         <div class="login-btn">
                                <br> <button type="button" class="login-btn__login" id="login-btn__login" onclick="location.href='home.html'">로그인</button>

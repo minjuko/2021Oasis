@@ -2,8 +2,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
-  width: 360px;
-  height: 640px;
+  width: auto;
+  max-width: 360px;
+  min-height: 640px;
   margin: 0px;
 }
 
@@ -14,6 +15,7 @@ body {
   position: fixed;
   padding: 5px 3px;
   width: 100%;
+  max-width: 360px;
   box-sizing: border-box;
   z-index: 2;
   background-color: rgb(251, 255, 255);

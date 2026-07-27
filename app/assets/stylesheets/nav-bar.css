@@ -2,6 +2,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  max-width: 360px;
   box-sizing: border-box;
   background-color: whitesmoke;
   border-top: 1px solid #7979794d;
