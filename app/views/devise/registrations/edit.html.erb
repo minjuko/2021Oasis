@@ -9,9 +9,9 @@
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {:id => "profile__modify-con", method: :put}) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
     <% if current_user.profile.attached? %>
-    <img src="<%= url_for(current_user.profile) %>" alt="" class="profile_img rounded-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <img src="<%= url_for(current_user.profile) %>" alt="<%= current_user.name %> 프로필 사진" class="profile_img rounded-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     <% else %>
-    <img src="https://picsum.photos/200" alt="" class="profile_img rounded-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <img src="https://picsum.photos/200" alt="기본 프로필 사진" class="profile_img rounded-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     <% end %>
 
     <div class="profile__modify__pic">

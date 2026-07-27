@@ -1,5 +1,4 @@
-<body onload="initTmap()">
-    <body class="ft_area">
+    <div class="ft_area">
       <div class="ft_select_wrap">
         <br />
         <br />
@@ -20,7 +19,7 @@
       </div>
       <div class="map_act_btn_wrap clear_box"></div>
       <div class="clear"></div>
-    </body>
+    </div>
 
     <div id="map_wrap" class="map_wrap">
       <div id="map_div"></div>
@@ -59,9 +58,9 @@
       <div class="user__manner-div">
         <div class="user__manner__profile">
           <% if @ride.user.profile.attached? %>
-            <img src="<%= url_for(@ride.user.profile) %>" alt="" class="profile_img rounded-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <img src="<%= url_for(@ride.user.profile) %>" alt="<%= @ride.user.name %> 프로필 사진" class="profile_img rounded-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
       	    <% else %>
-            <img src="https://picsum.photos/200" alt="" class="profile_img rounded-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <img src="https://picsum.photos/200" alt="기본 프로필 사진" class="profile_img rounded-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
       	    <% end %>
         </div>
         <div class="user__manner_name"><span>1 <%= @ride.user.name%></span></div>
@@ -77,9 +76,9 @@
           <div class="user__manner-div">
 			<div class="user__manner__profile">
                 <% if comment.user.profile.attached? %>
-                <img src="<%= url_for(comment.user.profile) %>" alt="" class="profile_img rounded-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <img src="<%= url_for(comment.user.profile) %>" alt="<%= comment.user.name %> 프로필 사진" class="profile_img rounded-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 <% else %>
-                <img src="https://picsum.photos/200" alt="" class="profile_img rounded-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <img src="https://picsum.photos/200" alt="기본 프로필 사진" class="profile_img rounded-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 <% end %>
             </div>
 			<div class="user__manner_name not__owner"><span><%= index+2 %> <%= comment.user.name %></span></div>
@@ -143,7 +142,6 @@
             <% end %>
         </div>
     <%end%>
-</body>
 <%= stylesheet_link_tag 'resInfo', media: 'all', 'data-turbolinks-track' => true %>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=YOUR_TMAP_APP_KEY"></script>
@@ -582,4 +580,6 @@ const dist = document.querySelector(".money__apply__cost span:last-child")
         resultMarkerArr = [];
         resultdrawArr = [];
       }
+
+      initTmap();
 </script>
