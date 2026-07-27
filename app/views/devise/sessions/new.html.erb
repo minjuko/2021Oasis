@@ -2,10 +2,10 @@
   <h1>로그인</h1>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="login-form__info">
-      &nbsp&nbsp&nbsp&nbsp<%= f.label :이메일, :for => 'login__email' %>
-      <%= f.email_field :email, autofocus: true, autocomplete: "off", :html => {:id => 'login__email'} %><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<%= f.label :이메일, :for => 'login__email' %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", :id => 'login__email' %><br>
       <%= f.label :비밀번호, :for => 'login__pw'%>
-      <%= f.password_field :password, autocomplete: "off", :html => {:id => 'login__pw'} %>
+      <%= f.password_field :password, autocomplete: "current-password", :id => 'login__pw' %>
     </div>
     <div class="login-btn">
       <br> <%= f.submit "로그인", :class => "login-btn__login" %><br><br> 
