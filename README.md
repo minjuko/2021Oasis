@@ -1,259 +1,141 @@
-- [Sections](#sections)
-  - [Title](#title)
-  - [Banner](#banner)
-  - [Description](#short-description)
-  - [Background](#background)
-  - [Usage](#usage)
-  - [API](#api)
-  - [Thanks](#thanks)
-  - [Contributing](#contributing)
-  - [Wireframe](#Wireframe)
-  - [Detail](#Detail)
-    - [Login](#Login)
-    - [Sign](#Sign)
-    - [Psfind](#Psfind)
-    - [Complete](#Complete)
-    - [Home](#Home)
-    - [ResAdd](#ResAdd)
-    - [ResInfo](#ResInfo)
-    - [Chatlist](#Chatlist)
-    - [Chat](#Chat)
-    - [Profile](#Profile)
-    - [ModiProfile](#ModiProfile)
-    - [CarCollect](#CarCollect)
-    - [CarFull](#CarFull)
-    - [CarOver](#CarOver)
-    - [MyResInfo](#MyResInfo)
-    - [MyRideInfo](#MyRideInfo)
+# 타부러
 
-## Sections
+> 지역 기반 카풀 예약 서비스를 주제로 제작한 2021년 해커톤 팀 프로젝트
 
-### Title
+## 한눈에 보기
 
-# _타부러_
+| 구분 | 내용 |
+| --- | --- |
+| 역할 | 화면 설계 및 프론트엔드 구현 |
+| 핵심 구현 | 모바일 UI, 예약 상태별 화면, 채팅·프로필 화면, TMAP 경로 시각화 |
+| 프론트엔드 | HTML5, CSS3, JavaScript, jQuery |
+| 서버 | Ruby 2.7, Ruby on Rails 6.1 |
+| 외부 API | TMAP JavaScript API, TMAP 경로 탐색 API |
 
-호남 전용 택시 카풀 서비스
+## 프로젝트 소개
 
-### Banner
+타부러는 출발지와 목적지가 비슷한 사용자를 연결해 카풀을 예약할 수 있도록 기획한 웹 프로젝트입니다. 모집글 작성·조회, 예약 등록·상세 확인, 참여자 정보, 채팅 화면, 프로필 화면 등을 하나의 사용자 흐름으로 구성했습니다.
+프로토타입으로 일부 기능들을 제공하지 않습니다.
 
-### Short Description
+호남지역의 교통순환 불편 문제를 해결하기 위해 기획되었습니다. 호남 지역의 대중교통 선택지가 제한적인 상황에서 지역 커뮤니티를 통해 택시 동승자를 구하는 사례에 주목했습니다. 
+흩어져 있던 동승 모집 과정을 하나의 서비스 흐름으로 만들고, 출발지·목적지와 참여 조건을 미리 확인할 수 있도록 하는 것이 기획의 출발점이었습니다.
 
-> 호남지역의 교통순환 불편 문제를 해결하기 위해 기획되었습니다. 호남지역에서만 사용이 가능하며 다양한 필터를 제공해 시민들의 교통 이용에 편의를 제공합니다.
-> _프로토 타입으로 일부 기능들을 제공하지 않습니다._
+- 진행 기간: 2021년 8월
+- 팀 구성: 4명
+- 프로젝트 형태: 해커톤 팀 프로젝트
+- 화면 기준: 모바일 중심 UI, Galaxy S5 viewport 기준
+- 주요 기술: HTML5, CSS3, JavaScript, jQuery, Ruby on Rails 6, TMAP API
 
-- 동성 전용 필터링 제공
-- 중간 경유 (최종 목적지 전에서 하차) 기능 제공
-- 인원 설정 가능
-- 개최자 양도 가능
-- 매너온도 시스템 도입으로 쾌적한 탑승환경 조정
-- 채팅 제공
+## 팀 구성 및 역할
 
-### Background
+| 영역 | 담당 |
+| --- | --- |
+| 화면 구조 (HTML) | 노수지, 고민주, 최은성 |
+| 화면 스타일 (CSS) | 노수지, 고민주 |
+| 지도 API 화면 연동 | 고민주, 최은성 |
+| 서버·데이터 처리 | 정효인 |
 
-저희팀은 두 명의 호남 본토박이와 두명의 타지역 출신 학생으로 구성되어 있습니다. 타지인 입장에서의 문제, 현지인의 경험 등을 바탕으로 호남의 문제를 적극적으로 성찰할 수 있었으며 저희는 "교통"을 호남 제일의 문제로 꼽았습니다.
+## 담당 범위
 
-호남 지역은 지하철이 발달하지 않아 대부분의 인구가 버스를 이용하고 있습니다.더욱이 도시와 지방지역의 인구수가 크게 차이나서 일부 인기있는 노선에 사람이 몰리고 간선 등의 버스에는 이용자가 미미한 현상이 발생하게 되었습니다. 혼잡한 교통으로 인해 사람들은 불편을 호소하고 외부 관광객 역시 호남 지역의 관광을 꺼리게 되는 등 지속되는 교통 체증 문제는 더 많은 부작용을 낳았습니다.
+팀 프로젝트에서 화면 설계와 프론트엔드 구현을 담당했습니다.
 
-이 문제를 어떻게 해결할까 생각하는 중 "에브리타임"이나 "당근마켓" 등의 지역 사회망에서 택시카풀을 구하는 사례를 보고 이번 택시 카풀 앱의 프로토타입을 웹으로 제작하게 되었습니다. 기존의 택시 카풀 앱은 다양하게 존재했지만 필터 제공, 인원수 조정처럼 편리성에 초점을 맞춘 기능이 없었기 때문에 상용화되지 못했습니다. "타부러"은 호남지역으로 서비스를 시작하고 여러 서비스를 제공하여 호남의 환경.사회문제인 교통 혼잡 문제를 해결하고자 합니다.
+- HTML 기반 정적 화면 구성
+- CSS를 이용한 모바일 화면 스타일링 및 상태별 UI 구성
+- JavaScript/jQuery 이벤트 처리와 화면 흐름 연결
+- 예약 등록·상세·참여·마감 상태 화면 구현
+- 채팅 목록·채팅방, 프로필·회원 관련 화면 구현
+- Rails ERB 화면에 정적 화면 구조와 스타일 적용
+- TMAP JavaScript API 및 경로 탐색 API 연동
 
-### Usage
+## 프로토타입 범위
 
-1. 서버가 열렸을 때 서버 주소 접속
-2. F12 실행 후 Galaxy S5로 화면 맞추기
+해커톤 기간에 서비스의 전체 사용자 흐름을 보여주는 프로토타입을 목표로 제작했습니다. 저장소에는 Rails 모델·컨트롤러와 ERB 화면이 포함되어 있지만, `FE/`의 정적 화면에 표시된 모든 동작이 서버 기능으로 연결된 것은 아닙니다.
 
-### API
+| 구분 | 구현 내용 |
+| --- | --- |
+| 화면 구현 | 모집글 등록·목록·상세, 모집 상태별 화면, 채팅, 프로필, 참여 이력 |
+| API 연동 | TMAP 지도 초기화, 출발지·목적지 마커, 경로 및 예상 요금 표시 |
+| 프로토타입 UI | 채팅 전송, 검색, 프로필 수정, 리더 양도·강제 퇴장·모집 취소 |
 
-티맵 API 사용
+기획 단계에서는 동성 전용 모집, 중간 경유, 모집 인원 설정, 리더 양도, 매너 온도 기능으로 안전성과 편의성을 보완하고자 했습니다. 이 가운데 일부는 화면으로만 표현되어 있으며 실제 서비스 동작으로 완성되지 않았습니다.
 
-### Thanks
+## TMAP API 활용
 
-> html 개발 : 노수지, 고민주, 최은성
-> css개발 : 노수지, 고민주
-> API 연동 : 고민주, 최은성
-> 데이터 및 서버관리 : 정효인
+JavaScript로 TMAP 지도를 초기화하고, 출발지와 목적지 좌표를 기준으로 경로를 요청했습니다.
 
-### Wireframe
+1. TMAP JavaScript SDK로 지도 초기화
+2. 출발지·목적지 마커 표시
+3. 경로 탐색 API에 좌표와 옵션 전달
+4. API 응답 좌표를 지도 좌표로 변환
+5. Polyline으로 이동 경로 표시
 
-<img width="70%" src="https://user-images.githubusercontent.com/71256649/129674426-1cfec27f-648f-4f94-bca3-80da46a0d844.jpg"/>
+```text
+FE/tmap-config.example.js  # 설정 형식 예시
+FE/tmap-config.local.js    # 개인 키 입력용, Git 추적 제외
+FE/js/tmap-loader.js        # TMAP SDK 로더
+```
 
-### Detail
+## 프로젝트 구조
 
-#### Login
+```text
+FE/                       정적 HTML/CSS 화면과 프론트엔드 예시
+app/views/                Rails ERB 화면 템플릿
+app/assets/stylesheets/   Rails 화면 스타일
+app/controllers/          서버 요청 처리
+app/models/               데이터 모델
+```
 
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675146-286ab8fe-4552-4206-9192-b6d05e51c340.PNG">
+`FE/`에서 먼저 화면을 구성한 뒤 Rails의 ERB 화면과 스타일에 적용하는 방식으로 작업했습니다. 이 과정에서 정적 화면과 서버 템플릿 사이의 구조 차이, 중복 스타일, 화면 상태별 UI를 함께 경험했습니다.
 
-- login.html, loginCss.css
-  > 가장 처음 시작하는 로그인창
+## 사용 시나리오
 
-#### Sign
+타부러는 카풀을 찾는 참여자와 카풀을 개설하는 리더의 흐름을 하나의 모바일 화면 안에서 연결하도록 구성했습니다.
 
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675146-286ab8fe-4552-4206-9192-b6d05e51c340.PNG">
+1. **카풀 탐색**  
+   사용자는 홈에서 출발지·목적지, 출발 시간, 잔여 좌석과 예상 금액을 확인하고 원하는 모집글을 선택합니다.
 
-- sign.html, signCss.css
-  > 회원가입 창 form으로 회원 정보 전달
+2. **경로와 참여 조건 확인**  
+   상세 화면에서 TMAP으로 표시한 이동 경로와 예상 요금을 확인합니다. 모집자의 프로필과 매너 온도, 현재 참여 인원도 함께 비교한 뒤 참여 여부를 결정합니다.
 
-#### Psfind
+3. **새 카풀 등록**  
+   원하는 모집글이 없다면 출발지·목적지, 시간, 모집 인원과 동성 탑승 여부 등을 입력해 직접 카풀을 개설합니다.
 
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675111-b3421fad-00eb-4d02-834b-760307dfcb1c.PNG">
+4. **참여자 소통**  
+   카풀 참여 후에는 채팅 목록에서 동승자와 모집글 정보를 확인하고, 개별 채팅방에서 출발 전 세부 사항을 조율합니다.
 
-- psfind.html, psfindCss.css
-  > 프로토타입 형태로 비밀번호 찾기 등의 기능은 제공하지 않음
+5. **모집 상태와 참여 이력 관리**  
+   프로필에서 모집 중·모집 완료·동승 완료 상태의 카풀을 구분해 확인합니다. 리더에게는 참여자 확인과 모집 마감 등의 관리 UI를, 참여자에게는 자신의 예약 정보를 보여줍니다.
 
-#### Complete
+> 채팅 전송, 검색, 리더 양도와 같은 일부 동작은 서비스 흐름을 표현한 프로토타입 UI이며 서버 기능으로 완전히 연결되지 않았습니다.
 
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675141-16542f71-159b-47b6-8faf-70ea6bf313c8.PNG">
+## 화면 기록
 
-- finish.html, finishCss.css
-  > 회원가입 성공시 뜨는 창
+아래 화면은 위 사용 시나리오에 따라 제작한 와이어프레임과 주요 UI입니다.
 
-#### Home
+![타부러 와이어프레임](https://user-images.githubusercontent.com/71256649/129674426-1cfec27f-648f-4f94-bca3-80da46a0d844.jpg)
 
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675144-434ffec2-0b46-4574-9250-78ffb1d37801.PNG">
+### 카풀 탐색과 등록
 
-- home.html, homeCss.css
+<p>
+  <img width="200" height="350" alt="홈 화면" src="https://user-images.githubusercontent.com/71256649/129675144-434ffec2-0b46-4574-9250-78ffb1d37801.PNG">
+  <img width="200" height="350" alt="예약 등록 화면" src="https://user-images.githubusercontent.com/71256649/129675142-c3b23a0b-610d-4390-b416-47ab5e9b42ef.PNG">
+  <img width="200" height="350" alt="예약 상세 화면" src="https://user-images.githubusercontent.com/71256649/129675114-618fe756-3564-42db-874e-363bbf4a5814.PNG">
+</p>
 
-  > 왼쪽 상단의 현재 위치 중심으로 존재하는 카풀 방들을 게시글 형식으로 나열 (기능x)
+홈에서 카풀을 탐색하고, 원하는 모집글이 없다면 직접 등록합니다. 상세 화면에서는 이동 경로와 참여 조건을 확인할 수 있습니다.
 
-  > 오른쪽 하단 + 버튼으로 예약 생성 가능
+### 채팅 및 동승 내역
 
-  > 시작점, 도착지, 시간, 부가 설명, 잔여석, 예상금액, 동행가능여부 정보가 포함된다.
+<p>
+  <img width="200" height="350" alt="채팅 목록 화면" src="https://user-images.githubusercontent.com/71256649/129675129-d59b59fc-6573-4cb0-b5e9-d423d520447c.PNG">
+  <img width="200" height="350" alt="프로필 화면" src="https://user-images.githubusercontent.com/71256649/129675133-72afc7ac-7091-4b11-b683-e1721b88c250.PNG">
+  <img width="200" height="350" alt="모집 중 화면" src="https://user-images.githubusercontent.com/71256649/129675137-e41fe42f-7b2d-489b-bdba-1bc37f92d6a4.PNG">
+</p>
 
-  > 검색 기능은 연동되지 않았다.
+참여 후에는 채팅 목록에서 동승자와 소통하고, 프로필에서 카풀 상태와 참여 이력을 확인합니다.
 
-  > 위의 게시글들은 예시로 채워넣은 것이다.
+## 회고
 
-#### ResAdd
+이 프로젝트를 통해 HTML과 CSS로 모바일 화면을 구성하고, JavaScript로 사용자 이벤트와 외부 API 응답을 화면에 연결하는 기본 흐름을 경험했습니다. 특히 지도 API를 활용해 좌표·마커·경로 데이터를 시각적인 UI로 변환한 점을 포트폴리오에서 보여주고자 합니다.
 
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675142-c3b23a0b-610d-4390-b416-47ab5e9b42ef.PNG">
-
-- resAdd.html, resAddCss.css
-
-  > 예약 생성 화면
-
-  > 폼형태로 정보를 서버에 보낸다.
-
-#### ResInfo
-
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675114-618fe756-3564-42db-874e-363bbf4a5814.PNG">
-
-- resInfo.html, resInfoCss.css
-
-  > 홈에서 보이는 게시글을 클릭했을 때 보이는 화면
-
-  > 지도, 인원, 시간, 출발지, 도착지, 예상 금액, 개최자의 온도와 정보가 담겨있다.
-
-  > 맵은 티맵 API를 사용하여 택시비와 지도, 경로를 보일 수 있게 하였다.
-
-#### Chatlist
-
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675129-d59b59fc-6573-4cb0-b5e9-d423d520447c.PNG">
-
-- chatList.html, chatListCss.css
-
-  > 예약에 참가하면 참가자들과의 채팅방이 생긴다. (기능x)
-
-  > 기존의 채팅룸들이 리스트 형태로 보인다.
-
-  > 프로필 사진, 이름, 가장 최근의 채팅 내역, 출발지와 도착지를 보여준다.
-
-#### Chat
-
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675123-0451857f-2010-4ff6-bab4-1538d99f8e14.PNG">
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675126-0be8a964-65e0-45d8-90a4-f40246a59cb5.PNG">
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675132-00389c26-ec21-4c09-ab69-32a9f5ef58ea.PNG">
-
-- chat.html, chatBong.html, chatMin.html, chatCss.css
-
-  > 채팅방의 자세 내역이다. 단체방을 구현하지는 않았지만 이후 프로젝트를 마저 진행한다면 단체방을 구현할 예정이다.
-
-  > 메가폰 옆의 글은 게시글의 메모이다.
-
-  > 채팅 기능은 아직 구현되지 않았다.
-
-#### Profile
-
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675133-72afc7ac-7091-4b11-b683-e1721b88c250.PNG">
-
-- myProfile.html, myProfileCss.css
-
-  > 내 프로필에서는 자신의 코드, 주소, 메너온도를 확인할 수 있다.
-
-  > 로그아웃 기능은 login.html로 사용자를 보낸다.
-
-#### ModiProfile
-
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675149-69618fec-0cd8-4cab-aea3-6d0c94ca0cff.PNG">
-
-- profileModi.html, profileModiCss.css
-
-  > 사진과 이름을 변경할 수 있다. (기능x)
-
-  > 위의 사진은 현재 프로필 사진이다. (임시)
-
-#### CarCollect
-
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675137-e41fe42f-7b2d-489b-bdba-1bc37f92d6a4.PNG">
-
-- carpoolCollect.html, carpoolCollectCss.css
-
-  > 타기전에 남은 인원을 모집하는 글을 의미한다.
-
-  > home에서 중간 경유 뱃지를 빼고 자신이 이 게시글의 모집자(리더)인지 동승 참여자인지를 표시했다. 둘은 다른 화면으로 이동된다.
-
-  > 임시로 car파일은 같은 예약을 넣어놓았다.
-
-#### CarFull
-
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675118-62512cab-4840-40da-913d-2adfe95c0bf6.PNG">
-
-- carpoolFull.html, carpoolFull.css
-
-  > 타기 전이며 인원이 꽉찬 글을 의미한다.
-
-  > home에서 중간 경유 뱃지를 빼고 자신이 이 게시글의 모집자(리더)인지 동승 참여자인지를 표시했다. 둘은 다른 화면으로 이동된다.
-
-  > 임시로 car파일은 같은 예약을 넣어놓았다.
-
-#### CarOver
-
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675120-33a73fb8-cfdf-46f4-b057-141fe37bd3e4.PNG">
-
-- carpoolCollect.html, carpoolCollectCss.css
-
-  > 동승이 끝난 글을 의미한다.
-
-  > home에서 중간 경유 뱃지를 빼고 자신이 이 게시글의 모집자(리더)인지 동승 참여자인지를 표시했다. 둘은 다른 화면으로 이동된다.
-
-  > 임시로 car파일은 같은 예약을 넣어놓았다.
-
-#### MyResInfo
-
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675136-d43db25c-6917-4db9-9c8b-b7e84e0e6b02.PNG">
-
-- myResInfo.html, myResInfoCss.css
-
-  > 내가 리더인 동승 내역을 조회했을 때 뜨는 페이지이다.
-
-  > 기존 정보창의 정보 외에 퇴장, 리더 양도, 마감 기능을 추가했다. (기능제공x)
-
-  > 동승에 참여한 사람들의 정보를 볼 수 있다.
-
-  > 싫어요 버튼으로 불량한 태도의 참가자나 매너온도가 낮은 참가자를 강제로 제외시킬 수 있다. (기능 구현x)
-
-  > 왕관 버튼으로 리더의 권한을 다른 참가자에게 양도할 수 있다.(기능 구현x)
-
-  > 리더가 마음대로 파티를 취소할 경우 매너온도에 약 5도의 패널티를 부여한다.(기능 구현x)
-
-  > 마감하기 버튼으로 파티의 인원 모집을 중단할 수 있다.(기능 구현x)
-
-  > 취소하기 버튼으로 파티를 해산할 수 있다. (기능 구현x)
-
-#### MyRideInfo
-
-<img width="200px" height="350px" src="https://user-images.githubusercontent.com/71256649/129675139-994b267d-a401-4cba-b5fc-88142aedc391.PNG">
-
-- myRideInfo.html, myRideInfoCss.css
-
-  > 내가 동승 참여자인 동승 내역을 조회했을 때 뜨는 페이지이다.
-
-  > 취소하기 버튼으로 파티에서 떠날 수 있다.(기능 구현x)
+해커톤 기간에 빠르게 구현한 프로젝트라 화면별 코드 중복과 모바일 중심 레이아웃의 한계가 남아 있습니다.
