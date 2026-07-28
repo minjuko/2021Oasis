@@ -41,3 +41,4 @@ yarn-debug.log*
 
 # Local-only TMAP credential used by the static frontend preview.
 /FE/tmap-config.local.js
+`n/.idea/
