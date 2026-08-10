@@ -27,6 +27,14 @@
         var resultMarkerArr = [];
     
         function initTmap() {
+            if (typeof window.Tmapv2 === "undefined") {
+                document.getElementById("result").textContent =
+                    window.TMAP_SDK_STATUS === "missing-key"
+                        ? "지도 설정이 필요합니다."
+                        : "지도를 불러오지 못했습니다.";
+                return;
+            }
+
             // 1. 지도 띄우기
             map = new Tmapv2.Map("map_div", {
                 center : new Tmapv2.LatLng(35.175, 126.889),
@@ -88,7 +96,13 @@
                                                 "trafficInfo" : trafficInfochk
                                             },
                                             success : function(response) {
-    
+                                                if (!response || !Array.isArray(response.features)
+                                                        || response.features.length === 0
+                                                        || !response.features[0].properties) {
+                                                    $("#result").text("경로 정보를 불러오지 못했습니다.");
+                                                    return;
+                                                }
+
                                                 var resultData = response.features;
     
                                                 var tDistance = "총 거리 : "
@@ -235,6 +249,7 @@
                                             },
 
                                             error : function(request, status, error) {
+                                                $("#result").text("경로 정보를 불러오지 못했습니다.");
                                                 console.error("TMAP route request failed", {
                                                     statusCode: request.status,
                                                     status: status,
