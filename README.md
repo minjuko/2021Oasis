@@ -1,141 +1,128 @@
 # 타부러
 
-> 지역 기반 카풀 예약 서비스를 주제로 제작한 2021년 해커톤 팀 프로젝트
+> HTML, CSS, JavaScript로 모바일 카풀 서비스를 구성한 2021년 해커톤 팀 프로젝트입니다.
+> 화면 구현을 중심으로 참여하며 TMAP API 공동 연동, Rails template 연결, Git 협업 과정을 경험한 첫 웹 팀 프로젝트입니다.
 
-## 한눈에 보기
+## Project Overview
 
-| 구분 | 내용 |
+타부러는 출발지와 목적지가 비슷한 사용자가 함께 이동할 수 있도록 기획한 지역 기반 카풀 예약 프로토타입입니다. 호남 지역의 제한적인 대중교통 선택지와 지역 커뮤니티의 택시 동승 모집 사례에서 출발했습니다.
+
+| 항목 | 내용 |
 | --- | --- |
-| 역할 | 화면 설계 및 프론트엔드 구현 |
-| 핵심 구현 | 모바일 UI, 예약 상태별 화면, 채팅·프로필 화면, TMAP 경로 시각화 |
-| 프론트엔드 | HTML5, CSS3, JavaScript, jQuery |
-| 서버 | Ruby 2.7, Ruby on Rails 6.1 |
-| 외부 API | TMAP JavaScript API, TMAP 경로 탐색 API |
+| 프로젝트 | 타부러 |
+| 형태 | 2021년 해커톤 팀 프로젝트 |
+| 팀 구성 | 4명 |
+| 담당 | Frontend UI 중심 |
+| 화면 기준 | 모바일 웹, Galaxy S5 viewport |
+| Frontend | HTML5, CSS3, JavaScript, jQuery |
+| Backend / Template | Ruby on Rails, ERB, Devise, SQLite |
+| External API | TMAP JavaScript API, TMAP 경로 탐색 API |
 
-## 프로젝트 소개
+## My Role
 
-타부러는 출발지와 목적지가 비슷한 사용자를 연결해 카풀을 예약할 수 있도록 기획한 웹 프로젝트입니다. 모집글 작성·조회, 예약 등록·상세 확인, 참여자 정보, 채팅 화면, 프로필 화면 등을 하나의 사용자 흐름으로 구성했습니다.
-프로토타입으로 일부 기능들을 제공하지 않습니다.
+- 주요 모바일 화면의 HTML 구조와 CSS 스타일 구현
+- 카풀 등록·상세·모집 상태 관련 UI 제작
+- 채팅 목록·채팅방과 프로필 화면 prototype 구현
+- JavaScript/jQuery를 활용한 화면 interaction 작업
+- 정적 Frontend 화면을 Rails ERB template에 적용하는 과정에 참여
+- TMAP 지도·경로 기능 공동 연동 및 이후 공개용 API key 설정 정리
 
-호남지역의 교통순환 불편 문제를 해결하기 위해 기획되었습니다. 호남 지역의 대중교통 선택지가 제한적인 상황에서 지역 커뮤니티를 통해 택시 동승자를 구하는 사례에 주목했습니다. 
-흩어져 있던 동승 모집 과정을 하나의 서비스 흐름으로 만들고, 출발지·목적지와 참여 조건을 미리 확인할 수 있도록 하는 것이 기획의 출발점이었습니다.
+Rails Backend와 데이터 처리는 다른 팀원이 주로 담당했습니다.
 
-- 진행 기간: 2021년 8월
-- 팀 구성: 4명
-- 프로젝트 형태: 해커톤 팀 프로젝트
-- 화면 기준: 모바일 중심 UI, Galaxy S5 viewport 기준
-- 주요 기술: HTML5, CSS3, JavaScript, jQuery, Ruby on Rails 6, TMAP API
+## Key Features
 
-## 팀 구성 및 역할
+| 기능 | 구현 수준 |
+| --- | --- |
+| 카풀 목록, 출발지·도착지·날짜 검색, 등록 | Rails Backend 연결 |
+| 로그인, 회원가입, 프로필 수정 | Devise / Rails Backend 연결 |
+| 참여 이력, 모집 취소·마감, 동성 전용 모집, 중간 경유 | Rails Backend 연결 |
+| 카풀 상세, 참여 신청, 강제 퇴장, 매너 온도 | 일부 Backend 연결 |
+| 채팅 목록·채팅방, 리더 양도, 일부 정적 회원 흐름 | UI Prototype |
+
+저장소의 `FE/`는 정적 HTML/CSS 프로토타입이고, `app/views/`는 이 화면 구조의 일부를 Rails ERB와 연결한 결과입니다. 모든 정적 UI가 Backend 기능으로 완성된 것은 아닙니다.
+
+## TMAP API Integration
+
+팀원과 함께 TMAP JavaScript SDK와 경로 탐색 API를 연결해 이동 경로를 상세 화면에 표현했습니다.
+
+- 출발지·도착지 marker 표시
+- 경로 탐색 API 요청과 response 처리
+- EPSG3857 좌표를 WGS84 지도 좌표로 변환
+- Polyline으로 경로 시각화
+- 이동 거리·시간·예상 요금을 UI에 표시
+
+공개 archive를 정리하며 기존 API key hardcoding을 제거하고, 정적 화면은 local config, Rails 화면은 환경변수로 key를 분리했습니다. key가 없으면 SDK와 API를 호출하지 않습니다. Rails 상세 화면의 지도는 DB에 좌표 field가 없어 당시 demo 좌표를 사용합니다.
+
+## Screens & Wireframe
+
+화면 자료는 2021년 해커톤 당시 구현 결과를 기준으로 구성했습니다.
+
+### 카풀 탐색과 등록
+
+<p>
+  <img width="200" height="350" alt="카풀 목록과 검색 화면" src="https://user-images.githubusercontent.com/71256649/129675144-434ffec2-0b46-4574-9250-78ffb1d37801.PNG">
+  <img width="200" height="350" alt="카풀 등록 화면" src="https://user-images.githubusercontent.com/71256649/129675142-c3b23a0b-610d-4390-b416-47ab5e9b42ef.PNG">
+  <img width="200" height="350" alt="TMAP 경로가 포함된 카풀 상세 화면" src="https://user-images.githubusercontent.com/71256649/129675114-618fe756-3564-42db-874e-363bbf4a5814.PNG">
+</p>
+
+### Prototype UI
+
+<p>
+  <img width="200" height="350" alt="채팅 목록 prototype 화면" src="https://user-images.githubusercontent.com/71256649/129675129-d59b59fc-6573-4cb0-b5e9-d423d520447c.PNG">
+  <img width="200" height="350" alt="사용자 프로필 화면" src="https://user-images.githubusercontent.com/71256649/129675133-72afc7ac-7091-4b11-b683-e1721b88c250.PNG">
+</p>
+
+### Design & Flow
+
+해커톤 당시 모바일 화면 흐름과 주요 UI를 정리한 자료입니다.
+
+<img width="700" alt="타부러 모바일 화면 흐름 와이어프레임" src="FE/exampleimage/wireframe.jpg">
+
+## Tech Stack
+
+| 영역 | 기술 |
+| --- | --- |
+| Frontend | HTML5, CSS3, JavaScript, jQuery 3.2.1 |
+| Backend / Template | Ruby 2.7, Ruby on Rails 6.1, ERB, Devise |
+| Database | SQLite |
+| External API | TMAP JavaScript API, TMAP 경로 탐색 API |
+| Collaboration | Git, GitHub |
+
+## What I Learned
+
+### HTML/CSS/JavaScript의 실제 적용
+
+정적 연습을 넘어 여러 화면과 사용자 흐름을 가진 웹 프로젝트를 처음 구현했습니다. 모바일 기준의 배치와 상태별 UI를 HTML과 CSS로 구성하고 JavaScript/jQuery로 화면 동작을 연결했습니다.
+
+### 첫 Git 팀 협업
+
+4명이 화면, 지도, Backend 영역을 나누어 작업하고 Git/GitHub에서 각자의 결과를 합치는 과정을 경험했습니다.
+
+### Frontend와 Backend의 연결
+
+`FE/`에서 만든 정적 화면을 Rails ERB template에 적용하고 controller/model의 데이터가 화면에 표시되는 과정을 경험했습니다.
+
+### External API 활용
+
+지도 SDK와 경로 API의 좌표·경로·요금 데이터를 marker, Polyline, 텍스트 UI로 변환하는 흐름을 경험했습니다.
+
+### Archive Cleanup
+
+공개 archive 정리 과정에서 API key hardcoding, 잘못된 화면 field, legacy GET delete route 등 명백한 오류와 공개 안전성 문제만 최소 범위로 정리했습니다.
+
+## Limitations
+
+- 일부 화면과 interaction은 UI prototype으로만 구현되었습니다.
+- 채팅과 리더 양도는 실제 Backend 기능이 아닙니다.
+- Rails TMAP 상세 화면은 실제 모집글 주소가 아닌 고정 demo 좌표를 사용합니다.
+- 2021년 당시 모바일 화면을 기준으로 설계해 현대적인 responsive layout과 차이가 있습니다.
+- Backend는 다른 팀원이 주로 담당했으며, archive 정리 과정에서 Rails 실행 환경을 별도로 재현하지는 않았습니다.
+
+## Team & Credits
 
 | 영역 | 담당 |
 | --- | --- |
 | 화면 구조 (HTML) | 노수지, 고민주, 최은성 |
 | 화면 스타일 (CSS) | 노수지, 고민주 |
-| 지도 API 화면 연동 | 고민주, 최은성 |
-| 서버·데이터 처리 | 정효인 |
-
-## 담당 범위
-
-팀 프로젝트에서 화면 설계와 프론트엔드 구현을 담당했습니다.
-
-- HTML 기반 정적 화면 구성
-- CSS를 이용한 모바일 화면 스타일링 및 상태별 UI 구성
-- JavaScript/jQuery 이벤트 처리와 화면 흐름 연결
-- 예약 등록·상세·참여·마감 상태 화면 구현
-- 채팅 목록·채팅방, 프로필·회원 관련 화면 구현
-- Rails ERB 화면에 정적 화면 구조와 스타일 적용
-- TMAP JavaScript API 및 경로 탐색 API 연동
-
-## 프로토타입 범위
-
-해커톤 기간에 서비스의 전체 사용자 흐름을 보여주는 프로토타입을 목표로 제작했습니다. 저장소에는 Rails 모델·컨트롤러와 ERB 화면이 포함되어 있지만, `FE/`의 정적 화면에 표시된 모든 동작이 서버 기능으로 연결된 것은 아닙니다.
-
-| 구분 | 구현 내용 |
-| --- | --- |
-| 화면 구현 | 모집글 등록·목록·상세, 모집 상태별 화면, 채팅, 프로필, 참여 이력 |
-| API 연동 | TMAP 지도 초기화, 출발지·목적지 마커, 경로 및 예상 요금 표시 |
-| 프로토타입 UI | 채팅 전송, 검색, 프로필 수정, 리더 양도·강제 퇴장·모집 취소 |
-
-기획 단계에서는 동성 전용 모집, 중간 경유, 모집 인원 설정, 리더 양도, 매너 온도 기능으로 안전성과 편의성을 보완하고자 했습니다. 이 가운데 일부는 화면으로만 표현되어 있으며 실제 서비스 동작으로 완성되지 않았습니다.
-
-## TMAP API 활용
-
-JavaScript로 TMAP 지도를 초기화하고, 출발지와 목적지 좌표를 기준으로 경로를 요청했습니다.
-
-1. TMAP JavaScript SDK로 지도 초기화
-2. 출발지·목적지 마커 표시
-3. 경로 탐색 API에 좌표와 옵션 전달
-4. API 응답 좌표를 지도 좌표로 변환
-5. Polyline으로 이동 경로 표시
-
-```text
-FE/tmap-config.example.js  # 설정 형식 예시
-FE/tmap-config.local.js    # 개인 키 입력용, Git 추적 제외
-FE/js/tmap-loader.js        # TMAP SDK 로더
-```
-
-## 프로젝트 구조
-
-```text
-FE/                       정적 HTML/CSS 화면과 프론트엔드 예시
-app/views/                Rails ERB 화면 템플릿
-app/assets/stylesheets/   Rails 화면 스타일
-app/controllers/          서버 요청 처리
-app/models/               데이터 모델
-```
-
-`FE/`에서 먼저 화면을 구성한 뒤 Rails의 ERB 화면과 스타일에 적용하는 방식으로 작업했습니다. 이 과정에서 정적 화면과 서버 템플릿 사이의 구조 차이, 중복 스타일, 화면 상태별 UI를 함께 경험했습니다.
-
-## 사용 시나리오
-
-타부러는 카풀을 찾는 참여자와 카풀을 개설하는 리더의 흐름을 하나의 모바일 화면 안에서 연결하도록 구성했습니다.
-
-1. **카풀 탐색**  
-   사용자는 홈에서 출발지·목적지, 출발 시간, 잔여 좌석과 예상 금액을 확인하고 원하는 모집글을 선택합니다.
-
-2. **경로와 참여 조건 확인**  
-   상세 화면에서 TMAP으로 표시한 이동 경로와 예상 요금을 확인합니다. 모집자의 프로필과 매너 온도, 현재 참여 인원도 함께 비교한 뒤 참여 여부를 결정합니다.
-
-3. **새 카풀 등록**  
-   원하는 모집글이 없다면 출발지·목적지, 시간, 모집 인원과 동성 탑승 여부 등을 입력해 직접 카풀을 개설합니다.
-
-4. **참여자 소통**  
-   카풀 참여 후에는 채팅 목록에서 동승자와 모집글 정보를 확인하고, 개별 채팅방에서 출발 전 세부 사항을 조율합니다.
-
-5. **모집 상태와 참여 이력 관리**  
-   프로필에서 모집 중·모집 완료·동승 완료 상태의 카풀을 구분해 확인합니다. 리더에게는 참여자 확인과 모집 마감 등의 관리 UI를, 참여자에게는 자신의 예약 정보를 보여줍니다.
-
-> 채팅 전송, 검색, 리더 양도와 같은 일부 동작은 서비스 흐름을 표현한 프로토타입 UI이며 서버 기능으로 완전히 연결되지 않았습니다.
-
-## 화면 기록
-
-아래 화면은 위 사용 시나리오에 따라 제작한 와이어프레임과 주요 UI입니다.
-
-![타부러 와이어프레임](https://user-images.githubusercontent.com/71256649/129674426-1cfec27f-648f-4f94-bca3-80da46a0d844.jpg)
-
-### 카풀 탐색과 등록
-
-<p>
-  <img width="200" height="350" alt="홈 화면" src="https://user-images.githubusercontent.com/71256649/129675144-434ffec2-0b46-4574-9250-78ffb1d37801.PNG">
-  <img width="200" height="350" alt="예약 등록 화면" src="https://user-images.githubusercontent.com/71256649/129675142-c3b23a0b-610d-4390-b416-47ab5e9b42ef.PNG">
-  <img width="200" height="350" alt="예약 상세 화면" src="https://user-images.githubusercontent.com/71256649/129675114-618fe756-3564-42db-874e-363bbf4a5814.PNG">
-</p>
-
-홈에서 카풀을 탐색하고, 원하는 모집글이 없다면 직접 등록합니다. 상세 화면에서는 이동 경로와 참여 조건을 확인할 수 있습니다.
-
-### 채팅 및 동승 내역
-
-<p>
-  <img width="200" height="350" alt="채팅 목록 화면" src="https://user-images.githubusercontent.com/71256649/129675129-d59b59fc-6573-4cb0-b5e9-d423d520447c.PNG">
-  <img width="200" height="350" alt="프로필 화면" src="https://user-images.githubusercontent.com/71256649/129675133-72afc7ac-7091-4b11-b683-e1721b88c250.PNG">
-  <img width="200" height="350" alt="모집 중 화면" src="https://user-images.githubusercontent.com/71256649/129675137-e41fe42f-7b2d-489b-bdba-1bc37f92d6a4.PNG">
-</p>
-
-참여 후에는 채팅 목록에서 동승자와 소통하고, 프로필에서 카풀 상태와 참여 이력을 확인합니다.
-
-## 회고
-
-이 프로젝트를 통해 HTML과 CSS로 모바일 화면을 구성하고, JavaScript로 사용자 이벤트와 외부 API 응답을 화면에 연결하는 기본 흐름을 경험했습니다. 특히 지도 API를 활용해 좌표·마커·경로 데이터를 시각적인 UI로 변환한 점을 포트폴리오에서 보여주고자 합니다.
-
-해커톤 기간에 빠르게 구현한 프로젝트라 화면별 코드 중복과 모바일 중심 레이아웃의 한계가 남아 있습니다.
+| TMAP API 화면 연동 | 고민주, 최은성 |
+| Rails Backend·데이터 처리 | 정효인 |
