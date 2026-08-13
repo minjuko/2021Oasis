@@ -90,7 +90,9 @@
           </div>
           <%if @ride.user.id == current_user.id%>
           <div class="user__indi-auth">
-            <a href = "/rides/<%=@ride.id%>/comments/destroy/<%=comment.id%>"><i class="far fa-thumbs-down"></i></a>
+            <%= link_to ride_comment_path(@ride, comment), method: :delete do %>
+              <i class="far fa-thumbs-down"></i>
+            <% end %>
             <a href = "/rides/<%=@ride.id%>/comments/swap/<%=comment.id%>"><i class="fas fa-crown"></i></a>   
           </div>
           <%end%>
@@ -111,7 +113,7 @@
       <% if (@ride.comments.find{|i| i.user_id == current_user.id} != nil)%>
       <div class="mine__canclose">
         <div class="mine__canclose-cancle">
-          <a href = "/rides/<%=@ride.id%>/comments/destroy/<%=(@ride.comments.find{|i| i.user_id == current_user.id}).id%>">취소하기</a>
+          <%= link_to "취소하기", ride_comment_path(@ride, @ride.comments.find { |comment| comment.user_id == current_user.id }), method: :delete %>
         </div>
         <div class="mine__canclose-close">
           <%= link_to "뒤로가기", '/rides'%>
@@ -144,8 +146,11 @@
     <%end%>
 <%= stylesheet_link_tag 'resInfo', media: 'all', 'data-turbolinks-track' => true %>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=YOUR_TMAP_APP_KEY"></script>
+<% if ENV["TMAP_APP_KEY"].present? %>
+  <script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=<%= ERB::Util.url_encode(ENV["TMAP_APP_KEY"]) %>"></script>
+<% end %>
 <script type="text/javascript">
+    const tmapAppKey = <%= raw json_escape(ENV.fetch("TMAP_APP_KEY", "").to_json) %>;
     const dist = document.querySelector(".money__apply__cost span:last-child");
     const money = document.querySelector(".money__apply__cost span:first-child");
     var map;
@@ -161,6 +166,11 @@
         var resultMarkerArr = [];
     
         function initTmap() {
+            if (!tmapAppKey || typeof window.Tmapv2 === "undefined") {
+                document.querySelector("#result").innerText = "TMAP API key가 설정되지 않아 지도를 표시할 수 없습니다.";
+                return;
+            }
+
             // 1. 지도 띄우기
             map = new Tmapv2.Map("map_div", {
                 center : new Tmapv2.LatLng(35.175, 126.889),
@@ -177,7 +187,7 @@
                     {
                         position : new Tmapv2.LatLng(35.180568,
 									126.905688),
-                        icon : "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_s.png",
+                        icon : "https://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_s.png",
                         iconSize : new Tmapv2.Size(24, 38),
                         map : map
                     });
@@ -187,7 +197,7 @@
                     {
                         position : new Tmapv2.LatLng(35.160873,
 									126.879347),
-                        icon : "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_e.png",
+                        icon : "https://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_e.png",
                         iconSize : new Tmapv2.Size(24, 38),
                         map : map
                     });
@@ -211,7 +221,7 @@
                                             url : "https://apis.openapi.sk.com/tmap/routes?version=1&format=json&callback=result",
                                             async : false,
                                             data : {
-                                                "appKey" : "YOUR_TMAP_APP_KEY",
+                                                "appKey" : tmapAppKey,
                                                 "startX" : "126.905688",
 												"startY" : "35.180568",
 												"endX" : "126.879347",
@@ -282,13 +292,13 @@
                                                             var pType = "";
     
                                                             if (properties.pointType == "S") { //출발지 마커
-                                                                markerImg = "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_s.png";
+                                                                markerImg = "https://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_s.png";
                                                                 pType = "S";
                                                             } else if (properties.pointType == "E") { //도착지 마커
-                                                                markerImg = "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_e.png";
+                                                                markerImg = "https://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_e.png";
                                                                 pType = "E";
                                                             } else { //각 포인트 마커
-                                                                markerImg = "http://topopen.tmap.co.kr/imgs/point.png";
+                                                                markerImg = "https://topopen.tmap.co.kr/imgs/point.png";
                                                                 pType = "P"
                                                             }
     
@@ -342,13 +352,13 @@
                                                             var pType = "";
     
                                                             if (properties.pointType == "S") { //출발지 마커
-                                                                markerImg = "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_s.png";
+                                                                markerImg = "https://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_s.png";
                                                                 pType = "S";
                                                             } else if (properties.pointType == "E") { //도착지 마커
-                                                                markerImg = "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_e.png";
+                                                                markerImg = "https://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_e.png";
                                                                 pType = "E";
                                                             } else { //각 포인트 마커
-                                                                markerImg = "http://topopen.tmap.co.kr/imgs/point.png";
+                                                                markerImg = "https://topopen.tmap.co.kr/imgs/point.png";
                                                                 pType = "P"
                                                             }
     

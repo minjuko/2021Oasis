@@ -1,8 +1,8 @@
 class CommentsController < ApplicationController
   def create
     @ride = Ride.find(params[:ride_id])
-    @comment = @ride.comments.create(params[:comment])#.permit(:ride_id)
-    @comment.user_id = current_user.id #이 comments의 user_id를 저장하여, 댓글을 단 사용자의 이메일을 노출할 수 있음!
+    @comment = @ride.comments.build(comment_params)
+    @comment.user = current_user
     @comment.save
     redirect_to request.referrer
   end
@@ -21,5 +21,11 @@ class CommentsController < ApplicationController
     # @ride.user = @comment.user 
     # @comment.user = k
     redirect_to request.referrer
+  end
+
+  private
+
+  def comment_params
+    params.fetch(:comment, ActionController::Parameters.new).permit
   end
 end
