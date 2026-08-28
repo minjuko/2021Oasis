@@ -60,16 +60,16 @@ Rails Backend와 데이터 처리는 다른 팀원이 주로 담당했습니다.
 ### 카풀 탐색과 등록
 
 <p>
-  <img width="200" height="350" alt="카풀 목록과 검색 화면" src="https://user-images.githubusercontent.com/71256649/129675144-434ffec2-0b46-4574-9250-78ffb1d37801.PNG">
-  <img width="200" height="350" alt="카풀 등록 화면" src="https://user-images.githubusercontent.com/71256649/129675142-c3b23a0b-610d-4390-b416-47ab5e9b42ef.PNG">
-  <img width="200" height="350" alt="TMAP 경로가 포함된 카풀 상세 화면" src="https://user-images.githubusercontent.com/71256649/129675114-618fe756-3564-42db-874e-363bbf4a5814.PNG">
+  <img width="200" height="350" alt="카풀 목록과 검색 화면" src="docs/images/carpool-list.PNG">
+  <img width="200" height="350" alt="카풀 등록 화면" src="docs/images/carpool-new.PNG">
+  <img width="200" height="350" alt="TMAP 경로가 포함된 카풀 상세 화면" src="docs/images/carpool-tmap-detail.PNG">
 </p>
 
 ### Prototype UI
 
 <p>
-  <img width="200" height="350" alt="채팅 목록 prototype 화면" src="https://user-images.githubusercontent.com/71256649/129675129-d59b59fc-6573-4cb0-b5e9-d423d520447c.PNG">
-  <img width="200" height="350" alt="사용자 프로필 화면" src="https://user-images.githubusercontent.com/71256649/129675133-72afc7ac-7091-4b11-b683-e1721b88c250.PNG">
+  <img width="200" height="350" alt="채팅 목록 prototype 화면" src="docs/images/chat-list-prototype.PNG">
+  <img width="200" height="350" alt="사용자 프로필 화면" src="docs/images/profile.PNG">
 </p>
 
 ### Design & Flow
