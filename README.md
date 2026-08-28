@@ -84,11 +84,10 @@ Rails Route 및 Form과 화면을 연결하면서 Frontend와 Backend가 하나�
 
 ## 서비스 화면
 
-| 화면 | 기능 | 주요 기능 |
-| --- | --- | --- |
-| <img width="180" alt="카풀 목록 화면" src="docs/images/carpool-list.PNG"> | **카풀 목록** | 등록된 카풀 목록 조회 및 출발지·도착지·날짜 조건을 통한 카풀 탐색 |
-| <img width="180" alt="카풀 등록 화면" src="docs/images/carpool-new.PNG"> | **카풀 등록** | 출발지·목적지·출발 시간 등 카풀 모집에 필요한 정보 등록 |
-| <img width="180" alt="카풀 상세 및 TMAP 경로 조회 화면" src="docs/images/carpool-tmap-detail.PNG"> | **카풀 상세 · 경로 조회** | 카풀 모집 정보 확인 및 TMAP을 활용한 출발지·도착지 이동 경로 조회 |
+| **카풀 목록** | **카풀 등록** | **카풀 상세 · 경로 조회** |
+| :---: | :---: | :---: |
+| <img width="200" alt="카풀 목록 화면" src="docs/images/carpool-list.PNG"> | <img width="200" alt="카풀 등록 화면" src="docs/images/carpool-new.PNG"> | <img width="200" alt="카풀 상세 및 TMAP 경로 조회 화면" src="docs/images/carpool-tmap-detail.PNG"> |
+| 등록된 카풀 목록 조회 및 출발지·도착지·날짜 조건을 통한 카풀 탐색 | 출발지·목적지·출발 시간 등 카풀 모집에 필요한 정보 등록 | 카풀 모집 정보 확인 및 TMAP을 활용한 출발지·도착지 이동 경로 조회 |
 
 ---
 
