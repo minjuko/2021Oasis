@@ -3,8 +3,8 @@
 		<strong> <span>  나의 프로필</span> </strong>
 	</div>
 	<div class="profile__info">
-		<% if current_user.profile.attached? %>
-        <img src="<%= url_for(current_user.profile) %>" alt="<%= @user.name %> 프로필 사진" class="profile_img rounded-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+		<% if @user.profile.attached? %>
+        <img src="<%= url_for(@user.profile) %>" alt="<%= @user.name %> 프로필 사진" class="profile_img rounded-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
       	<% else %>
         <img src="https://picsum.photos/200" alt="기본 프로필 사진" class="profile_img rounded-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
       	<% end %>
@@ -30,7 +30,7 @@
 	</a>
 		
 	<div class="profile__temperture">
-		<img src="https://github.com/2021-oasis-hackathon/Bluepoint/blob/main/FE/exampleimage/thermometer.jpg?raw=true" alt="매너 온도계">
+		<%= image_tag 'thermometer.jpg', alt: '매너 온도계' %>
 		<div class="profile__temperture-context">
 			<div class="profile__temperture-context__my"><span>현재 나의 온도</span></div>
 			<div class="profile__temperture-context__tem"><span>78.6도</span></div>

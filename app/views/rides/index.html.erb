@@ -22,7 +22,7 @@
 <a href="/rides/<%= ride.id %>">
   <div class="resinfo">
     <div class="resinfo__map">
-      <img src="https://github.com/2021-oasis-hackathon/Bluepoint/blob/main/FE/exampleimage/mapexample.PNG?raw=true" alt="출발지와 목적지 경로 예시">
+      <%= image_tag 'mapexample.PNG', alt: '출발지와 목적지 경로 예시' %>
     </div>
     <div class="resinfo__detone">
       <span><%= ride.departure %> -> <%= ride.arrival %></span> <br>
