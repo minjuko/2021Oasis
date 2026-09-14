@@ -2,10 +2,8 @@
 
 one:
   user: one
-  post_id: 1
-  owner: 1
+  ride: one
 
 two:
   user: two
-  post_id: 1
-  owner: 1
+  ride: one

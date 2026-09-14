@@ -6,8 +6,6 @@ one:
   arrival: MyString
   reservation: 2021-08-17 15:47:23
   min: 1
-  max: MyString
-  integer: MyString
   memo: MyText
   via: false
   samesex: false
@@ -20,8 +18,6 @@ two:
   arrival: MyString
   reservation: 2021-08-17 15:47:23
   min: 1
-  max: MyString
-  integer: MyString
   memo: MyText
   via: false
   samesex: false
