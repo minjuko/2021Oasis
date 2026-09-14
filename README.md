@@ -105,7 +105,7 @@ Rails Route 및 Form과 화면을 연결하면서 Frontend와 Backend가 하나�
 ## Repository 구조
 
 ```text
-2021Oasis/
+tabureo-carpool/
 ├── FE/                     # 초기 정적 Frontend
 │   ├── css/
 │   ├── js/
