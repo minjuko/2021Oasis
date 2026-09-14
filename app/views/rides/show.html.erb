@@ -219,7 +219,7 @@
                                         .ajax({
                                             type : "POST",
                                             url : "https://apis.openapi.sk.com/tmap/routes?version=1&format=json&callback=result",
-                                            async : false,
+                                            timeout : 10000,
                                             data : {
                                                 "appKey" : tmapAppKey,
                                                 "startX" : "126.905688",
@@ -234,6 +234,11 @@
                                             success : function(response) {
     
                                                 var resultData = response.features;
+
+                                                if (!Array.isArray(resultData) || resultData.length === 0 || !resultData[0].properties) {
+                                                    document.querySelector("#result").innerText = "경로 정보를 찾을 수 없습니다.";
+                                                    return;
+                                                }
     
                                                 var tDistance = "총 거리 : "
                                                         + (resultData[0].properties.totalDistance / 1000)
@@ -385,6 +390,10 @@
                                             },
 
                                             error : function(request, status, error) {
+                                                document.querySelector("#result").innerText =
+                                                        status === "timeout"
+                                                                ? "TMAP 요청 시간이 초과되었습니다."
+                                                                : "TMAP 경로 정보를 불러오지 못했습니다.";
                                                 console.log("code:"
                                                         + request.status + "\n"
                                                         + "message:"

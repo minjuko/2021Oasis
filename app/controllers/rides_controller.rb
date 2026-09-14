@@ -1,9 +1,10 @@
 class RidesController < ApplicationController
-  before_action :set_ride, only: %i[ show edit update destroy ]
   before_action :authenticate_user!
+  before_action :set_ride, only: :show
+  before_action :set_owned_ride, only: %i[ edit update destroy ]
   # GET /rides or /rides.json
   def index
-    @allRides = Ride.all
+    @allRides = Ride.includes(:user)
     @rides = @allRides.where(:end => false)
     if params[:departure].present?
       @rides = @rides.where(departure: params[:departure])
@@ -14,8 +15,12 @@ class RidesController < ApplicationController
     end
 
     if params[:start_date].present?
-      selected_date = Date.parse(params[:start_date])
-      @rides = @rides.where(:reservation=> selected_date.beginning_of_day..selected_date.end_of_day)
+      begin
+        selected_date = Date.iso8601(params[:start_date])
+        @rides = @rides.where(:reservation=> selected_date.beginning_of_day..selected_date.end_of_day)
+      rescue ArgumentError
+        @rides = @rides.none
+      end
     end
   
     if params[:samesex].present?
@@ -78,7 +83,11 @@ class RidesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_ride
-      @ride = Ride.find(params[:id])
+      @ride = Ride.includes(comments: :user).find(params[:id])
+    end
+
+    def set_owned_ride
+      @ride = current_user.rides.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
